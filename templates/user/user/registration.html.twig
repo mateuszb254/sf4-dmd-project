@@ -1,0 +1,17 @@
+{% extends 'user/base.html.twig' %}
+{% block header_title %}{% trans %}registration{% endtrans %}{% endblock %}
+{% form_theme form _self %}
+{% block _registration_terms_label %}
+    {% set termsUri = path('terms') %}
+    <label for="{{ id }}">
+        {{ label|trans({'%linkStart%' : '<a href="' ~termsUri~ '">', '%linkEnd%' : '</a>'})|raw }}
+    </label>
+{% endblock -%}
+{% block content %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="form-row">
+        <button type="submit" class="button-medium">{% trans %}register{% endtrans %}</button>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,186 @@
+{% from 'macro.html.twig' import
+    displayEmpireFlag, displayTitlePoints, displayAccountStatus, displayMinutesAsText, displayProfessionName,
+    displayProfessionImage %}
+{% extends 'user/base.html.twig' %}
+{% block content %}
+    <div class="profile">
+        <div class="profile-character">
+            <div class="profile-character-header">
+                <span class="profile-character-level">
+                    Lv. {{ character.level }}
+                </span>
+                <div class="profile-character-group">
+                    <span class="profile-character-empire">{{ displayEmpireFlag(character.empire) }}</span>
+                    <span class="profile-character-guild">
+                       {% if character.guild is not null %}
+                           <a href="{{ path('guild_profile', {
+                               'name' : character.guild.name
+                           }) }}">{{ character.guild.name }}</a>
+                       {% else %}
+                           -
+                       {% endif %}
+                    </span>
+                    <span class="profile-character-name">{{ character.name }}</span>
+                </div>
+                <span class="profile-character-title">
+                    {{ displayTitlePoints(character.titlePoints) }}
+                </span>
+            </div>
+            <div class="profile-character-info">
+                <div class="profile-character-image-wrapper">
+                    {{ displayProfessionImage(character.profession) }}
+                </div>
+                <div class="profile-character-info-stats">
+                    <table>
+                        <tr>
+                            <th>{% trans %}character_stat_strength{% endtrans %}</th>
+                            <td>{{ character.strength }}</td>
+                        </tr>
+                        <tr>
+                            <th>{% trans %}character_stat_dexterity{% endtrans %}</th>
+                            <td>{{ character.dexterity }}</td>
+                        </tr>
+                        <tr>
+                            <th>{% trans %}character_stat_vitality{% endtrans %}</th>
+                            <td>{{ character.vitality }}</td>
+                        </tr>
+                        <tr>
+                            <th>{% trans %}character_stat_intelligence{% endtrans %}</th>
+                            <td>{{ character.intelligence }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="profile-character-info-general">
+                <table>
+                    <tr>
+                        <th>{% trans %}character_playtime{% endtrans %}</th>
+                        <td>{{ displayMinutesAsText(character.playtime) }}</td>
+                    </tr>
+                    <tr>
+                        <th>{% trans %}character_profession{% endtrans %}</th>
+                        <td>{{ displayProfessionName(character.profession) }}</td>
+                    </tr>
+                    <tr>
+                        <th>{% trans %}character_horse_level{% endtrans %}</th>
+                        <td>{{ character.horseLevel }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <style>
+        .profile {
+            width: 330px;
+            margin: auto;
+        }
+
+        .profile-character {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-character-image-wrapper {
+            height: 150px;
+            width: 150px;
+        }
+
+        .profile-character-image-wrapper img {
+            height: 100%;
+            width: 100%;
+        }
+
+        .profile > .profile-character > .profile-character-header {
+            width: 250px;
+            justify-content: space-between;
+            margin: auto;
+            display: flex;
+            font-size: 10px;
+            margin-bottom: -15px;
+            margin-top: 10px;
+        }
+
+        .profile-character-level {
+            color: #06c506;
+        }
+
+        .profile-character-info {
+            width: 315px;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            font-size: 11px;
+            padding: 25px 0;
+
+            border-top: 1px solid rgba(205, 238, 238, 0.2);
+            border-bottom: 1px solid rgba(205, 238, 238, 0.2);
+        }
+
+        .profile-character-level, .profile-character-title,
+        .profile-character-group > .profile-character-guild {
+            font-size: 9px;
+        }
+
+        .profile-character-group > .profile-character-guild {
+            color: #d1ffff;
+        }
+
+        .profile-character-group {
+            top: -41px;
+            margin-bottom: -20px;
+            position: relative;
+        }
+
+        .profile-character-group > span {
+            text-align: center;
+            padding: 2px 0;
+            display: block;
+        }
+
+        .profile-character-info-stats table {
+            border-collapse: collapse;
+            width: 130px;
+        }
+
+        .profile-character-info-stats tr > * {
+            padding: 5px 0 3px 0;
+        }
+
+        .profile-character-info-stats tr {
+            border-bottom: 1px solid rgba(205, 238, 238, 0.2);
+        }
+
+        .profile-character-info-stats th:first-child {
+            text-align: left;
+        }
+
+        .profile-character-info-stats {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .profile-character-info-general {
+            width: 285px;
+            padding: 10px 0;
+            font-size: 10px;
+        }
+
+        .profile-character-info-general table {
+            width: 100%;
+        }
+
+
+        .profile-character-info-general tr th {
+            text-align: left;
+            color: #95e2f9;
+        }
+
+        .profile-character-info-general tr td {
+            text-align: right;
+        }
+
+    </style>
+{% endblock %}

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="generated_info">
+                <source>generated_info</source>
+                <target>Bu mesaj otomatik olarak oluşturuldu. Lütfen cevap vermeyin.</target>
+            </trans-unit>
+            <trans-unit id="hello">
+                <source>hello</source>
+                <target>Merhaba, %username%!</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_title">
+                <source>email_change_request_title</source>
+                <target>E-posta adresi değişikliği</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_1">
+                <source>email_change_request_content_1</source>
+                <target>%project_name% 'de e-posta adresinizi değiştirme isteği aldık.</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_2">
+                <source>email_change_request_content_2</source>
+                <target>Sen değil misin? Hesabınıza atanmış e-posta adresinizi değiştirin.</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_3">
+                <source>email_change_request_content_3</source>
+                <target>Sen değil misin? Aşağıdaki butona tıklayarak e-posta adresinizi değiştirebilirsiniz.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_1">
+                <source>password_reset_request_content_1</source>
+                <target>%project_name% 'de şifrenizi değiştirme isteği aldık.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_2">
+                <source>password_reset_request_content_2</source>
+                <target>Sen değil misin? Hesabınıza atanmış e-posta adresinizi değiştirin.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_3">
+                <source>password_reset_request_content_3</source>
+                <target>Sen değil misin? Aşağıdaki butona tıklayarak e-posta adresinizi değiştirebilirsiniz.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_title">
+                <source>password_reset_request_title</source>
+                <target>Parola sıfırlama</target>
+            </trans-unit>
+            <trans-unit id="regards">
+                <source>regards</source>
+                <target>Saygılarla - %project_name% takımı!</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_title">
+                <source>support_ticket_reply_received_title</source>
+                <target>Bilet cevap - %title%</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_content_1">
+                <source>support_ticket_reply_received_content_1</source>
+                <target>Biletiniz için bir cevap var - %title%.</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_content_2">
+                <source>support_ticket_reply_received_content_2</source>
+                <target>Bilete gitmek için aşağıdaki butona tıklayın.</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_content_3">
+                <source>support_ticket_reply_received_content_3</source>
+                <target>Umarız çok beklememişsindir.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

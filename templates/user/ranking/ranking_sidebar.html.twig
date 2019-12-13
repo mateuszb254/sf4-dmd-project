@@ -1,0 +1,37 @@
+{% from 'macro.html.twig' import displayEmpireFlag %}
+<table id="ranking-players" class="table">
+    {% set lp = 1 %}
+    {% for character in characters %}
+        <tr>
+            <td class="left">{{ lp }}.</td>
+            <td class="left">
+                <a href="{{ path('character_profile', {
+                    'name' : character.name
+                }) }}"> {{ character.name }}</a>
+            </td>
+            <td class="image">
+                {{ displayEmpireFlag(random(1, 3)) }}
+
+                {#{{ displayEmpireFlag(character.empire) }}#}
+            <td>{{ character.level }}</td>
+        </tr>
+        {% set lp = lp + 1 %}
+    {% endfor %}
+</table>
+<table id="ranking-guilds" class="table" style="display: none;">
+    {% set lp = 1 %}
+    {% for guild in guilds %}
+        <tr>
+            <td class="left">{{ lp }}.</td>
+            <td class="left">
+                <a href="{{ path('guild_profile', {
+                    'name' : guild.name
+                }) }}">{{ guild.name }}</a>
+            </td>
+            <td class="image">
+                {{ displayEmpireFlag(1) }}
+            <td>{{ guild.ladderPoints }}</td>
+        </tr>
+        {% set lp = lp + 1 %}
+    {% endfor %}
+</table>

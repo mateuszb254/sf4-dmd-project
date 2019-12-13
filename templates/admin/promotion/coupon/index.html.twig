@@ -1,0 +1,111 @@
+{% extends 'admin/base.html.twig' %}
+{% from 'macro.html.twig' import paginate_bootstrap %}
+{% form_theme form 'admin/form_theme.html.twig' %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12 col-lg-7">
+            <div class="box box-solid box-primary">
+                <div class="box-header">
+                    {% trans %}promotion_coupon_list{% endtrans %}
+                </div>
+                <div class="box-body">
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-hover">
+                            <tbody>
+                            <tr>
+                                <th>{% trans %}promotion_coupon{% endtrans %}</th>
+                                <th>{% trans %}promotion{% endtrans %}</th>
+                                <th>{% trans %}generated_by{% endtrans %}</th>
+                                <th>{% trans %}used_by{% endtrans %}</th>
+                            </tr>
+                            {% for promotionCoupon in pagination.result %}
+                                <tr>
+                                    <td>{{ promotionCoupon.code }}</td>
+                                    <td>
+                                        <a href="{{ path('admin_promotion_edit', {'id' : promotionCoupon.promotion.id}) }}">
+                                            {{ promotionCoupon.promotion }}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{{ path('admin_user_profile', {
+                                            'login' : promotionCoupon.generatedBy
+                                        }) }}">
+                                            {{ promotionCoupon.generatedBy }}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        {% if promotionCoupon.usedBy %}
+                                            <a href="{{ path('admin_user_profile', {
+                                                'login' : promotionCoupon.usedBy
+                                            }) }}">
+                                                {{ promotionCoupon.usedBy }}
+                                            </a>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td>{% trans %}no_result{% endtrans %}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    {{ paginate_bootstrap(pagination, 'admin_promotion_coupon_index') }}
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-lg-5">
+            <div class="box box-solid box-primary">
+                <div class="box-header">
+                    {% trans %}promotion_coupons_generate{% endtrans %}
+                </div>
+                <div class="box-body">
+                    {{ form_start(form) }}
+                    {{ form_row(form.amount) }}
+                    {{ form_row(form.promotion) }}
+                    <div id="promotion_wrapper"
+                         style="display: {{ form.newPromotion.vars.valid ? 'none' : 'block' }};">
+                        {{ form_label(form.newPromotion) }}
+                        {{ form_row(form.newPromotion.coins) }}
+                        {{ form_row(form.newPromotion.name) }}
+                        {{ form_row(form.newPromotion.expires_confirmation) }}
+                        <div id="expires_wrapper"
+                             style="display: {{ form.newPromotion.expires_confirmation.vars.value ? 'none' : 'block' }}; text-align: center;">
+                            {{ form_row(form.newPromotion.expires) }}
+                        </div>
+                        {{ form_row(form.newPromotion.type) }}
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button id="promotion_new_button" type="button"
+                                    class="btn btn-adn">{% trans %}promotion_add{% endtrans %}</button>
+                            <button id="promotion_existing_button" type="button"
+                                    class="btn btn-adn"
+                                    style="display: none">{% trans %}select_existing{% endtrans %}</button>
+                            <button type="submit" class="btn btn-primary">{% trans %}generate{% endtrans %}</button>
+                        </div>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+            <div class="box box-solid box-primary">
+                <div class="box-header">
+                    {% trans %}promotions_active{% endtrans %}
+                </div>
+                <div class="box-body">
+                    {% if activePromotionsData %}
+                        {% include 'admin/promotion/partials/promotion_table.html.twig' with {'promotionsData' : activePromotionsData} %}
+                    {% else %}
+                        {% trans %}promotion_there_is_no_active{% endtrans %}
+                    {% endif %}
+                    <div class="text-center">Zobacz <a href="{{ path('admin_promotion_index') }}">wszystkie</a>.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('adminlte_js_promotion') }}
+{% endblock %}

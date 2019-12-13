@@ -1,0 +1,37 @@
+.flash-message-wrapper {
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .flash-message {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+
+    padding: 10px 0;
+
+    &.success {
+      color: rgb(116, 199, 117);
+      border-color: rgba(116, 199, 117, 0.3);
+
+      a {
+        color: rgb(159, 240, 157);
+      }
+    }
+
+    &.failure {
+      color: rgb(243, 45, 45);
+      border-color: rgba(243, 45, 45, 0.3);
+
+      a {
+        color: rgb(159, 240, 157);
+      }
+    }
+
+    .flash-message-content {
+      font-size: 11px;
+      text-align: center;
+    }
+  }
+}

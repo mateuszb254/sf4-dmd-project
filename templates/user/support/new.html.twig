@@ -1,0 +1,10 @@
+{% extends 'user/support/base.html.twig' %}
+{% block header_title %}{% trans %}support_ticket_new{% endtrans %}{% endblock %}
+{% block support_content %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="form-row">
+        <button class="button-medium" type="submit">{% trans %}send{% endtrans %}</button>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

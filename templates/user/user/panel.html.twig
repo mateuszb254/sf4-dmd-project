@@ -1,0 +1,134 @@
+{% from 'macro.html.twig' import displayAccountStatus, displayVIPDate, displayTitlePoints, displayProfessionImage %}
+{% extends 'user/base.html.twig' %}
+{% block header_title %}{% trans %}user_panel{% endtrans %}{% endblock %}
+{% block content %}
+    <section class="user-panel-section">
+        <h2>{% trans %}user_your_account{% endtrans %}</h2>
+        <table class="table users-data-table">
+            <tr>
+                <th class="left">{% trans %}username{% endtrans %}</th>
+                <td colspan="2">{{ user.username }} </td>
+            </tr>
+            <tr>
+                <th class="left">{% trans %}user_status{% endtrans %}</th>
+                <td colspan="2">{{ displayAccountStatus(user.banTime, user.status) }} </td>
+            </tr>
+            {% if user.isBanned %}
+                <tr>
+                    <th class="left">{% trans %}user_ban_reason{% endtrans %}</th>
+                    <td colspan="2">{{ user.banReason ?? '-' }} </td>
+                </tr>
+            {% endif %}
+            <tr>
+                <th class="left">{% trans %}email{% endtrans %}</th>
+                <td>{{ user.email|mask(constant('App\\Core\\Twig\\MaskStringExtension::EMAIL_TYPE')) }}</td>
+                <td>
+                    <a href="{{ path("user_change_email_request") }}">
+                        <i class="fas fa-user-edit"></i> {% trans %}change{% endtrans %}
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <th class="left">{% trans %}password{% endtrans %}</th>
+                <td>*****</td>
+                <td>
+                    <a href="{{ path("user_change_password") }}">
+                        <i class="fas fa-user-edit"></i> {% trans %}change{% endtrans %}
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <th class="left">{% trans %}char_removal_code{% endtrans %}</th>
+                <td>{{ user.charRemovalCode }}</td>
+                <td>
+                    <a href="{{ path("user_change_char_removal_code") }}">
+                        <i class="fas fa-user-edit"></i> {% trans %}change{% endtrans %}
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="left">{% trans %}user_coins{% endtrans %}</td>
+                <td>{{ user.coins }}</td>
+                <td>
+                    <a href="{{ path("payments_index") }}">
+                        <i class="fas fa-coins"></i> {% trans %}buy_coins{% endtrans %}
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section class="user-panel-section">
+        <h2>{% trans %}user_your_characters{% endtrans %}</h2>
+        <div style="display: flex;justify-content:  center;">
+
+            {% for character in user.characters %}
+                <div style="display: inline-block; margin: 0 3px;" class="character">
+                    <div style="width: 110px; height: 110px; display: flex" class="frame-box image-wrapper">
+                        <div style="    width: 90px;
+    height: 90px;
+    margin: auto;" class="image-wrapper">
+
+                        </div>
+                    </div>
+                    <div class="xD">
+                        <table class="table">
+                            <tr>
+                                <td>Nickname</td>
+                                <td><a href="{{ path('character_profile', {"name" : character.name}) }}">{{ character.name }}</a></td>
+                            </tr>
+                            <tr>
+                                <td>Lvl.</td>
+                                <td>{{ character.level }}</td>
+                            </tr>
+                            <tr>
+                                <td>Ranga</td>
+                                <td>{{ displayTitlePoints(character.titlePoints) }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            {% else %}
+                <table class="table">
+                    <tr>
+                        <td>{% trans %}user_your_characters_not_found{% endtrans %}</td>
+                    </tr>
+                </table>
+
+            {% endfor %}
+        </div>
+    </section>
+    <section class="user-panel-section">
+        <h2>{% trans %}vip_account{% endtrans %}</h2>
+        <table class="table">
+            <tr>
+                <th>{% trans %}vip_bronze{% endtrans %}</th>
+                <th>{% trans %}vip_silver{% endtrans %}</th>
+                <th>{% trans %}vip_gold{% endtrans %}</th>
+            </tr>
+            <tr>
+                <td>{{ displayVIPDate(user.bronzeVip) }}</td>
+                <td>{{ displayVIPDate(user.silverVip) }}</td>
+                <td>{{ displayVIPDate(user.goldVip) }}</td>
+            </tr>
+        </table>
+    </section>
+    <section class="user-panel-section">
+        <h2>{% trans %}user_auth_last_attempts{% endtrans %}</h2>
+        <table class="table">
+            <tr>
+                <th></th>
+                <th>{% trans %}ip{% endtrans %}</th>
+                {#<th>{% trans %}browser{% endtrans %}</th>#}
+                <th>{% trans %}date{% endtrans %}</th>
+            </tr>
+            {% for authAttempt in user_statistics.authAttempts %}
+                <tr>
+                    <td>{{ authAttempt|trans }}</td>
+                    <td>{{ authAttempt.ip }}</td>
+                    <td>{{ authAttempt.createdAt|date('Y-m-d H:i:s') }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </section>
+{% endblock %}

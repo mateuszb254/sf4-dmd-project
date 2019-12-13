@@ -1,0 +1,140 @@
+imports:
+    - { resource: app.yaml }
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/*'
+        exclude: '../src/*/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+
+    App\User\Model\UserInterface:
+        class: App\User\Entity\User
+
+    #EventListeners
+    App\User\EventListener\UserPasswordUpdaterListener:
+        tags:
+            - { name: doctrine.event_listener, event: preUpdate, priority: 0 }
+            - { name: doctrine.event_listener, event: prePersist, priority: 0 }
+
+    #EventSubscribers
+    App\Core\Util\Timestamp\EventSubscriber\TimestampSubscriber:
+        tags:
+            - { name: doctrine.event_listener, event: prePersist }
+
+    App\Core\EventSubscriber\LocaleSubscriber:
+        arguments:
+            $defaultLocale: '%locale%'
+            $supportedLocales: '%supported_locales%'
+
+    #Form
+    App\Core\Form\Type\SupportedCurrenciesType:
+        arguments:
+            $currencies: '%supported_currencies%'
+
+    App\Core\Form\Type\RecaptchaType:
+        arguments:
+            $publicKey: '%recaptcha.public_key%'
+            $enabled: '%recaptcha.enabled%'
+
+    #Game
+    App\Game\Client\GameClient:
+        arguments:
+            $host: '%game.host%'
+            $port: '%game.port%'
+            $password: '%game.password%'
+
+    App\Core\Mailer\MailSender:
+        abstract: true
+        arguments:
+            $string: 'asdada'
+
+    App\User\Mailer\UserMailSenderInterface:
+      class: App\User\Mailer\UserMailSender
+      parent: App\Core\Mailer\MailSender
+      autowire: true
+      autoconfigure: false
+
+    #ManulAuthenticatorInterface
+    App\Auth\Service\ManualAuthenticatorInterface:
+        class: App\Auth\Service\ManualAuthenticatorService
+
+    #PromotionCouponGeneratorInterface:
+    App\Promotion\Generator\PromotionCouponGeneratorInterface:
+        class: App\Promotion\Generator\PromotionCouponGenerator
+        arguments:
+            $uniqueGenerator: '@generator.unique_promotion_coupon_code'
+
+    #RandomenessGeneratorInterface
+    App\Core\Generator\RandomnessGeneratorInterface:
+        class: App\Core\Generator\RandomnessGenerator
+
+    #Service
+    App\User\Service\ResetPasswordTokenService:
+        arguments:
+            $tokenGenerator: '@generator.unique_token.password_reset'
+
+    App\User\Service\EmailChangeService:
+        arguments:
+            $tokenGenerator: '@generator.unique_token.email_change'
+
+    #twig
+    twig.extension.text:
+        class: Twig_Extensions_Extension_Text
+        tags:
+            - { name: twig.extension }
+
+    twig.extension.date:
+        class: Twig_Extensions_Extension_Date
+        tags:
+            - { name: twig.extension }
+
+    App\Core\Twig\CurrentLocaleWithFallback:
+        class: App\Core\Twig\CurrentLocaleWithFallback
+        arguments:
+            $defaultLocale: '%locale%'
+        tags:
+            - { name: twig.extension }
+
+    #UniquenessCheckerInterface
+    checker.unique_promotion_coupon:
+        class: App\Core\UniqueChecker\UniqueEntityValueByFieldChecker
+        arguments:
+            $repository: '@App\Promotion\Repository\PromotionCouponRepository'
+            $fieldName: 'code'
+
+    checker.unique_token.password_reset:
+        class: App\Core\UniqueChecker\UniqueEntityValueByFieldChecker
+        arguments:
+            $repository: '@App\User\Repository\UserRepository'
+            $fieldName: 'passwordResetToken'
+
+    checker.unique_token.email_change:
+        class: App\Core\UniqueChecker\UniqueEntityValueByFieldChecker
+        arguments:
+            $repository: '@App\User\Repository\UserRepository'
+            $fieldName: 'emailChangeToken'
+
+    #UniquenessGeneratorInterface
+    generator.unique_token.email_change:
+        class: App\User\Generator\UniqueTokenGenerator
+        arguments:
+            $checker: '@checker.unique_token.email_change'
+
+    generator.unique_token.password_reset:
+        class: App\User\Generator\UniqueTokenGenerator
+        arguments:
+            $checker: '@checker.unique_token.password_reset'
+
+    generator.unique_promotion_coupon_code:
+        class: App\Promotion\Generator\UniquePromotionCouponGenerator
+        arguments:
+            $checker: '@checker.unique_promotion_coupon'
+
+    #Validator
+    App\Core\Validator\RecaptchaValidator:
+        arguments:
+            $secretKey: '%recaptcha.secret_key%'
+            $enabled: '%recaptcha.enabled%'

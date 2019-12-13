@@ -1,0 +1,632 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="auth_required">
+                <source>auth_required</source>
+                <target>Pentru a accesa trebuie sa fii logat. Te rog logheaza-te.</target>
+            </trans-unit>
+            <trans-unit id="board">
+                <source>board</source>
+                <target>Forum</target>
+            </trans-unit>
+            <trans-unit id="browse">
+                <source>browse</source>
+                <target>Website</target>
+            </trans-unit>
+            <trans-unit id="buy_coins">
+                <source>buy_coins</source>
+                <target>Cumpara monede</target>
+            </trans-unit>
+            <trans-unit id="calculate">
+                <source>calculate</source>
+                <target>Calculeazza</target>
+            </trans-unit>
+            <trans-unit id="calculate_coins">
+                <source>calculate_coins</source>
+                <target>Calculator pentru monede</target>
+            </trans-unit>
+            <trans-unit id="currency_amount">
+                <source>currency_amount</source>
+                <target>Cantitatea curenta</target>
+            </trans-unit>
+            <trans-unit id="currency_amount_help">
+                <source>currency_amount_help</source>
+                <target>Dupa ce ai introdus cantitatea actuala, apasa pe 'Calcueaza' pentru a vedea suma
+				de monede pe care o poti primii
+                </target>
+            </trans-unit>
+            <trans-unit id="change">
+                <source>change</source>
+                <target>Schimba</target>
+            </trans-unit>
+            <trans-unit id="char_removal_code">
+                <source>char_removal_code</source>
+                <target>Cod stergere caracter</target>
+            </trans-unit>
+            <trans-unit id="char_removal_code_change">
+                <source>char_removal_code_change</source>
+                <target>Modifica codul pentru stergerea caracterelor</target>
+            </trans-unit>
+            <trans-unit id="char_removal_code_new">
+                <source>char_removal_code</source>
+                <target>Noul cod pentru stergere caractere</target>
+            </trans-unit>
+            <trans-unit id="char_removal_code_new_repeat">
+                <source>char_removal_code_new_repeat</source>
+                <target>Repeta codul pentru stergerea caracterelor</target>
+            </trans-unit>
+            <trans-unit id="character_horse_level">
+                <source>character_horse_level</source>
+                <target>Nivelul calului</target>
+            </trans-unit>
+            <trans-unit id="character_name">
+                <source>character_name</source>
+                <target>Numele caracterului</target>
+            </trans-unit>
+            <trans-unit id="character_not_found">
+                <source>character_not_found</source>
+                <target>Jucatorul nu a fost gasit.</target>
+            </trans-unit>
+            <trans-unit id="character_playtime">
+                <source>character_playtime</source>
+                <target>Timpul jucat</target>
+            </trans-unit>
+            <trans-unit id="character_profession">
+                <source>character_profession</source>
+                <target>Profesie</target>
+            </trans-unit>
+            <trans-unit id="character_profession_ninja">
+                <source>character_profession_ninja</source>
+                <target>Ninja</target>
+            </trans-unit>
+            <trans-unit id="character_profession_shaman">
+                <source>character_profession_shaman</source>
+                <target>Shaman</target>
+            </trans-unit>
+            <trans-unit id="character_profession_sura">
+                <source>character_profession_sura</source>
+                <target>Sura</target>
+            </trans-unit>
+            <trans-unit id="character_profession_warrior">
+                <source>character_profession_warrior</source>
+                <target>Razboinic</target>
+            </trans-unit>
+            <trans-unit id="character_stat_dexterity">
+                <source>character_stat_dexterity</source>
+                <target>Dexteritate</target>
+            </trans-unit>
+            <trans-unit id="character_stat_intelligence">
+                <source>character_stat_intelligence</source>
+                <target>Inteligenta</target>
+            </trans-unit>
+            <trans-unit id="character_stat_strength">
+                <source>character_stat_strength</source>
+                <target>Putere</target>
+            </trans-unit>
+            <trans-unit id="character_stat_vitality">
+                <source>character_stat_vitality</source>
+                <target>Vitalitate</target>
+            </trans-unit>
+            <trans-unit id="characters">
+                <source>characters</source>
+                <target>Caractere</target>
+            </trans-unit>
+            <trans-unit id="coins">
+                <source>coins</source>
+                <target>Moneda|Monede</target>
+            </trans-unit>
+            <trans-unit id="coins_state">
+                <source>coins_state</source>
+                <target>Monedele tale</target>
+            </trans-unit>
+            <trans-unit id="copyrights">
+                <source>copyrights</source>
+                <target>Toate drepturile sunt rezervate.</target>
+            </trans-unit>
+            <trans-unit id="currency">
+                <source>currency</source>
+                <target>Valuta</target>
+            </trans-unit>
+            <trans-unit id="download_caption">
+                <source>download.caption</source>
+                <target>Descarca jocul si joaca gratis</target>
+            </trans-unit>
+            <trans-unit id="email">
+                <source>email</source>
+                <target>Adresa de e-mail</target>
+            </trans-unit>
+            <trans-unit id="email_change">
+                <source>email_change</source>
+                <target>Schimba adresa de e-mail</target>
+            </trans-unit>
+            <trans-unit id="email_change_password_info">
+                <source>email_change_password_info</source>
+                <target>Dupa ce ai introdus corect parola, vei primii un e-mail cu
+				instructiuni suplimentare</target>
+            </trans-unit>
+            <trans-unit id="email_change_success">
+                <source>email_change_success</source>
+                <target>Adresa de e-mail a fost schimbata.</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_success">
+                <source>email_change_request_success</source>
+                <target>Ti-am trimis intructiuni si detalii despre schimbarea datelor.
+                </target>
+            </trans-unit>
+            <trans-unit id="email_new">
+                <source>email_new</source>
+                <target>Noua adresa de e-mail</target>
+            </trans-unit>
+            <trans-unit id="email_new_repeat">
+                <source>email_new_repeat</source>
+                <target>Repeta noua adresa de e-mail</target>
+            </trans-unit>
+            <trans-unit id="guild">
+                <source>guild</source>
+                <target>Bresla</target>
+            </trans-unit>
+            <trans-unit id="guild_leader">
+                <source>guild_leader</source>
+                <target>Liderul breslei</target>
+            </trans-unit>
+            <trans-unit id="guild_members">
+                <source>guild_members</source>
+                <target>Membrii breslei</target>
+            </trans-unit>
+            <trans-unit id="guild_name">
+                <source>guild_name</source>
+                <target>Numele breslei</target>
+            </trans-unit>
+            <trans-unit id="guild_not_found">
+                <source>guild_not_found</source>
+                <target>Bresla nu a fost gasita.</target>
+            </trans-unit>
+            <trans-unit id="guild_stat_draws">
+                <source>guild_stat_draws</source>
+                <target>Egaluri</target>
+            </trans-unit>
+            <trans-unit id="guild_stat_ladder_points">
+                <source>guild_stat_ladder_points</source>
+                <target>Puncte</target>
+            </trans-unit>
+            <trans-unit id="guild_stat_loses">
+                <source>guild_stat_loses</source>
+                <target>Pierderi</target>
+            </trans-unit>
+            <trans-unit id="guild_stat_wins">
+                <source>guild_stat_wins</source>
+                <target>Victorii</target>
+            </trans-unit>
+            <trans-unit id="guilds">
+                <source>guilds</source>
+                <target>Bresle</target>
+            </trans-unit>
+            <trans-unit id="hello">
+                <source>hello</source>
+                <target>Salut</target>
+            </trans-unit>
+            <trans-unit id="homepage">
+                <source>homepage</source>
+                <target>Prima pagina</target>
+            </trans-unit>
+            <trans-unit id="language_choose">
+                <source>language_choose</source>
+                <target>Schimba limba</target>
+            </trans-unit>
+            <trans-unit id="language_current">
+                <source>language_current</source>
+                <target>Limba curenta</target>
+            </trans-unit>
+            <trans-unit id="language_en">
+                <source>language_en</source>
+                <target>Engleza</target>
+            </trans-unit>
+            <trans-unit id="language_pl">
+                <source>language_pl</source>
+                <target>Poloneza</target>
+            </trans-unit>
+            <trans-unit id="language_ro">
+                <source>language_ro</source>
+                <target>Română</target>
+            </trans-unit>
+            <trans-unit id="level">
+                <source>level</source>
+                <target>Nivel</target>
+            </trans-unit>
+            <trans-unit id="login">
+                <source>login</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="logout">
+                <source>logout</source>
+                <target>Delogheza-te</target>
+            </trans-unit>
+            <trans-unit id="kingdom">
+                <source>kingdom</source>
+                <target>Regat</target>
+            </trans-unit>
+            <trans-unit id="navigation">
+                <source>navigation</source>
+                <target>Meniu</target>
+            </trans-unit>
+            <trans-unit id="next">
+                <source>next</source>
+                <target>Urmatorul</target>
+            </trans-unit>
+            <trans-unit id="password">
+                <source>password</source>
+                <target>Parola</target>
+            </trans-unit>
+            <trans-unit id="password_change">
+                <source>password_change</source>
+                <target>Schimba parola</target>
+            </trans-unit>
+            <trans-unit id="password_change_success">
+                <source>password_change_success</source>
+                <target>Parola a fost schimbata cu succes!</target>
+            </trans-unit>
+            <trans-unit id="password_new">
+                <source>password_new</source>
+                <target>Noua parola</target>
+            </trans-unit>
+            <trans-unit id="password_new_repeat">
+                <source>password_new_repeat</source>
+                <target>Repeta noua parola</target>
+            </trans-unit>
+            <trans-unit id="password_repeat">
+                <source>password_repeat</source>
+                <target>Repeta parola</target>
+            </trans-unit>
+            <trans-unit id="password_reset">
+                <source>password_reset</source>
+                <target>Parola a fost resetata</target>
+            </trans-unit>
+            <trans-unit id="password_reset_success">
+                <source>password_reset_success</source>
+                <target>Parola a fost schimbata, te poti loga acum.</target>
+            </trans-unit>
+            <trans-unit id="payments_choose">
+                <source>payments_choose</source>
+                <target>Schimba metoda de plata</target>
+            </trans-unit>
+            <trans-unit id="payments_choose_another">
+                <source>payments_choose_another</source>
+                <target>Alege alta metoda de plata</target>
+            </trans-unit>
+            <trans-unit id="payments_paypal">
+                <source>payments_paypal</source>
+                <target>PayPal</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon">
+                <source>promotion_coupon</source>
+                <target>Cod promotional</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_usage_success">
+                <source>promotion_coupon_usage_success</source>
+                <target>Ai folosit cu succes codul promotional.</target>
+            </trans-unit>
+            <trans-unit id="payments_paypal_box_description">
+                <source>payments_paypal_box_description</source>
+                <target>Serviciul este prevazut de paypal.com</target>
+            </trans-unit>
+            <trans-unit id="payments_paypal_box_title">
+                <source>payments_paypal_box_title</source>
+                <target>Cumpara monezi folosind paypal</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_box_description">
+                <source>promotion_coupon_box_description</source>
+                <target>Poti obtine un cod pentru eventuri speciale.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_box_title">
+                <source>promotion_coupon_box_title</source>
+                <target>Foloseste codul promotional</target>
+            </trans-unit>
+            <trans-unit id="payments_transfer">
+                <source>payments_transfer</source>
+                <target>Transfer</target>
+            </trans-unit>
+            <trans-unit id="payments_transfer_box_description">
+                <source>payments_transfer_box_description</source>
+                <target>Serviciul este prevazut de cashbill.pl</target>
+            </trans-unit>
+            <trans-unit id="payments_transfer_box_title">
+                <source>payments_transfer_box_title</source>
+                <target>Cumpara monede folosind transfer bancar</target>
+            </trans-unit>
+            <trans-unit id="payments_paysafecard">
+                <source>payments_paysafecard</source>
+                <target>PaySafeCard</target>
+            </trans-unit>
+            <trans-unit id="payments_paysafecard_box_description">
+                <source>payments_paysafecard_box_description</source>
+                <target>Serviciul este din partea cashbill.pl</target>
+            </trans-unit>
+            <trans-unit id="payments_paysafecard_box_title">
+                <source>payments_paysafecard_box_title</source>
+                <target>Cumpara monede folosind PaySafeCard</target>
+            </trans-unit>
+            <trans-unit id="previous">
+                <source>previous</source>
+                <target>Inapoi</target>
+            </trans-unit>
+            <trans-unit id="project_caption">
+                <source>project_caption</source>
+                <target>Mergeți să ne cunoașteți</target>
+            </trans-unit>
+            <trans-unit id="published_by">
+                <source>published_by</source>
+                <target>Publicat de</target>
+            </trans-unit>
+            <trans-unit id="ranking_show_full">
+                <source>ranking_show_full</source>
+                <target>Arata-mi toata lista de top</target>
+            </trans-unit>
+            <trans-unit id="ranking_type_guild_name">
+                <source>ranking_type_guild_name</source>
+                <target>Scrie numele breslei</target>
+            </trans-unit>
+            <trans-unit id="ranking_type_player_name">
+                <source>ranking_type_player_name</source>
+                <target>Scrie numele jucatorului</target>
+            </trans-unit>
+            <trans-unit id="register_create_one">
+                <source>register_create_one</source>
+                <target>Creeaza una</target>
+            </trans-unit>
+            <trans-unit id="registration">
+                <source>registration</source>
+                <target>Logheaza-te</target>
+            </trans-unit>
+            <trans-unit id="registration_ask">
+                <source>registration_ask</source>
+                <target>Nu ai inca un cont?</target>
+            </trans-unit>
+            <trans-unit id="registration_success">
+                <source>registration_success</source>
+                <target>Contul tau a fost inregistrat.Te poti loga acum.</target>
+            </trans-unit>
+            <trans-unit id="registration_password_help">
+                <source>registration_password_help</source>
+                <target>Nu uita sa iti pui o parola puternica.</target>
+            </trans-unit>
+            <trans-unit id="registration_email_help">
+                <source>registration_email_help</source>
+                <target>Ar putea fi util să vă resetați parola sau să vă schimbați adresa de e-mail.</target>
+            </trans-unit>
+            <trans-unit id="registration_security_question_help">
+                <source>registration_security_question_help</source>
+                <target>Poate fi util să vă recuperați contul prin contactarea suportului</target>
+            </trans-unit>
+            <trans-unit id="remind_password">
+                <source>remind_password</source>
+                <target>Amintește-ți parola</target>
+            </trans-unit>
+            <trans-unit id="request_password_reset_expired">
+                <source>request_password_reset_expired</source>
+                <target>Acest jeton a expirat.Incearca din nou.</target>
+            </trans-unit>
+            <trans-unit id="request_password_reset_success">
+                <source>request_password_reset_success</source>
+                <target>Ti-am trimis instructiunile pe adresa de e-mail.</target>
+            </trans-unit>
+            <trans-unit id="security_answer">
+                <source>security_answer</source>
+                <target>Intrebarea de securitate</target>
+            </trans-unit>
+            <trans-unit id="security_question">
+                <source>security_question</source>
+                <target>Raspunsul intrebarii de securitate</target>
+            </trans-unit>
+            <trans-unit id="send">
+                <source>send</source>
+                <target>Trimite</target>
+            </trans-unit>
+            <trans-unit id="search">
+                <source>search</source>
+                <target>Cauta</target>
+            </trans-unit>
+            <trans-unit id="server_status">
+                <source>server_status</source>
+                <target>Statusul serverului</target>
+            </trans-unit>
+            <trans-unit id="server_status_online">
+                <source>server_status_online</source>
+                <target>Online</target>
+            </trans-unit>
+            <trans-unit id="server_status_offline">
+                <source>server_status_offline</source>
+                <target>Mentenanta/ Offline</target>
+            </trans-unit>
+            <trans-unit id="server_status_not_released">
+                <source>server_status_not_released</source>
+                <target>Acest proiect nu a fost lansat.</target>
+            </trans-unit>
+            <trans-unit id="sign_in">
+                <source>sign_in</source>
+                <target>Logheaza-te</target>
+            </trans-unit>
+            <trans-unit id="signing_in">
+                <source>signing_in</source>
+                <target>Logheaza-te</target>
+            </trans-unit>
+            <trans-unit id="shop">
+                <source>shop</source>
+                <target>Shopul itemelor</target>
+            </trans-unit>
+            <trans-unit id="shop_buy_item">
+                <source>shop_buy_item</source>
+                <target>Cumpara</target>
+            </trans-unit>
+            <trans-unit id="shop_item_not_found">
+                <source>shop_item_not_found</source>
+                <target>Itemul cerut nu este in lista noastra.</target>
+            </trans-unit>
+            <trans-unit id="shop_item_unavailable">
+                <source>shop_item_unavailable</source>
+                <target>Acest item nu este disponibil momentan.Te rog incearca mai tarziu.</target>
+            </trans-unit>
+            <trans-unit id="shop_category_not_found">
+                <source>shop_category_not_found</source>
+                <target>Solicitarea nu se afla in aceasta categorie</target>
+            </trans-unit>
+            <trans-unit id="shop_category_unavailable">
+                <source>shop_category_unavailable</source>
+                <target>Acest item nu este disponibil momentan.Te rog incearca mai tarziu.</target>
+            </trans-unit>
+            <trans-unit id="shop.unavailable">
+                <source>shop.unavailable</source>
+                <target>Ne pare rau,magazinul de iteme nu este valabil pe website.Viziteaza magazinul in joc.
+                </target>
+            </trans-unit>
+            <trans-unit id="support">
+                <source>support</source>
+                <target>Sistemul pentru suport</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_send">
+                <source>support_ticket_send</source>
+                <target>Tichetul a fost trimist.Vei primii un raspuns in cel mai scurt timp</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_send">
+                <source>support_ticket_reply_send</source>
+                <target>Textul tau a fost trimis.Vei primii un raspuns cand se poate de repede</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_list">
+                <source>support_ticket_list</source>
+                <target>Lista</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_new">
+                <source>support_ticket_new</source>
+                <target>Ticket nou</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_category">
+                <source>support_ticket_category</source>
+                <target>Categorii</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_content">
+                <source>support_ticket_content</source>
+                <target>Conţinut</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_createdAt">
+                <source>support_ticket_createdAt</source>
+                <target>Data crearii</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_title">
+                <source>support_ticket_title</source>
+                <target>Titlu</target>
+            </trans-unit>
+            <trans-unit id="terms_accept_info">
+                <source>terms_accept_info</source>
+                <target>Inregistreaza-ti un cont inainte de a accepta %linkStart%terms%linkEnd%.</target>
+            </trans-unit>
+            <trans-unit id="time_days">
+                <source>time_days</source>
+                <target>Zi|Zile</target>
+            </trans-unit>
+            <trans-unit id="time_hours">
+                <source>time_hours</source>
+                <target>Ora|Ore</target>
+            </trans-unit>
+            <trans-unit id="time_minutes">
+                <source>time_minutes</source>
+                <target>minut|minute</target>
+            </trans-unit>
+            <trans-unit id="welcome_message">
+                <source>welcome_message</source>
+                <target>Bun venit pe website-ul severului</target>
+            </trans-unit>
+            <trans-unit id="welcome_caption">
+                <source>welcome_caption</source>
+                <target>Suntem bucuroși că sunteți cu noi.</target>
+            </trans-unit>
+            <trans-unit id="user_ban">
+                <source>user_ban</source>
+                <target>Baneaza un utilizator</target>
+            </trans-unit>
+            <trans-unit id="user_unban">
+                <source>user_unban</source>
+                <target>Debaneaza un utilizator</target>
+            </trans-unit>
+            <trans-unit id="user_ban_reason">
+                <source>user_ban_reason</source>
+                <target>Motivul banului</target>
+            </trans-unit>
+            <trans-unit id="user_characters_list">
+                <source>user_characters_list</source>
+                <target>Caracterele utilizatorului</target>
+            </trans-unit>
+            <trans-unit id="user_has_no_characters">
+                <source>user_has_no_characters</source>
+                <target>Utilizatorul nu are caractere</target>
+            </trans-unit>
+            <trans-unit id="user_status_banned_perm">
+                <source>user_status_banned_perm</source>
+                <target>Permanent</target>
+            </trans-unit>
+            <trans-unit id="user_status_ok">
+                <source>user_status_ok</source>
+                <target>OK</target>
+            </trans-unit>
+            <trans-unit id="user_status_banned_perm_util">
+                <source>user_status_banned_perm_util</source>
+                <target>Banat (%date%)</target>
+            </trans-unit>
+            <trans-unit id="user_title_1">
+                <source>user_title_1</source>
+                <target>Cavaleresc</target>
+            </trans-unit>
+            <trans-unit id="user_title_2">
+                <source>user_title_2</source>
+                <target>Nobil</target>
+            </trans-unit>
+            <trans-unit id="user_title_3">
+                <source>user_title_3</source>
+                <target>Bun</target>
+            </trans-unit>
+            <trans-unit id="user_title_4">
+                <source>user_title_4</source>
+                <target>Prietenos</target>
+            </trans-unit>
+            <trans-unit id="user_title_5">
+                <source>user_title_5</source>
+                <target>Agresiv</target>
+            </trans-unit>
+            <trans-unit id="user_title_6">
+                <source>user_title_6</source>
+                <target>Necinstit</target>
+            </trans-unit>
+            <trans-unit id="user_title_7">
+                <source>user_title_7</source>
+                <target>Rautacios</target>
+            </trans-unit>
+            <trans-unit id="user_title_8">
+                <source>user_title_8</source>
+                <target>Crud</target>
+            </trans-unit>
+            <trans-unit id="users">
+                <source>users</source>
+                <target>Utilizator</target>
+            </trans-unit>
+            <trans-unit id="vip_account">
+                <source>vip_account</source>
+                <target>Cont VIP</target>
+            </trans-unit>
+            <trans-unit id="vip_bronze">
+                <source>vip_bronze</source>
+                <target>VIP - YANG</target>
+            </trans-unit>
+            <trans-unit id="vip_silver">
+                <source>vip_silver</source>
+                <target>VIP - EXP</target>
+            </trans-unit>
+            <trans-unit id="vip_gold">
+                <source>vip_gold</source>
+                <target>VIP - DROP</target>
+            </trans-unit>
+            <trans-unit id="you_will_receive">
+                <source>you_will_receive</source>
+                <target>Vei primi</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

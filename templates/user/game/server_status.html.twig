@@ -1,0 +1,13 @@
+{% if isServerUp is same as(true) %}
+    <span class="success">
+        {% trans %}server_status_online{% endtrans %}
+    </span>
+{% else %}
+    <span class="error">
+        {% trans %}server_status_offline{% endtrans %}
+    </span>
+{% endif %}
+{#<span class="error">
+    {% trans %}server_status_not_released{% endtrans %}
+</span>
+#}

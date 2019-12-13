@@ -1,0 +1,36 @@
+{% extends  'user/base.html.twig' %}
+{% block template_name %}payments{% endblock %}
+{% block content %}
+    <h2>{% block title %}{% endblock %} - {% trans %}calculate_coins{% endtrans %}</h2>
+    {% block payments_content %}
+        <p class="receive-coins-info">
+            {% trans %}you_will_receive{% endtrans %}
+            <span id="coins-amount" class="coins-amount">
+                -
+            </span>
+            <span id="coins-message" class="coins-message">{% transchoice 0 %}coins{% endtranschoice %}</span>
+        </p>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <div style="display: flex; justify-content: center">
+            <div class="form-row" style="width: auto;">
+                <button id="calculate-button" data-endpoint="{{ path('api_payments_coins_calculate') }}"
+                        type="button" class="button-medium "
+                        disabled>{% trans %}calculate{% endtrans %}</button>
+            </div>
+            <div class="form-row" style="width: auto;">
+                <button id="buy_coins" type="submit" class="button-medium">{% trans %}buy_coins{% endtrans %}</button>
+            </div>
+        </div>
+        <div class="form-row">
+            <a class="another-payment-link"
+               href="{{ path('payments_index') }}">{% trans %}payments_choose_another{% endtrans %}</a>
+        </div>
+        {{ form_end(form) }}
+    {% endblock %}
+{% endblock %}
+{% block js %}
+    {{ parent() }}
+    <script src="{{ path('bazinga_jstranslation_js', { 'domain': 'messages', 'locales': localeWithFallback()|join(',') }) }}"></script>
+    {{ encore_entry_script_tags('app_user_js_calculate_coins') }}
+{% endblock %}

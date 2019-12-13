@@ -1,0 +1,64 @@
+{% extends 'admin/base.html.twig' %}
+{% from 'macro.html.twig' import paginate_bootstrap %}
+{% block content %}
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">{% trans %}articles{% endtrans %}</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover">
+                    <tbody>
+                    <tr>
+                        <th>{% trans %}title{% endtrans %}</th>
+                        <th>{% trans %}author{% endtrans %}</th>
+                        <th>{% trans %}createdAt{% endtrans %}</th>
+                        <th>{% trans %}status{% endtrans %}</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    {% for article in pagination.result %}
+                        <tr>
+                            <td>{{ article.title }}</td>
+                            <td><a href="{{ path('admin_user_profile', {
+                                    'login' : article.author
+                                }) }}">{{ article.author }}</td>
+                            <td>
+                                {{ article.createdAt|date('Y-m-d H:i:s') }}
+                            </td>
+                            <td>
+                                {% if article.status == 0 %}
+                                    {% trans %}draft{% endtrans %}
+                                {% elseif article.status == 1 %}
+                                    {% trans %}published{% endtrans %}
+                                {% endif %}
+                            </td>
+                            {% if is_granted(constant('App\\User\\Permissions::ARTICLE_CAN_EDIT'), article) %}
+                                <td>
+                                    <a href="{{ path('admin_article_edit', {"id" : article.id }) }}"
+                                       class="btn btn-sm btn-block btn-primary">
+                                        <i class="fa fa-edit" aria-hidden="true"></i>
+                                    </a>
+                                </td>
+                            {% endif %}
+                            {% if is_granted(constant('App\\User\\Permissions::ARTICLE_CAN_DELETE'), article) %}
+                                <td>
+                                    {% include 'admin/article/form/_delete.html.twig' with {'itemName' : article.title, 'id' : article.id} %}
+                                </td>
+                            {% endif %}
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td>{% trans %}no_result{% endtrans %}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {{ paginate_bootstrap(pagination, 'admin_article_index') }}
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+{% endblock %}

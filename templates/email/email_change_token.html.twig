@@ -1,0 +1,42 @@
+{% extends 'email/base.html.twig' %}
+{% trans_default_domain 'mail' %}
+{% block title %}{% trans %}email_change_request_title{% endtrans %}{% endblock %}
+{% block content %}
+    <tr>
+        <td width="10%">&nbsp;</td>
+        <td colspan="3" width="80%"
+            style="font-size:12px;font-family:Arial;color:#979797;text-transform:none;vertical-align:text-top;line-height:1.5;text-align:center">
+            {% trans with {'%project_name%' : project_name } %}email_change_request_content_1{% endtrans %}
+        </td>
+        <td width="10%">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="10%">&nbsp;</td>
+        <td colspan="3" width="80%"
+            style="font-size:12px;font-family:Arial;color:#979797;text-transform:none;vertical-align:text-top;line-height:1.5;text-align:center">
+            {% trans %}email_change_request_content_2{% endtrans %}
+        </td>
+        <td width="10%">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="10%">&nbsp;</td>
+        <td colspan="3" width="80%"
+            style="font-size:12px;font-family:Arial;color:#979797;text-transform:none;vertical-align:text-top;line-height:1.5;text-align:center">
+            {% trans %}email_change_request_content_3{% endtrans %}
+        </td>
+        <td width="10%">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="10%">&nbsp;</td>
+        <td colspan="3" width="80%" style="text-align: center;">
+            <a href="{{ url('user_change_email', {'token' : token }) }}"
+               style="border-collapse:collapse;border-radius:2px;text-align:center;border:solid 1px #344c80;background:#4c649b;
+               padding:7px 16px 11px 16px;color:#3b5998;text-decoration:none; line-height: 6;" target="_blank">
+                <span style="font-family:Helvetica Neue,Helvetica,Lucida Grande,tahoma,verdana,arial,sans-serif;white-space:nowrap;font-weight:bold;vertical-align:middle;color:#ffffff;font-size:14px;line-height:14px">
+                    {% trans from 'messages' %}email_change{% endtrans %}
+                </span>
+            </a>
+        </td>
+    </tr>
+{% endblock %}
+

@@ -1,0 +1,41 @@
+{% extends 'user/support/base.html.twig' %}
+{% block header_title %}{{ ticket.title }}{% endblock %}
+{% block support_content %}
+    <div class="support-ticket">
+        <header>
+            <h3>{{ ticket.title }}</h3>
+        </header>
+        <div class="ticket-answer author">
+            {{ ticket.content }}
+        </div>
+        {% for ticket_reply in ticket.getReplies() %}
+            <div class="ticket-answer {{ ticket_reply.author is same as(app.user) ? 'author' : 'admin' }}">
+                {{ ticket_reply.content }}
+                {% if ticket_reply.author is not same as(app.user) %}
+                    <div class="answer-author-info">
+                        <p>Odpowiedzi udzielił <span class="author-name">{{ ticket_reply.author.username }}</span></p>
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    {{ form_start(form) }}
+    <div class="form-answer">
+        {{ form_widget(form) }}
+        <div class="form-row">
+            <button class="button-medium" type="submit">{% trans %}send{% endtrans %}</button>
+        </div>
+    </div>
+    {{ form_end(form) }}
+    {#<div class="form-answer">#}
+    {#<form>#}
+    {#<div class="form-row">#}
+    {#<label for="content">Tresc</label>#}
+    {#<textarea id="content" class="textarea"></textarea>#}
+    {#</div>#}
+    {#<div class="form-row">#}
+    {#<button class="button-medium">Wyslij</button>#}
+    {#</div>#}
+    {#</form>#}
+    {#</div>#}
+{% endblock %}

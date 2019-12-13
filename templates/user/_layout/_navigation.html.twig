@@ -1,0 +1,47 @@
+<section class="box">
+    <header class="box-header">
+        <h3>{% trans %}navigation{% endtrans %}</h3>
+    </header>
+    <div class="box-middle">
+        <div class="box-content">
+            <nav class="navigation">
+                <ul>
+                    <li>
+                        <a href="{{ path('homepage') }}"
+                           class="{% if app.request.get('_route') == 'homepage' %}active{% endif %}">
+                            {% trans %}homepage{% endtrans %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('user_registration') }}"
+                           class="{% if app.request.get('_route') == 'user_registration' %}active{% endif %}">
+                            {% trans %}registration{% endtrans %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('ranking_characters') }}"
+                           class="{% if app.request.get('_route') == 'ranking_characters'  or app.request.get('_route') == "ranking_guilds" %}active{% endif %}">
+                            {% trans %}ranking{% endtrans %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('shop_index') }}"
+                           class="{% if app.request.get('_route') == 'shop_index' %}active{% endif %}">
+                            {% trans %}shop{% endtrans %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ path('support_index') }}">
+                            {% trans %}support{% endtrans %}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ board_url }}">
+                            {% trans %}board{% endtrans %}
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>

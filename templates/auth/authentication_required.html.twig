@@ -1,0 +1,10 @@
+{% extends 'user/base.html.twig' %}
+{% block content %}
+    <div class="flash-message-wrapper">
+        <div class="flash-message failure">
+            <p class="flash-message-content">
+                {% trans %}auth_required{% endtrans %}
+            </p>
+        </div>
+    </div>
+{% endblock %}

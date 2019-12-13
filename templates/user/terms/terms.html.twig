@@ -1,0 +1,57 @@
+{% extends 'user/base.html.twig' %}
+{% block template_name %}rules{% endblock %}
+{% block content %}
+    <ol class="rules-list">
+        <li>Definicje
+            <ol>
+                <li>
+                    <b>Aplikacja</b> - oprogramowanie, które zostało udostępnione uzytkownikom przez
+                    <a href="#">diamondmt2.org</a> pod adresem <a href="{{ path('download_mirrors') }}">/download</a>.
+                </li>
+                <li>
+                    <b>VIP</b> - konto z dodatkowymi uprawnieniami, które użytkownik może kupić w dziale <a
+                            href="{{ path('payments_index') }}">płatności</a>.
+                </li>
+                <li>
+                    <b>Monety</b> - wirtualna waluta, która służy do robienia zakupów w naszym
+                    sklepie.
+                </li>
+            </ol>
+        </li>
+        <li>Postanowienia ogolne
+            <ol>
+                <li>
+                    Rejestracja konta na witrynie <strong>diamondmt2.org</strong> oznacza akceptację
+                    poniższego regulaminu.
+                </li>
+                <li>
+                    Regulamin może ulec zmianie.
+                </li>
+                <li>
+                    W przypadku zmiany regulaminu, kazdy uzytkownik dostane stosowna informacje, na
+                    adres e-mail, ktory zostal przypisany do konta.
+                </li>
+                <li>
+                    Uzytkownik decydujacy sie korzystac z aplikacji podlega <a href="#game">regulaminowi
+                        gry</a>.
+                </li>
+            </ol>
+        </li>
+        <li id="game">Zasady dotyczącę gry</li>
+        <li id="board">Zasady dotyczącę forum</li>
+        <li>Płatności
+            <ol>
+                <li>Zakup konta VIP jest dobrowolny.</li>
+                <li>W przypadku zakupu konta VIP użytkownik dostaje dodatkowo określoną ilość monet.</li>
+                <li>W przypadku zamknięcia projektu, koszty płatnych rozszerzeń serwisu nie są zwracane.</li>
+                <li>W przypadku zablokowania użytkownika, który nabył konto VIP administracja zrzeka się z
+                    możliwości zwrotów.
+                </li>
+                <li>
+                    Wszelakie reklamacje można kierować pod adresem - <a href="{{ path('support_index') }}">support</a>.
+                </li>
+                <li>Właścicielem serwisu diamondmt2.org jest: MATEUSZ SUCHODOLSKI NIP:8451993266 Regon: 382402998</li>
+            </ol>
+        </li>
+    </ol>
+{% endblock %}

@@ -1,0 +1,77 @@
+.support {
+  .support-content {
+    padding: 0 25px;
+
+
+    .support-ticket {
+      header {
+        text-align: center;
+
+        h3 {
+          font-size: 17px;
+          padding: 10px 0;
+        }
+      }
+
+      .ticket-answer {
+        @mixin backgroundImage($gradientColor) {
+          background: url('../../images/support/ticket_answer_horizontal.png') center top repeat-x,
+          url('../../images/support/ticket_answer_vertical.png') left repeat-y,
+          url('../../images/support/ticket_answer_vertical.png') right repeat-y,
+          url('../../images/support/ticket_answer_horizontal.png') center bottom repeat-x,
+          linear-gradient(
+                          to bottom,
+                          rgba($gradientColor, 0.4) 0%,
+                          rgba($gradientColor, 0.6) 25%,
+                          rgba($gradientColor, 0.8) 50%,
+                          rgba($gradientColor, 0.6) 75%,
+                          rgba($gradientColor, 0.4) 100%
+          );
+        }
+
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        padding: 10px 20px;
+        font-size: 11px;
+
+        width: 80%;
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+
+        &.author {
+          @include backgroundImage(#000);
+          float: left;
+        }
+
+        &.admin {
+          @include backgroundImage(#0a3f54);
+          float: right;
+
+          .answer-author-info {
+            text-align: right;
+
+            p {
+              font-size: 9px;
+
+              .author-name {
+                color: #95e2f9;
+              }
+            }
+          }
+        }
+      }
+
+      &:after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+    }
+
+    .form-answer {
+      margin-top: 17px;
+    }
+  }
+}

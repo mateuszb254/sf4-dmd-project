@@ -1,0 +1,151 @@
+/** Aside box */
+.box {
+  $headerPositionTop: 30px;
+  $afterPositionBottom: 76px;
+
+  width: 279px;
+  margin-bottom: -($headerPositionTop+$afterPositionBottom);
+
+  &::after {
+    content: '';
+    background: url('../../images/components/box/box_bottom.png') center no-repeat;
+
+    height: 105px;
+
+    position: relative;
+    bottom: $afterPositionBottom;
+
+    display: block;
+  }
+
+  &-header {
+    background: url('../../images/components/box/box_top.png') center no-repeat;
+    height: 84px;
+    margin-top: -$headerPositionTop;
+    padding: 5px 40px 0 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: $headerPositionTop;
+    position: relative;
+
+    h3 {
+      font-family: "Van Helsing", monospace;
+      text-transform: uppercase;
+      font-size: 14px;
+      text-align: center;
+      font-weight: normal;
+    }
+  }
+
+  &-middle {
+    background: url('../../images/components/box/box_middle.png') center repeat-y;
+
+    padding: $headerPositionTop 56px 19px 56px;
+  }
+
+  &-content {
+    z-index: 2;
+    position: relative;
+  }
+}
+
+/** End aside box */
+
+/** Center box */
+.box-center {
+  $headerPositionTop: 56px;
+  $afterPositionBottom: 37px;
+
+  width: 523px;
+
+  margin-bottom: -($headerPositionTop+$afterPositionBottom);
+
+  &::after {
+    content: '';
+    background: url('../../images/components/box/box_center_after.png') center no-repeat;
+
+    height: 113px;
+
+    position: relative;
+    bottom: $afterPositionBottom;
+
+    display: block;
+  }
+
+  &-header {
+    background: url('../../images/components/box/box_center_top.png') center no-repeat;
+    height: 128px;
+    margin-top: -$headerPositionTop;
+    padding: 0 40px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: $headerPositionTop;
+    position: relative;
+
+    h1, h2 {
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: normal;
+    }
+
+    h1 {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 16px;
+    }
+
+    &-download {
+      margin-bottom: 13px;
+    }
+  }
+
+  &-middle {
+    background: url('../../images/components/box/box_center_middle.png') center repeat-y;
+
+    padding: $headerPositionTop 15px $afterPositionBottom 15px;
+  }
+
+  &-content {
+    z-index: 2;
+    position: relative;
+
+    padding: 0 11px;
+
+    h2 {
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+}
+
+/** End center box */
+
+/** Frame box **/
+.frame-box {
+  $gradientColor: #000;
+  background: url('../../images/support/ticket_answer_horizontal.png') center top repeat-x,
+  url('../../images/support/ticket_answer_vertical.png') left repeat-y,
+  url('../../images/support/ticket_answer_vertical.png') right repeat-y,
+  url('../../images/support/ticket_answer_horizontal.png') center bottom repeat-x,
+  linear-gradient(
+                  to bottom,
+                  rgba($gradientColor, 0.4) 0%,
+                  rgba($gradientColor, 0.6) 25%,
+                  rgba($gradientColor, 0.8) 50%,
+                  rgba($gradientColor, 0.6) 75%,
+                  rgba($gradientColor, 0.4) 100%
+  );
+
+  display: flex;
+}
+/** End frame box */

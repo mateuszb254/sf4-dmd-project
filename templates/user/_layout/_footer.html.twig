@@ -1,0 +1,27 @@
+<footer id="footer" class="footer">
+    <div class="footer-content">
+        <nav class="footer-nav">
+            <ul>
+                <li>
+                    <a href="{{ path('homepage') }}"
+                       class="{% if app.request.get('_route') == 'homepage' %}active{% endif %}">
+                        {% trans %}homepage{% endtrans %}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ path('user_registration') }}"
+                       class="{% if app.request.get('_route') == 'user_registration' %}active{% endif %}">
+                        {% trans %}registration{% endtrans %}
+                    </a>
+                </li>
+                <li><a href="{{ path('ranking_characters') }}">{% trans %}ranking{% endtrans %}</a></li>
+                <li><a href="{{ path('shop_index') }}">{% trans %}shop{% endtrans %}</a></li>
+                <li><a href="{{ path('support_index') }}">{% trans %}support{% endtrans %}</a></li>
+                <li><a href="{{ board_url }}">{% trans %}board{% endtrans %}</a></li>
+            </ul>
+        </nav>
+        <div class="copyrights">
+            <p>&copy; {% trans %}copyrights{% endtrans %}</p>
+        </div>
+    </div>
+</footer>

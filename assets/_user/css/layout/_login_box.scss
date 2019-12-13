@@ -1,0 +1,40 @@
+.user-box {
+  p {
+    font-size: 10px;
+    text-align: center;
+
+    margin-bottom: 5px;
+
+    &.hello-message {
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-weight: bold;
+
+      &.coins {
+        color: #efff70;
+      }
+
+      &.user-data {
+        color: #95e2f9;
+      }
+    }
+  }
+
+  .navigation {
+
+  }
+
+  .links {
+    p {
+      a {
+        color: #95e2f9;
+      }
+    }
+  }
+
+  .logout {
+    margin: auto;
+  }
+}

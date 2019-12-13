@@ -1,0 +1,10 @@
+{% extends 'user/base.html.twig' %}
+{% block header_title %}{% trans %}email_change{% endtrans %}{% endblock %}
+{% block content %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="form-row">
+        <button type="submit" class="button-medium">{% trans %}change{% endtrans %}</button>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

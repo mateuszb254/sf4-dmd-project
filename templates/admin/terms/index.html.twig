@@ -1,0 +1,9 @@
+{% extends 'admin/base.html.twig' %}
+{% block content %}
+
+{% endblock %}
+{% block js %}
+{{ parent() }}
+<script src="{{ asset('adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
+<script>$('.textarea').wysihtml5()</script>
+{% endblock %}

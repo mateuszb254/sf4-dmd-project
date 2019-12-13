@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="generated_info">
+                <source>generated_info</source>
+                <target>Acest mesaj a fost generat automat. Nu este nevoie sa raspunzi.</target>
+            </trans-unit>
+            <trans-unit id="Salut">
+                <source>Salut</source>
+                <target>Salut, %username%!</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_title">
+                <source>email_change_request_title</source>
+                <target>Schimba adresa de e-mail</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_1">
+                <source>email_change_request_content_1</source>
+                <target>Ti-am primit cererea de modificare a datelor.Verifica-ti adresa de email %project_name% .</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_2">
+                <source>email_change_request_content_2</source>
+                <target>Nu ai fost tu? Schimbati adresa de email.</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_3">
+                <source>email_change_request_content_3</source>
+                <target>Tu ai fost? Daca da iti poti schimba adresa de email apasand butonul de mai jos.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_1">
+                <source>password_reset_request_content_1</source>
+                <target>Am primit o cerere pentru modificarea parolei. %project_name% .</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_2">
+                <source>password_reset_request_content_2</source>
+                <target>Nu ai fost tu? Schimba adresa de email de la cont.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_3">
+                <source>password_reset_request_content_3</source>
+                <target>Tu ai fost? Daca da iti poti schimba adresa de email apasand butonul de mai jos.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_title">
+                <source>password_reset_request_title</source>
+                <target>Parola a fost resetata</target>
+            </trans-unit>
+            <trans-unit id="regards">
+                <source>regards</source>
+                <target>Bun venit!- %project_name% team!</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_title">
+                <source>support_ticket_reply_received_title</source>
+                <target>Raspunde la un ticket - %title%</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_content_1">
+                <source>support_ticket_reply_received_content_1</source>
+                <target>Ai primit un raspuns la ticketul tau - %title%.</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_content_2">
+                <source>support_ticket_reply_received_content_2</source>
+                <target>Apasa pe acest buton pentru a muta ticket-ul.</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_content_3">
+                <source>support_ticket_reply_received_content_3</source>
+                <target>Speram ca nu a-ti asteptat prea mult.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,19 @@
+<section class="box ranking-aside">
+    <header class="box-header">
+        <h3>{% trans %}ranking{% endtrans %}</h3>
+    </header>
+    <div class="box-middle">
+        <div class="box-content ranking-aside-content">
+            <table>
+                {{ render(controller('App\\Ranking\\Controller\\RankingController::sidebarRanking')) }}
+            </table>
+            <div class="ranking-buttons-wrapper">
+                <button id="ranking-players-button"
+                        class="button-small">{% trans %}characters{% endtrans %}</button>
+                <button id="ranking-guilds-button"
+                        class="button-small">{% trans %}guilds{% endtrans %}</button>
+            </div>
+            <p class="ranking-more"><a href="{{ path('ranking_characters') }}">{% trans %}ranking_show_full{% endtrans %}</a></p>
+        </div>
+    </div>
+</section>

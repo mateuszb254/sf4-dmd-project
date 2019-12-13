@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="pl" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="generated_info">
+                <source>generated_info</source>
+                <target>Ta wiadomość została wygenerowana automatycznie. Prosimy na nią nie odpowiadać.</target>
+            </trans-unit>
+            <trans-unit id="hello">
+                <source>hello</source>
+                <target>Witaj, %username%!</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_title">
+                <source>email_change_request_title</source>
+                <target>Zmiana adresu e-mail</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_1">
+                <source>email_change_request_content_1</source>
+                <target>Otrzymaliśmy prośbę dotyczącą zmiany adresu e-mail do Twojego konta na %project_name%.</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_2">
+                <source>email_change_request_content_2</source>
+                <target>Jeżeli to nie byłeś Ty zmień adres mailowy przypisany do konta.</target>
+            </trans-unit>
+             <trans-unit id="email_change_request_content_3">
+                <source>email_change_request_content_3</source>
+                 <target>Jeżeli to byłeś Ty możesz zmienić adres email klikając link poniżej.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_1">
+                <source>password_reset_request_content_1</source>
+                <target>Otrzymaliśmy prośbę dotyczącą zmiany hasła do Twojego konta na %project_name%.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_2">
+                <source>password_reset_request_content_2</source>
+                <target>Jeżeli to nie byłeś Ty zmień adres mailowy przypisany do konta.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_3">
+                <source>password_reset_request_content_3</source>
+                <target>Jeżeli to byłeś Ty możesz zmienić hasło klikając link poniżej.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_title">
+                <source>password_reset_request_title</source>
+                <target>Resetowanie hasła</target>
+            </trans-unit>
+            <trans-unit id="regards">
+                <source>regards</source>
+                <target>Pozdrawiamy - Administracja %project_name%!</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

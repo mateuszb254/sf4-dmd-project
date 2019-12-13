@@ -1,0 +1,13 @@
+.main {
+  margin-top: 60px;
+
+  .main-content {
+    width: $contentWidth;
+    min-width: $contentWidth;
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+  }
+}

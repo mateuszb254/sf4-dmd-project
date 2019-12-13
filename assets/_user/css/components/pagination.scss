@@ -1,0 +1,51 @@
+.pagination {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  position: relative;
+  text-align: center;
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 40%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 40%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 40%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0) 100%);
+
+  li {
+    display: inline-block;
+
+    a {
+      display: block;
+      font-size: 12px;
+      text-decoration: none;
+      padding: 11px 9px;
+      border: 1px solid transparent;
+
+      color: #666;
+
+      position: relative;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &.active {
+        cursor: default;
+        outline: none;
+
+        color: #fff;
+
+        &:hover {
+          &:after {
+            display: none;
+          }
+        }
+      }
+
+      &.next, &.prev {
+        color: #a5ecff;
+
+        &:hover {
+          color: #13bdea;
+        }
+      }
+    }
+  }
+}

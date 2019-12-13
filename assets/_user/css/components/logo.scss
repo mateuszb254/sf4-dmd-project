@@ -1,0 +1,11 @@
+.logo {
+  background: url('../../images/components/logo/logo.png') no-repeat;
+
+  width: 443px;
+  height: 123px;
+  display: block;
+
+  &:hover {
+    background-position: bottom;
+  }
+}

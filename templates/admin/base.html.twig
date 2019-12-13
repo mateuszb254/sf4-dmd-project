@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ project_name }} - {% block header_title %}{% trans %}admin_panel{% endtrans %}{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('adminlte_css') }}
+    {% endblock %}
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+    <header class="main-header">
+        {% include 'admin/_layout/_logo.html.twig' %}
+        {% include 'admin/_layout/_navbar.html.twig' %}
+    </header>
+    <aside class="main-sidebar">
+        <section class="sidebar">
+            {% include 'admin/_layout/_sidebar_profile.twig' %}
+            {% include 'admin/_layout/_search_character_form.html.twig' %}
+            {% include 'admin/_layout/_sidebar_navigation.html.twig' %}
+        </section>
+    </aside>
+    <div class="content-wrapper">
+        <section class="content container-fluid">
+            {% include 'admin/_layout/_flash_messages.html.twig' %}
+            {% block content %}
+            {% endblock %}
+        </section>
+    </div>
+    {% include 'admin/_layout/_footer.html.twig' %}
+</div>
+{% block js %}
+    {{ encore_entry_script_tags('adminlte_js') }}
+{% endblock %}
+</body>
+</html>

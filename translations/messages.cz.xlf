@@ -1,0 +1,637 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="auth_required">
+                <source>auth_required</source>
+                <target>Táto sekce vyžaduje registrovaného hráče. Prosím registruj se.</target>
+            </trans-unit>
+            <trans-unit id="board">
+                <source>board</source>
+                <target>Forum</target>
+            </trans-unit>
+            <trans-unit id="browse">
+                <source>browse</source>
+                <target>Hledat</target>
+            </trans-unit>
+            <trans-unit id="buy_coins">
+                <source>buy_coins</source>
+                <target>Koupit mince</target>
+            </trans-unit>
+            <trans-unit id="calculate">
+                <source>calculate</source>
+                <target>Spočítat</target>
+            </trans-unit>
+            <trans-unit id="calculate_coins">
+                <source>calculate_coins</source>
+                <target>Spočítat množství mincí</target>
+            </trans-unit>
+            <trans-unit id="currency_amount">
+                <source>currency_amount</source>
+                <target>Aktuální množství</target>
+            </trans-unit>
+            <trans-unit id="currency_amount_help">
+                <source>currency_amount_help</source>
+                <target>Po zadání aktuální částky, prosím stlač 'Spočítat' aby jsi získal informace o tom kolik
+                    mincí obdržíš.
+                </target>
+            </trans-unit>
+            <trans-unit id="change">
+                <source>change</source>
+                <target>Změnit</target>
+            </trans-unit>
+            <trans-unit id="char_removal_code">
+                <source>char_removal_code</source>
+                <target>Kod smazání postavy</target>
+            </trans-unit>
+            <trans-unit id="char_removal_code_change">
+                <source>char_removal_code_change</source>
+                <target>Změna kodu pro smazáni postavy</target>
+            </trans-unit>
+            <trans-unit id="char_removal_code_new">
+                <source>char_removal_code</source>
+                <target>Nový kod pro smazání postavy</target>
+            </trans-unit>
+            <trans-unit id="char_removal_code_new_repeat">
+                <source>char_removal_code_new_repeat</source>
+                <target>Zopakuj nový kod pro smazání postavy</target>
+            </trans-unit>
+            <trans-unit id="character_horse_level">
+                <source>character_horse_level</source>
+                <target>Level koně</target>
+            </trans-unit>
+            <trans-unit id="character_name">
+                <source>character_name</source>
+                <target>Jméno postavy</target>
+            </trans-unit>
+            <trans-unit id="character_not_found">
+                <source>character_not_found</source>
+                <target>Hráč nebyl nalzen.</target>
+            </trans-unit>
+            <trans-unit id="character_playtime">
+                <source>character_playtime</source>
+                <target>Herní čas</target>
+            </trans-unit>
+            <trans-unit id="character_profession">
+                <source>character_profession</source>
+                <target>Profese</target>
+            </trans-unit>
+            <trans-unit id="character_profession_ninja">
+                <source>character_profession_ninja</source>
+                <target>Ninja</target>
+            </trans-unit>
+            <trans-unit id="character_profession_shaman">
+                <source>character_profession_shaman</source>
+                <target>Šaman</target>
+            </trans-unit>
+            <trans-unit id="character_profession_sura">
+                <source>character_profession_sura</source>
+                <target>Sura</target>
+            </trans-unit>
+            <trans-unit id="character_profession_warrior">
+                <source>character_profession_warrior</source>
+                <target>Válečník</target>
+            </trans-unit>
+            <trans-unit id="character_stat_dexterity">
+                <source>character_stat_dexterity</source>
+                <target>Obratnost</target>
+            </trans-unit>
+            <trans-unit id="character_stat_intelligence">
+                <source>character_stat_intelligence</source>
+                <target>Inteligence</target>
+            </trans-unit>
+            <trans-unit id="character_stat_strength">
+                <source>character_stat_strength</source>
+                <target>Síla</target>
+            </trans-unit>
+            <trans-unit id="character_stat_vitality">
+                <source>character_stat_vitality</source>
+                <target>Vitalita</target>
+            </trans-unit>
+            <trans-unit id="characters">
+                <source>characters</source>
+                <target>Hráči</target>
+            </trans-unit>
+            <trans-unit id="coins">
+                <source>coins</source>
+                <target>mince|mincí</target>
+            </trans-unit>
+            <trans-unit id="coins_state">
+                <source>coins_state</source>
+                <target>Máš</target>
+            </trans-unit>
+            <trans-unit id="copyrights">
+                <source>copyrights</source>
+                <target>Všechny práva vyhrazena.</target>
+            </trans-unit>
+            <trans-unit id="currency">
+                <source>currency</source>
+                <target>Měna</target>
+            </trans-unit>
+            <trans-unit id="download_caption">
+                <source>download.caption</source>
+                <target>Stáhni a hraj hru zdarma</target>
+            </trans-unit>
+            <trans-unit id="email">
+                <source>email</source>
+                <target>E-mailová adresa</target>
+            </trans-unit>
+            <trans-unit id="email_change">
+                <source>email_change</source>
+                <target>Změna e-mailu</target>
+            </trans-unit>
+            <trans-unit id="email_change_password_info">
+                <source>email_change_password_info</source>
+                <target>Po odeslání formuláře se správným heslem ti zašleme pokyny
+                                         e-mailem.
+                </target>
+            </trans-unit>
+            <trans-unit id="email_change_success">
+                <source>email_change_success</source>
+                <target>E-mailová adresa byla změnena.</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_success">
+                <source>email_change_request_success</source>
+                <target>Na tvoji e-mailovou adresu, na kterou je třeba provést změny, jsme odeslali pokyny
+                </target>
+            </trans-unit>
+            <trans-unit id="email_new">
+                <source>email_new</source>
+                <target>Nový e-mail</target>
+            </trans-unit>
+            <trans-unit id="email_new_repeat">
+                <source>email_new_repeat</source>
+                <target>Zopakuj nový e-mail</target>
+            </trans-unit>
+            <trans-unit id="guild">
+                <source>guild</source>
+                <target>Cech</target>
+            </trans-unit>
+            <trans-unit id="guild_leader">
+                <source>guild_leader</source>
+                <target>Vůdce cechu</target>
+            </trans-unit>
+            <trans-unit id="guild_members">
+                <source>guild_members</source>
+                <target>Členové cechu</target>
+            </trans-unit>
+            <trans-unit id="guild_name">
+                <source>guild_name</source>
+                <target>Název cechu</target>
+            </trans-unit>
+            <trans-unit id="guild_not_found">
+                <source>guild_not_found</source>
+                <target>Cech nebyl nalzen.</target>
+            </trans-unit>
+            <trans-unit id="guild_stat_draws">
+                <source>guild_stat_draws</source>
+                <target>Statistiky</target>
+            </trans-unit>
+            <trans-unit id="guild_stat_ladder_points">
+                <source>guild_stat_ladder_points</source>
+                <target>Body</target>
+            </trans-unit>
+            <trans-unit id="guild_stat_loses">
+                <source>guild_stat_loses</source>
+                <target>Prohry</target>
+            </trans-unit>
+            <trans-unit id="guild_stat_wins">
+                <source>guild_stat_wins</source>
+                <target>Výhry</target>
+            </trans-unit>
+            <trans-unit id="guilds">
+                <source>guilds</source>
+                <target>Cechy</target>
+            </trans-unit>
+            <trans-unit id="hello">
+                <source>hello</source>
+                <target>Ahoj</target>
+            </trans-unit>
+            <trans-unit id="homepage">
+                <source>homepage</source>
+                <target>Domov</target>
+            </trans-unit>
+            <trans-unit id="language_choose">
+                <source>language_choose</source>
+                <target>Vybrát jazyk</target>
+            </trans-unit>
+            <trans-unit id="language_current">
+                <source>language_current</source>
+                <target>Aktuální jazyk</target>
+            </trans-unit>
+            <trans-unit id="language_cz">
+                <source>language_cz</source>
+                <target>český</target>
+            </trans-unit>
+            <trans-unit id="language_en">
+                <source>language_en</source>
+                <target>angličtina</target>
+            </trans-unit>
+            <trans-unit id="language_pl">
+                <source>language_pl</source>
+                <target>polština</target>
+            </trans-unit>
+            <trans-unit id="language_tr">
+                <source>language_tr</source>
+                <target>turecký</target>
+            </trans-unit>
+            <trans-unit id="level">
+                <source>level</source>
+                <target>Level</target>
+            </trans-unit>
+            <trans-unit id="login">
+                <source>login</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="logout">
+                <source>logout</source>
+                <target>Odhlásit</target>
+            </trans-unit>
+            <trans-unit id="kingdom">
+                <source>kingdom</source>
+                <target>Říše</target>
+            </trans-unit>
+            <trans-unit id="navigation">
+                <source>navigation</source>
+                <target>Menu</target>
+            </trans-unit>
+            <trans-unit id="next">
+                <source>next</source>
+                <target>Další</target>
+            </trans-unit>
+            <trans-unit id="password">
+                <source>password</source>
+                <target>Heslo</target>
+            </trans-unit>
+            <trans-unit id="password_change">
+                <source>password_change</source>
+                <target>Změna hesla</target>
+            </trans-unit>
+            <trans-unit id="password_change_success">
+                <source>password_change_success</source>
+                <target>Heslo bylo úspěšně změneno.</target>
+            </trans-unit>
+            <trans-unit id="password_new">
+                <source>password_new</source>
+                <target>Nové heslo</target>
+            </trans-unit>
+            <trans-unit id="password_new_repeat">
+                <source>password_new_repeat</source>
+                <target>Zopakuj nové heslo</target>
+            </trans-unit>
+            <trans-unit id="password_repeat">
+                <source>password_repeat</source>
+                <target>Zopakuj heslo</target>
+            </trans-unit>
+            <trans-unit id="password_reset">
+                <source>password_reset</source>
+                <target>Zapomněl jsem heslo</target>
+            </trans-unit>
+            <trans-unit id="password_reset_success">
+                <source>password_reset_success</source>
+                <target>Heslo bylo změneno. Byl jsi přihlášen.</target>
+            </trans-unit>
+            <trans-unit id="payments_choose">
+                <source>payments_choose</source>
+                <target>Vyber si platební metodu</target>
+            </trans-unit>
+            <trans-unit id="payments_choose_another">
+                <source>payments_choose_another</source>
+                <target>Vyber si jinou platební metodu</target>
+            </trans-unit>
+            <trans-unit id="payments_paypal">
+                <source>payments_paypal</source>
+                <target>PayPal</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon">
+                <source>promotion_coupon</source>
+                <target>Promoční kod</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_usage_success">
+                <source>promotion_coupon_usage_success</source>
+                <target>Promoční kod byl úspěšně použit.</target>
+            </trans-unit>
+            <trans-unit id="payments_paypal_box_description">
+                <source>payments_paypal_box_description</source>
+                <target>Servis je hostován s paypal.com</target>
+            </trans-unit>
+            <trans-unit id="payments_paypal_box_title">
+                <source>payments_paypal_box_title</source>
+                <target>Koupit mince pomocí PayPal</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_box_description">
+                <source>promotion_coupon_box_description</source>
+                <target>Můžeš získat kod pro specialní event.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_box_title">
+                <source>promotion_coupon_box_title</source>
+                <target>Použít promoční kod</target>
+            </trans-unit>
+            <trans-unit id="payments_transfer">
+                <source>payments_transfer</source>
+                <target>Převod</target>
+            </trans-unit>
+            <trans-unit id="payments_transfer_box_description">
+                <source>payments_transfer_box_description</source>
+                <target>Servis je hostován s cashbill.pl</target>
+            </trans-unit>
+            <trans-unit id="payments_transfer_box_title">
+                <source>payments_transfer_box_title</source>
+                <target>Koupit mince převodem</target>
+            </trans-unit>
+            <trans-unit id="payments_paysafecard">
+                <source>payments_paysafecard</source>
+                <target>PaySafeCard</target>
+            </trans-unit>
+            <trans-unit id="payments_paysafecard_box_description">
+                <source>payments_paysafecard_box_description</source>
+                <target>Servis je hostován s cashbill.pl</target>
+            </trans-unit>
+            <trans-unit id="payments_paysafecard_box_title">
+                <source>payments_paysafecard_box_title</source>
+                <target>Koupit mince použitím PaySafeCard</target>
+            </trans-unit>
+            <trans-unit id="previous">
+                <source>previous</source>
+                <target>Předešlá</target>
+            </trans-unit>
+            <trans-unit id="project_caption">
+                <source>project_caption</source>
+                <target>Dej nám vědet</target>
+            </trans-unit>
+            <trans-unit id="published_by">
+                <source>published_by</source>
+                <target>Publikováno od</target>
+            </trans-unit>
+            <trans-unit id="ranking_show_full">
+                <source>ranking_show_full</source>
+                <target>Zobrazit celé hodnocení</target>
+            </trans-unit>
+            <trans-unit id="ranking_type_guild_name">
+                <source>ranking_type_guild_name</source>
+                <target>Napiš název cechu</target>
+            </trans-unit>
+            <trans-unit id="ranking_type_player_name">
+                <source>ranking_type_player_name</source>
+                <target>Napiš jméno hráče</target>
+            </trans-unit>
+            <trans-unit id="register_create_one">
+                <source>register_create_one</source>
+                <target>Vytvořit</target>
+            </trans-unit>
+            <trans-unit id="registration">
+                <source>registration</source>
+                <target>Zaregistrovat se</target>
+            </trans-unit>
+            <trans-unit id="registration_ask">
+                <source>registration_ask</source>
+                <target>Nemáš ještě účet?</target>
+            </trans-unit>
+            <trans-unit id="registration_success">
+                <source>registration_success</source>
+                <target>Tvůj účet byl úspěšně zaregistrován. Byl jsi přihlášen.</target>
+            </trans-unit>
+            <trans-unit id="registration_password_help">
+                <source>registration_password_help</source>
+                <target>Nezapoměn si dát silné heslo.</target>
+            </trans-unit>
+            <trans-unit id="registration_email_help">
+                <source>registration_email_help</source>
+                <target>Užitečné bude když si změniš heslo nebo-li e-mailovou adresu.</target>
+            </trans-unit>
+            <trans-unit id="registration_security_question_help">
+                <source>registration_security_question_help</source>
+                <target>Chceš vrátit účet? Kontaktuj prosím podporu.</target>
+            </trans-unit>
+            <trans-unit id="remind_password">
+                <source>remind_password</source>
+                <target>Připomenout heslo</target>
+            </trans-unit>
+            <trans-unit id="request_password_reset_expired">
+                <source>request_password_reset_expired</source>
+                <target>Žádost změny hesla vypršela. Zkus to prosím znovu.</target>
+            </trans-unit>
+            <trans-unit id="request_password_reset_success">
+                <source>request_password_reset_success</source>
+                <target>Na e-mailovou adresu jsme ti poslali pokyny.</target>
+            </trans-unit>
+            <trans-unit id="security_answer">
+                <source>security_answer</source>
+                <target>Bezpečnostní odpověd</target>
+            </trans-unit>
+            <trans-unit id="security_question">
+                <source>security_question</source>
+                <target>Bezpečnostní otázka</target>
+            </trans-unit>
+            <trans-unit id="send">
+                <source>send</source>
+                <target>Odeslát</target>
+            </trans-unit>
+            <trans-unit id="search">
+                <source>search</source>
+                <target>Vyhledat</target>
+            </trans-unit>
+            <trans-unit id="server_status">
+                <source>server_status</source>
+                <target>Status serveru</target>
+            </trans-unit>
+            <trans-unit id="server_status_online">
+                <source>server_status_online</source>
+                <target>Online</target>
+            </trans-unit>
+            <trans-unit id="server_status_offline">
+                <source>server_status_offline</source>
+                <target>Momentálně probíha údržba / Offline</target>
+            </trans-unit>
+            <trans-unit id="server_status_not_released">
+                <source>server_status_not_released</source>
+                <target>Projekt ještě nebyl vydán.</target>
+            </trans-unit>
+            <trans-unit id="sign_in">
+                <source>sign_in</source>
+                <target>Přihlásit se</target>
+            </trans-unit>
+            <trans-unit id="signing_in">
+                <source>signing_in</source>
+                <target>Přihlašování</target>
+            </trans-unit>
+            <trans-unit id="shop">
+                <source>shop</source>
+                <target>ItemShop</target>
+            </trans-unit>
+            <trans-unit id="shop_buy_item">
+                <source>shop_buy_item</source>
+                <target>Koupit</target>
+            </trans-unit>
+            <trans-unit id="shop_item_not_found">
+                <source>shop_item_not_found</source>
+                <target>Požadovaný předmět není v naší nabídce.</target>
+            </trans-unit>
+            <trans-unit id="shop_item_unavailable">
+                <source>shop_item_unavailable</source>
+                <target>Požadovaný předmět je momentálně nedostupný. Zkus to později.</target>
+            </trans-unit>
+            <trans-unit id="shop_category_not_found">
+                <source>shop_category_not_found</source>
+                <target>Kategorie nebyla nalzena.</target>
+            </trans-unit>
+            <trans-unit id="shop_category_unavailable">
+                <source>shop_category_unavailable</source>
+                <target>Kategorie je momentalně nedostupná. Zkus to později.</target>
+            </trans-unit>
+            <trans-unit id="shop.unavailable">
+                <source>shop.unavailable</source>
+                <target>Mrzí nás to, ale ItemShop není momentalně na naší stránce. Navštív náš obchod ve hře.
+                </target>
+            </trans-unit>
+            <trans-unit id="support">
+                <source>support</source>
+                <target>Podpora</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_send">
+                <source>support_ticket_send</source>
+                <target>Tiket byl odeslán. Odpověd dostaneš co nejdřív to půjde.</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_send">
+                <source>support_ticket_reply_send</source>
+                <target>Odpověd byla odeslána. Odpovíme ti co nejdřív to půjde.</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_list">
+                <source>support_ticket_list</source>
+                <target>List</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_new">
+                <source>support_ticket_new</source>
+                <target>Nový tiket</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_category">
+                <source>support_ticket_category</source>
+                <target>Kategorie</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_content">
+                <source>support_ticket_content</source>
+                <target>Kontent</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_createdAt">
+                <source>support_ticket_createdAt</source>
+                <target>Datum vytvoření</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_title">
+                <source>support_ticket_title</source>
+                <target>Název</target>
+            </trans-unit>
+            <trans-unit id="terms_accept_info">
+                <source>terms_accept_info</source>
+                <target>Registrovaní e-mail potvrzuje %linkStart%terms%linkEnd%.</target>
+            </trans-unit>
+            <trans-unit id="time_days">
+                <source>time_days</source>
+                <target>den|dní</target>
+            </trans-unit>
+            <trans-unit id="time_hours">
+                <source>time_hours</source>
+                <target>hodina|hodiny</target>
+            </trans-unit>
+            <trans-unit id="time_minutes">
+                <source>time_minutes</source>
+                <target>minuta|minuty</target>
+            </trans-unit>
+            <trans-unit id="welcome_message">
+                <source>welcome_message</source>
+                <target>Vítej na naší stránce.</target>
+            </trans-unit>
+            <trans-unit id="welcome_caption">
+                <source>welcome_caption</source>
+                <target>Jsme rádi že jsi s náma.</target>
+            </trans-unit>
+            <trans-unit id="user_ban">
+                <source>user_ban</source>
+                <target>Zablokovat užívatele</target>
+            </trans-unit>
+            <trans-unit id="user_unban">
+                <source>user_unban</source>
+                <target>Odblokovat užívatele</target>
+            </trans-unit>
+            <trans-unit id="user_ban_reason">
+                <source>user_ban_reason</source>
+                <target>Důvod zablokování</target>
+            </trans-unit>
+            <trans-unit id="user_characters_list">
+                <source>user_characters_list</source>
+                <target>Seznam postav</target>
+            </trans-unit>
+            <trans-unit id="user_has_no_characters">
+                <source>user_has_no_characters</source>
+                <target>Žádné postavy</target>
+            </trans-unit>
+            <trans-unit id="user_status_banned_perm">
+                <source>user_status_banned_perm</source>
+                <target>PERM</target>
+            </trans-unit>
+            <trans-unit id="user_status_ok">
+                <source>user_status_ok</source>
+                <target>OK</target>
+            </trans-unit>
+            <trans-unit id="user_status_banned_perm_util">
+                <source>user_status_banned_perm_util</source>
+                <target>Zablokován (%date%)</target>
+            </trans-unit>
+            <trans-unit id="user_title_1">
+                <source>user_title_1</source>
+                <target>Řytírský</target>
+            </trans-unit>
+            <trans-unit id="user_title_2">
+                <source>user_title_2</source>
+                <target>Ušlechtilý</target>
+            </trans-unit>
+            <trans-unit id="user_title_3">
+                <source>user_title_3</source>
+                <target>Dobrý</target>
+            </trans-unit>
+            <trans-unit id="user_title_4">
+                <source>user_title_4</source>
+                <target>Přátelský</target>
+            </trans-unit>
+            <trans-unit id="user_title_5">
+                <source>user_title_5</source>
+                <target>Agresívní</target>
+            </trans-unit>
+            <trans-unit id="user_title_6">
+                <source>user_title_6</source>
+                <target>Podvodný</target>
+            </trans-unit>
+            <trans-unit id="user_title_7">
+                <source>user_title_7</source>
+                <target>Zlomyslný</target>
+            </trans-unit>
+            <trans-unit id="user_title_8">
+                <source>user_title_8</source>
+                <target>Krutý</target>
+            </trans-unit>
+            <trans-unit id="users">
+                <source>users</source>
+                <target>Užívatelé</target>
+            </trans-unit>
+            <trans-unit id="vip_account">
+                <source>vip_account</source>
+                <target>VIP účet</target>
+            </trans-unit>
+            <trans-unit id="vip_bronze">
+                <source>vip_bronze</source>
+                <target>VIP - YANG</target>
+            </trans-unit>
+            <trans-unit id="vip_silver">
+                <source>vip_silver</source>
+                <target>VIP - EXP</target>
+            </trans-unit>
+            <trans-unit id="vip_gold">
+                <source>vip_gold</source>
+                <target>VIP - DROP</target>
+            </trans-unit>
+            <trans-unit id="you_will_receive">
+                <source>you_will_receive</source>
+                <target>Získal jsi</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

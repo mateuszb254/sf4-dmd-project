@@ -1,0 +1,9 @@
+{% form_theme form 'admin/form_theme.html.twig' %}
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<div class="text-center">
+    <button type="submit" class="btn button-medium btn-primary">
+        {% trans %}save{% endtrans %}
+    </button>
+</div>
+{{ form_end(form) }}

@@ -1,0 +1,52 @@
+.header {
+  background: url('../../images/header/background.png') center center;
+
+  width: 100%;
+  min-width: $contentWidth;
+  height: 329px;
+
+  position: relative;
+
+  &::after {
+    content: '';
+
+    background: url('../../images/header/background_after.png') center center;
+
+    width: 100%;
+    height: 159px;
+
+    display: block;
+
+    bottom: -100px;
+    position: absolute;
+  }
+
+  .header-content {
+    width: $contentWidth;
+    height: 329px;
+    margin: auto;
+
+    position: relative;
+
+    .logo-wrapper {
+      top: 139px;
+      left: 314px;
+      position: absolute;
+
+      .caption {
+        font-family: "Van Helsing", monospace;
+        font-size: 16px;
+        text-shadow: 1px 1px #000;
+        text-align: center;
+        color: #e2f1f1;
+        bottom: -4px;
+        width: 100%;
+        text-transform: uppercase;
+        position: absolute;
+        cursor: default;
+        padding-bottom: 15px;
+      }
+    }
+  }
+
+}

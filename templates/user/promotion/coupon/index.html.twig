@@ -1,0 +1,10 @@
+{% extends 'user/payments/base.html.twig' %}
+{% block title %}{% trans %}promotion_coupon{% endtrans %}{% endblock %}
+{% block payments_content %}
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <div class="form-row">
+        <button class="button-medium">{% trans %}send{% endtrans %}</button>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,58 @@
+.footer {
+  background: url('../../images/footer/background.png') center no-repeat;
+
+  width: 100%;
+  min-width: $contentWidth;
+
+  height: 360px;
+
+  position: relative;
+
+  .footer-content {
+    width: $contentWidth;
+    right: 0;
+    left: 0;
+    top: 130px;
+    height: 135px;
+    margin: auto;
+
+    position: absolute;
+
+    .footer-nav {
+      width: 100%;
+      text-align: center;
+
+
+      li {
+        display: inline-block;
+
+        a {
+          color: $defaultFontColor;
+          font-size: 9px;
+          text-transform: uppercase;
+          padding: 10px 10px;
+          opacity: 0.6;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .copyrights {
+      width: 100%;
+
+      bottom: 0;
+
+      margin: auto;
+      position: absolute;
+      text-align: center;
+
+      p {
+        font-size: 9px;
+        opacity: 0.6;
+      }
+    }
+  }
+}

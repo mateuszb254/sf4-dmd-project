@@ -1,0 +1,76 @@
+{% set isArticlePage = app.request.get('_route') in ['admin_article_index', 'admin_article_new', 'admin_article_edit'] %}
+{% set isSupportPage = app.request.get('_route') in ['admin_support_tickets', 'admin_support_category_edit', 'admin_support_categories_list', 'admin_support_ticket', 'admin_support_category_index'] %}
+{% set isPromotionPage = app.request.get('_route') in ['admin_promotion_coupon_index', 'admin_promotion_index', 'admin_promotion_edit' ] %}
+{% set isUserPage = app.request.get('_route') in ['admin_user_profile', 'admin_users_index'] %}
+{% set isRoleGroupPage = app.request.get('_route') in ['admin_users_role_group_index', 'admin_users_role_group_edit'] %}
+<ul class="sidebar-menu" data-widget="tree">
+    <li class="header">{% trans %}navigation{% endtrans %}</li>
+    {% if is_granted(constant('App\\User\\Permissions::USER_CAN_BROWSE_SECTION')) %}
+        <li class="{% if isUserPage %}active{% endif %}">
+            <a href="{{ path('admin_users_index') }}">
+                <i class="fa fa-user"></i><span>{% trans %}users{% endtrans %}</span>
+            </a>
+        </li>
+    {% endif %}
+    {% if is_granted(constant('App\\User\\Entity\\User::ROLE_GLOBAL_ADMIN')) %}
+        <li class="{% if isRoleGroupPage %}active{% endif %}">
+            <a href="{{ path('admin_users_role_group_index') }}">
+                <i class="fa fa-user"></i><span>{% trans %}user_role_groups{% endtrans %}</span>
+            </a>
+        </li>
+    {% endif %}
+    <li class="{% if isPromotionPage %}active{% endif %}">
+        <a href="{{ path('admin_promotion_coupon_index') }}">
+            <i class="fa fa-id-card"></i>
+            <span>
+                {% trans %}promotion_codes{% endtrans %}
+            </span>
+        </a>
+    </li>
+    {% if is_granted(constant('App\\User\\Permissions::ARTICLE_CAN_BROWSE_SECTION')) %}
+        {% set isArticlePage = app.request.get('_route') in ['admin_article_index', 'admin_article_new', 'admin_article_edit'] %}
+        <li class="treeview{% if isArticlePage %} active{% endif %}">
+            <a href="{% if isArticlePage %}active{% endif %}">
+                <i class="fa fa-newspaper-o"></i>
+                <span>
+                    {% trans %}articles{% endtrans %}
+                </span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu" style="display: {{ isArticlePage ? 'block' : 'none' }};">
+                <li class="{% if app.request.get('_route') == 'admin_article_index' %}active{% endif %}">
+                    <a href="{{ path('admin_article_index') }}">
+                        <i class="fa fa-edit"></i>{% trans %}browse{% endtrans %}
+                    </a>
+                </li>
+                {% if is_granted(constant('App\\User\\Permissions::ARTICLE_CAN_ADD')) %}
+                    <li class="{% if app.request.get('_route') == 'admin_article_new' %}active{% endif %}">
+                        <a href="{{ path('admin_article_new') }}">
+                            <i class="fa fa-plus-square-o"></i> {% trans %}new{% endtrans %}
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </li>
+    {% endif %}
+    <li class="treeview{% if isSupportPage %} active{% endif %}">
+        <a href="#">
+            <i class="fa fa-envelope"></i>
+            <span>{% trans %}support{% endtrans %}</span>
+            <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+        </a>
+        <ul class="treeview-menu" style="display: {{ isSupportPage ? 'block' : 'none' }};">
+            <li class="active">
+                <a href="{{ path('admin_support_tickets') }}">{% trans %}browse{% endtrans %}
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    {% trans %}support_categories{% endtrans %}
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>

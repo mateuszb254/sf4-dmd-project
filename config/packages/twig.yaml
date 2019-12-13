@@ -1,0 +1,18 @@
+twig:
+  default_path: '%kernel.project_dir%/templates'
+  debug: '%kernel.debug%'
+  strict_variables: '%kernel.debug%'
+
+  form_themes:
+    - 'form_theme.html.twig'
+    - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+
+  globals:
+    project_name: '%project_name%'
+    board_url: '%page.board_url%'
+    facebook_url: 'https://bit.ly/2WsMYNA'
+
+    default_locale: '%locale%'
+    supportedLocales: '%supported_locales%'
+
+

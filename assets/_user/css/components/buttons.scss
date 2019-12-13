@@ -1,0 +1,56 @@
+.button-medium {
+  background: url('../../images/components/button/button_medium.png') top center no-repeat;
+  width: 136px;
+  height: 46px;
+
+  font-family: "Van Helsing", monospace;
+  color: $defaultFontColor;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.button-small {
+  background: url('../../images/components/button/button_small.png') top center no-repeat;
+  width: 93px;
+  height: 31px;
+
+  font-family: "Van Helsing", monospace;
+  color: $defaultFontColor;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.button-download {
+  font-family: "Van Helsing", monospace;
+  background: url('../../images/components/button/button_download.png') top center no-repeat;
+  width: 253px;
+  height: 106px;
+  font-size: 17px;
+  padding: 10px 48px;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.button-small:hover, .button-medium:focus,
+.button-medium:hover, .button-medium:focus,
+.button-download:hover, .button-download:focus {
+  &:not(:disabled) {
+    background-position: center bottom;
+  }
+}
+
+.button-small:active,
+.button-medium:active {
+  background-position: center center;
+}
+
+/** support links to look like buttons */
+a.button-small, a.button-medium, a.button-download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/** end **/

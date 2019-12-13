@@ -1,0 +1,47 @@
+{% extends 'user/support/base.html.twig' %}
+{% from 'macro.html.twig' import paginate %}
+{% block header_title %}{% trans %}support_ticket_list{% endtrans %}{% endblock %}
+{% block support_content %}
+    <table class="table">
+        <tr>
+            <th>
+                {% trans %}support_ticket_title{% endtrans %}
+            </th>
+            <th>
+                {% trans %}support_ticket_category{% endtrans %}
+            </th>
+            <th>
+                {% trans %}support_ticket_createdAt{% endtrans %}
+            </th>
+            <th>
+                {% trans %}support_ticket_status{% endtrans %}
+            </th>
+            <th>
+                -
+            </th>
+        </tr>
+        {% for ticket in pagination.result %}
+            <tr>
+                <td class="left">{{ ticket.title }}</td>
+                <td>{{ ticket.category }}</td>
+                <td>{{ ticket.createdAt|date('Y-m-d H:i') }}</td>
+                <td>{{ ticket.status|lower|trans }}</td>
+                <td><a href="{{ path('support_ticket_show', {'id' : ticket.id }) }}">{% trans %}browse{% endtrans %}</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">
+                    {% trans %}support_tickets_not_found{% endtrans %}
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <a href="{{ path('support_ticket_new') }}">{% trans %}support_ticket_send_new{% endtrans %}</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {{ paginate(pagination, 'support_ticket_list') }}
+{% endblock %}
