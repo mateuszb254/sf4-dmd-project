@@ -1,0 +1,83 @@
+{% if app.user %}
+    <section class="box user-box">
+        <header class="box-header">
+            <h3>{% trans %}panel_box{% endtrans %}</h3>
+        </header>
+        <div class="box-middle">
+            <div class="box-content">
+                <p class="hello-message">
+                    {% trans %}hello{% endtrans %},
+                    <span class="user-data">{{ app.user.username }}!</span>
+                </p>
+                <p>{% trans %}coins_state{% endtrans %}:
+                    <span class="coins">
+                        {{ app.user.coins }} {% transchoice (app.user.coins) %}coins{% endtranschoice %}
+                    </span>
+                </p>
+                <p>
+                    {% trans %}e-mail{% endtrans %}:
+                    <span class="user-data">
+                        {{ app.user.email|mask(constant('App\\Core\\Twig\\MaskStringExtension::EMAIL_TYPE')) }}
+                    </span>
+                </p>
+                <nav class="navigation">
+                    <ul>
+                        {% if is_granted(constant('App\\User\\Model\\UserInterface::ROLE_ADMIN')) %}
+                            <li>
+                                <a class="red" href="{{ path('admin_dashboard') }}">{% trans %}admin_panel{% endtrans %}</a>
+                            </li>
+                        {% endif %}
+                        <li><a href="{{ path('user_panel') }}">{% trans %}user_panel{% endtrans %}</a></li>
+                        <li>
+                            <a class="blue" href="#">{% trans %}shop{% endtrans %}
+                            </a>
+                        </li>
+                        <li>
+                            <a class="gold" href="{{ path('payments_index') }}">{% trans %}buy_coins{% endtrans %}
+                            </a>
+                        </li>
+                        <li>
+                            <a class="orange" href="{{ path('support_index') }}">{% trans %}support{% endtrans %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('user_change_password') }}">{% trans %}password_change{% endtrans %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('user_change_email_request') }}">{% trans %}email_change{% endtrans %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ path('user_change_char_removal_code') }}">{% trans %}char_removal_code_change{% endtrans %}</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <a href="{{ path('auth_logout') }}" class="button-medium logout">{% trans %}logout{% endtrans %}</a>
+            </div>
+        </div>
+    </section>
+{% else %}
+    <section class="box user-box">
+        <header class="box-header">
+            <h3>{% trans %}signing_in{% endtrans %}</h3>
+        </header>
+        <div class="box-middle">
+            <div class="box-content">
+                {{ render(controller(
+                    'App\\Auth\\Controller\\AuthController::userAuth'
+                )) }}
+                <div class="links">
+                    <p>{% trans %}registration_ask{% endtrans %}
+                        <a href="{{ path('user_registration') }}">{% trans %}register_create_one{% endtrans %}!</a>
+                    </p>
+                    <p>
+                        <a href="{{ path('user_request_password_reset') }}">{% trans %}remind_password{% endtrans %}
+                            .</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endif %}

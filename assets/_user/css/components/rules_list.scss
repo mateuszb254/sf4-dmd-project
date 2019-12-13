@@ -1,0 +1,33 @@
+%defaultNestedList {
+  padding-left: 10px;
+  list-style-position: inside;
+}
+
+ol.rules-list {
+  & > li {
+    font-size: 13px;
+    font-weight: bold;
+    list-style-type: upper-roman;
+    padding-bottom: 5px;
+
+    & > ol {
+      @extend %defaultNestedList;
+      font-size: 12px;
+      font-weight: normal;
+
+      li {
+        list-style-type: decimal;
+
+        & > ol {
+          @extend %defaultNestedList;
+
+          li {
+            list-style-type: circle;
+          }
+        }
+
+      }
+    }
+  }
+}
+

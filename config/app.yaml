@@ -1,0 +1,30 @@
+parameters:
+  project_name: 'Diamond'
+
+  #currencies
+  supported_currencies: ['PLN']
+
+  #document
+  documents_storage_path: '%kernel.project_dir%/var/documents/%env(string:APP_ENV)%'
+
+  #game
+  game.host: '%env(string:GAME_HOST)%'
+  game.port: '%env(int:GAME_PORT)%'
+  game.password: '%env(string:GAME_PASSWORD)%'
+
+  #mailer
+  mailer.defaultFrom: '%env(string:MAILER_DEFAULT_FROM_ADDRESS)%'
+  mailer.name: '%env(string:MAILER_DEFAULT_FROM_NAME)%'
+
+  #locales
+  locale: 'en'
+  supported_locales: ['pl', 'en', 'tr', 'cz', 'ro']
+  fallback_locales: ['%locale%']
+
+  #page
+  page.board_url: '#'
+
+  #recaptcha
+  recaptcha.public_key: '%env(string:RECAPTCHA_PUBLIC_KEY)%'
+  recaptcha.secret_key: '%env(string:RECAPTCHA_SECRET_KEY)%'
+  recaptcha.enabled: true

@@ -1,0 +1,12 @@
+{% extends 'user/base.html.twig' %}
+{% block template_name %}shop{% endblock %}
+{% block header_title %}{% trans %}shop{% endtrans %}{% endblock %}
+{% block content %}
+    <div class="flash-message-wrapper">
+        <div class="flash-message failure">
+            <p class="flash-message-content">
+                {% trans %}shop.unavailable{% endtrans %}
+            </p>
+        </div>
+    </div>
+{% endblock %}

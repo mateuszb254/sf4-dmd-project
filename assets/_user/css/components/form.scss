@@ -1,0 +1,46 @@
+.form-row {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+
+  & > * {
+    display: block;
+  }
+
+  label {
+    font-size: 15px;
+  }
+
+  input, textarea, select, button {
+    &:disabled {
+      cursor: not-allowed;
+    }
+
+    margin: auto;
+  }
+
+  .form-error, .form-help {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .form-error {
+    color: #f19e9e;
+  }
+
+  .form-help {
+    color: #ababab;;
+  }
+
+  &.checkbox-row {
+    label {
+      font-family: 'Raleway', sans-serif;
+      font-size: 11px;
+      text-transform: none;
+    }
+
+    input[type=checkbox] {
+      margin: 5px auto;
+    }
+  }
+}

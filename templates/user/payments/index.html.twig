@@ -1,0 +1,50 @@
+{% extends  'user/payments/base.html.twig' %}
+{% block template_name %}payments{% endblock %}
+{% block title %}{% trans %}payments_choose{% endtrans %}{% endblock %}
+{% block payments_content %}
+    <a href="{{ path('promotion_coupon_index') }}" class="frame-box payment-box">
+        <div class="frame-box image-wrapper">
+            <img src="{{ asset('build/images/static/_user/payments/promotion_code_static.png') }}" alt="">
+        </div>
+        <div class="description">
+            <h4>{% trans %}promotion_coupon_box_title{% endtrans %}</h4>
+            <p>{% trans %}promotion_coupon_box_description{% endtrans %}</p>
+        </div>
+    </a>
+    <a href="{{ path('payments_paypal_index') }}" class="frame-box payment-box">
+        <div class="frame-box image-wrapper">
+            <img src="{{ asset('build/images/static/_user/payments/paypal_static.png') }}" alt="">
+        </div>
+        <div class="description">
+            <h4>{% trans %}payments_paypal_box_title{% endtrans %}</h4>
+            <p>{% trans %}payments_paypal_box_description{% endtrans %}</p>
+        </div>
+    </a>
+    <a href="{{ path('payments_transfer_index') }}" class="frame-box payment-box">
+        <div class="frame-box image-wrapper">
+            <img src="{{ asset('build/images/static/_user/payments/transfers_static.png') }}" alt="">
+        </div>
+        <div class="description">
+            <h4>{% trans %}payments_transfer_box_title{% endtrans %}</h4>
+            <p>{% trans %}payments_transfer_box_description{% endtrans %}</p>
+        </div>
+    </a>
+    <a href="{{ path('payments_paysafecard_index') }}" class="frame-box payment-box">
+        <div class="frame-box image-wrapper">
+            <img src="{{ asset('build/images/static/_user/payments/paysafecard_static.png') }}" alt="">
+        </div>
+        <div class="description">
+            <h4>{% trans %}payments_paysafecard_box_title{% endtrans %}</h4>
+            <p>{% trans %}payments_paysafecard_box_description{% endtrans %}</p>
+        </div>
+    </a>
+    <a class="frame-box payment-box">
+        <div class="frame-box image-wrapper">
+            <img src="{{ asset('build/images/static/_user/payments/sms_static.png') }}" alt="">
+        </div>
+        <div class="description">
+            <h4>{% trans %}payments_sms_box_title{% endtrans %}</h4>
+            <p>{% trans %}payments_sms_box_description{% endtrans %}</p>
+        </div>
+    </a>
+{% endblock %}

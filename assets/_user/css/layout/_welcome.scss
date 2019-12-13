@@ -1,0 +1,78 @@
+.welcome {
+  background: #FFF;
+  width: 100%;
+  font-size: 13px;
+  border-bottom: 1px #000 solid;
+  min-width: $contentWidth;
+
+  span {
+    font-weight: bold;
+  }
+
+  p {
+    color: #000;
+    font-size: 11px;
+  }
+
+  .welcome-content {
+    width: $contentWidth;
+    padding: 12px 20px;
+    box-sizing: border-box;
+
+    margin: auto;
+
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    .welcome-message {
+
+      p:first-child {
+        font-size: 12px;
+      }
+
+      p:not(:last-child) {
+        margin-bottom: 4px;
+      }
+
+      p.error {
+        color: red;
+      }
+
+      a {
+        color: #000;
+        font-weight: bold;
+      }
+    }
+
+    .welcome-languages {
+      display: flex;
+
+      .welcome-languages-info {
+        p {
+          display: block;
+        }
+
+        p:not(:last-child) {
+          margin-bottom: 4px;
+        }
+      }
+
+      .welcome-languages-select {
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+
+        a {
+          display: inline-block;
+          margin: 0 3px;
+        }
+
+        img {
+          height: 20px;
+          width: 20px;
+        }
+      }
+    }
+  }
+}

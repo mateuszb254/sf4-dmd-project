@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="email_nonexistent">
+                <source>email_nonexistent</source>
+                <target>Zadán e-mail nepatří žádnému účtu.</target>
+            </trans-unit>
+            <trans-unit id="recaptcha_invalid">
+                <source>recaptcha_invalid</source>
+                <target>Musíš potvrdit recaptcha.</target>
+            </trans-unit>
+            <trans-unit id="payments_promotional_not_found">
+                <source>payments_promotional_not_found</source>
+                <target>Promoční kod neexistuje.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_already_used">
+                <source>promotion_coupon_already_used</source>
+                <target>Promoční kod již byl použit.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_one_per_tag">
+                <source>promotion_coupon_one_per_tag</source>
+                <target>Promoční kód s tímto promočním fondem již byl použit.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

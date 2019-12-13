@@ -1,0 +1,184 @@
+{% from 'macro.html.twig' import
+    displayEmpireFlag, displayTitlePoints, displayAccountStatus, displayTimeAsText, displayProfessionName,
+    displayProfessionImage %}
+{% extends 'user/base.html.twig' %}
+{% block content %}
+<div class="guild-profile">
+    <div class="guild-profile-header">
+        <p class="guild-name">
+            <span>
+                 {% trans %}guild{% endtrans %}:
+            </span>
+            <span>
+                {{ guild.name }}
+            </span>
+        </p>
+        <div class="guild-flag-wrapper">
+            {{ displayEmpireFlag(1) }}
+        </div>
+        <div class="guild-level">
+            <span>
+                {% trans %}level{% endtrans %}:
+            </span>
+            <span>
+                {{ guild.level }}
+            </span>
+        </div>
+    </div>
+    <p class="guild-stat-ladder-points">
+        <strong>{% trans %}guild_stat_ladder_points{% endtrans %}</strong>: {{ guild.ladderPoints }}
+    </p>
+    <div class="guild-profile-stats">
+        <div class="guild-stat-ladder-wars">
+            <span>{% trans %}guild_stat_wins{% endtrans %}: {{ guild.wins }}</span>
+            <span>{% trans %}guild_stat_draws{% endtrans %}: {{ guild.draws }}</span>
+            <span>{% trans %}guild_stat_loses{% endtrans %}: {{ guild.loses }}</span>
+        </div>
+    </div>
+    <div class="guild-profile-members-wrapper">
+        <p>{% trans %}guild_leader{% endtrans %}</p>
+        <div class="guild-profile-leader">
+            {% for member in guild.members if member.isLeader %}
+                {% set character = member.character %}
+                <span class="level">Lv. {{ character.level }}</span>
+                <span><a href="#">{{ character.name }}</a></span>
+                <span>{{ displayTitlePoints(character.titlePoints) }}</span>
+                <span>{{ displayProfessionName(character.profession) }}</span>
+            {% endfor %}
+        </div>
+        <p>{% trans %}guild_members{% endtrans %}</p>
+        <div class="guild-profile-members">
+            <table>
+                {% for member in guild.members if not member.isLeader %}
+                    {% set character = member.character %}
+                    <tr class="guild-profile-member">
+                        <td class="level">Lv. {{ character.level }}</td>
+                        <td>
+                            <a href="{{ path('character_profile', {
+                                'name' : character.name
+                            }) }}">{{ character.name }}</a>
+                        </td>
+                        <td>{{ displayTitlePoints(character.titlePoints) }}</td>
+                        <td>{{ displayProfessionName(character.profession) }}</td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td style="text-align: center; color: #bdbcbc;">{% trans %}guild_has_no_members{% endtrans %}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <style>
+
+        .guild-profile-members {
+            font-size: 10px;
+            width: 95%;
+            margin: auto;
+            border-top: 1px solid rgba(205, 238, 238, 0.2);
+            border-bottom: 1px solid rgba(205, 238, 238, 0.2);
+        }
+
+
+        .guild-profile a {
+            color: #FFF;
+        }
+
+        .guild-profile-members table {
+            width: 91%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        .guild-profile-members td:not(:first-child) {
+            text-align: left;
+            padding: 0 0 0 30px;
+        }
+
+        .guild-profile-members td:first-child {
+            padding: 8px 0 8px 0;
+            text-align: right;
+        }
+
+        .guild-profile-members tr:not(:last-child) td {
+            border-bottom: 1px solid rgba(205, 238, 238, 0.2);
+        }
+
+        p.guild-stat-ladder-points,
+        .guild-profile-members-wrapper p {
+            margin: 25px 0 5px 0;
+        }
+
+        .guild-level {
+            margin: 0 auto 10px auto;
+        }
+
+        .guild-flag-wrapper {
+            padding: 8px 0;
+        }
+
+        .guild-level {
+            font-size: 11px;
+        }
+
+        .guild-profile p {
+            font-size: 11px;
+        }
+
+        .guild-profile-leader {
+            font-size: 11px;
+            width: 100%;
+            border-top: 1px solid rgba(205, 238, 238, 0.2);
+            border-bottom: 1px solid rgba(205, 238, 238, 0.2);
+        }
+
+        .guild-profile-leader {
+            padding: 8px 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .level {
+            color: #06c506;
+        }
+
+        .guild-profile {
+            width: 350px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .guild-profile-header {
+            font-size: 12px;
+        }
+
+        .guild-profile-stats {
+            padding: 8px 0;
+            border-top: 1px solid rgba(205, 238, 238, 0.2);
+            border-bottom: 1px solid rgba(205, 238, 238, 0.2);
+            width: 325px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .guild-stat-ladder-points {
+            font-size: 11px;
+        }
+
+        .guild-stat-ladder-wars {
+            display: flex;
+            justify-content: space-around;
+            font-size: 10px;
+        }
+
+        .guild-stat-ladder-wars span {
+            display: block;
+            flex: 1;
+        }
+
+        .guild-stat-ladder-wars span:not(:last-child) {
+            border-right: 1px solid rgba(205, 238, 238, 0.2);
+        }
+    </style>
+    {% endblock %}

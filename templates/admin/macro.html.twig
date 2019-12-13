@@ -1,0 +1,37 @@
+{%- macro progressBar(total, amount) -%}
+    {% if total == 0 and amount == 0 %}
+        {% set percents = 0 %}
+    {% else %}
+        {% set percents = (total-amount) == 0 ? 0 : (100/(total/(total-amount)))|round %}
+    {% endif %}
+
+    {% if percents > 50 %}
+        {% set class = 'success' %}
+    {% elseif percents > 25 %}
+        {% set class = 'yellow' %}
+    {% else %}
+        {% set class = 'danger' %}
+    {% endif %}
+
+    <div class="progress progress-xs">
+        <div role="img" class="progress-bar progress-bar-{{ class }}" style="width: {{ percents }}%"></div>
+    </div>
+{%- endmacro -%}
+
+{%- macro percentBadge(total, amount) -%}
+    {% if total == 0 and amount == 0 %}
+        {% set percents = 0 %}
+    {% else %}
+        {% set percents = (total-amount) == 0 ? 0 : (100/(total/(total-amount)))|round %}
+    {% endif %}
+
+    {% if percents > 50 %}
+        {% set class = 'green' %}
+    {% elseif percents > 25 %}
+        {% set class = 'yellow' %}
+    {% else %}
+        {% set class = 'red' %}
+    {% endif %}
+
+    <span class="badge bg-{{ class }}">{{ percents }}%</span>
+{%- endmacro -%}

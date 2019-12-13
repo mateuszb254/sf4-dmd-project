@@ -1,0 +1,637 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="auth_required">
+                <source>auth_required</source>
+                <target>Bu bölüm kimlik doğrulaması gerektiriyor. Lütfen giriş yapın.</target>
+            </trans-unit>
+            <trans-unit id="board">
+                <source>board</source>
+                <target>Forum</target>
+            </trans-unit>
+            <trans-unit id="browse">
+                <source>browse</source>
+                <target>Ara</target>
+            </trans-unit>
+            <trans-unit id="buy_coins">
+                <source>buy_coins</source>
+                <target>Ejderha Parası satın al</target>
+            </trans-unit>
+            <trans-unit id="calculate">
+                <source>calculate</source>
+                <target>Hesapla</target>
+            </trans-unit>
+            <trans-unit id="calculate_coins">
+                <source>calculate_coins</source>
+                <target>Ejderha Parası miktarını hesapla</target>
+            </trans-unit>
+            <trans-unit id="currency_amount">
+                <source>currency_amount</source>
+                <target>Para birimi</target>
+            </trans-unit>
+            <trans-unit id="currency_amount_help">
+                <source>currency_amount_help</source>
+                <target>Para biriminizi girdikten sonra, "Hesapla" butonuna basarak ne kadar
+                    Ejderha Parası elde edeceğinizi görebilirsiniz.
+                </target>
+            </trans-unit>
+            <trans-unit id="change">
+                <source>change</source>
+                <target>Değiştir</target>
+            </trans-unit>
+            <trans-unit id="char_removal_code">
+                <source>char_removal_code</source>
+                <target>Karakter silme kodu</target>
+            </trans-unit>
+            <trans-unit id="char_removal_code_change">
+                <source>char_removal_code_change</source>
+                <target>Karakter silme kodu değiştirme</target>
+            </trans-unit>
+            <trans-unit id="char_removal_code_new">
+                <source>char_removal_code</source>
+                <target>Yeni karakter silme kodu</target>
+            </trans-unit>
+            <trans-unit id="char_removal_code_new_repeat">
+                <source>char_removal_code_new_repeat</source>
+                <target>Yeni karakter silme kodunu tekrarlayın</target>
+            </trans-unit>
+            <trans-unit id="character_horse_level">
+                <source>character_horse_level</source>
+                <target>At seviyes</target>
+            </trans-unit>
+            <trans-unit id="character_name">
+                <source>character_name</source>
+                <target>Karakter ismi</target>
+            </trans-unit>
+            <trans-unit id="character_not_found">
+                <source>character_not_found</source>
+                <target>Oyuncu bulunamadı.</target>
+            </trans-unit>
+            <trans-unit id="character_playtime">
+                <source>character_playtime</source>
+                <target>Oyun süresi</target>
+            </trans-unit>
+            <trans-unit id="character_profession">
+                <source>character_profession</source>
+                <target>Sınıf</target>
+            </trans-unit>
+            <trans-unit id="character_profession_ninja">
+                <source>character_profession_ninja</source>
+                <target>Ninja</target>
+            </trans-unit>
+            <trans-unit id="character_profession_shaman">
+                <source>character_profession_shaman</source>
+                <target>Şaman</target>
+            </trans-unit>
+            <trans-unit id="character_profession_sura">
+                <source>character_profession_sura</source>
+                <target>Sura</target>
+            </trans-unit>
+            <trans-unit id="character_profession_warrior">
+                <source>character_profession_warrior</source>
+                <target>Savaşçı</target>
+            </trans-unit>
+            <trans-unit id="character_stat_dexterity">
+                <source>character_stat_dexterity</source>
+                <target>Çeviklik</target>
+            </trans-unit>
+            <trans-unit id="character_stat_intelligence">
+                <source>character_stat_intelligence</source>
+                <target>Zeka</target>
+            </trans-unit>
+            <trans-unit id="character_stat_strength">
+                <source>character_stat_strength</source>
+                <target>Güç</target>
+            </trans-unit>
+            <trans-unit id="character_stat_vitality">
+                <source>character_stat_vitality</source>
+                <target>Canlılık</target>
+            </trans-unit>
+            <trans-unit id="characters">
+                <source>characters</source>
+                <target>Oyuncular</target>
+            </trans-unit>
+            <trans-unit id="coins">
+                <source>coins</source>
+                <target>EP|EPler</target>
+            </trans-unit>
+            <trans-unit id="coins_state">
+                <source>coins_state</source>
+                <target>Sahipsiniz</target>
+            </trans-unit>
+            <trans-unit id="copyrights">
+                <source>copyrights</source>
+                <target>Her hakkı saklıdır.</target>
+            </trans-unit>
+            <trans-unit id="currency">
+                <source>currency</source>
+                <target>Para birimi</target>
+            </trans-unit>
+            <trans-unit id="download_caption">
+                <source>download.caption</source>
+                <target>Oyunu indirin ve ücretsiz oynayın</target>
+            </trans-unit>
+            <trans-unit id="email">
+                <source>email</source>
+                <target>E-posta adresi</target>
+            </trans-unit>
+            <trans-unit id="email_change">
+                <source>email_change</source>
+                <target>E-posta adresi değişikliği</target>
+            </trans-unit>
+            <trans-unit id="email_change_password_info">
+                <source>email_change_password_info</source>
+                <target>Formu doğru şifre ile gönderdikten sonra sizin mail adresinize talimatlar
+                    göndereceğiz.
+                </target>
+            </trans-unit>
+            <trans-unit id="email_change_success">
+                <source>email_change_success</source>
+                <target>E-posta adresi başarıyla değiştirildi.</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_success">
+                <source>email_change_request_success</source>
+                <target>Değişiklik yapmak için yapılması gereken e-posta adresinize talimatlar gönderdik
+                </target>
+            </trans-unit>
+            <trans-unit id="email_new">
+                <source>email_new</source>
+                <target>Yeni E-posta adresi</target>
+            </trans-unit>
+            <trans-unit id="email_new_repeat">
+                <source>email_new_repeat</source>
+                <target>Yeni E-posta adresini tekrarlayın</target>
+            </trans-unit>
+            <trans-unit id="guild">
+                <source>guild</source>
+                <target>Lonca</target>
+            </trans-unit>
+            <trans-unit id="guild_leader">
+                <source>guild_leader</source>
+                <target>Lonca lideri</target>
+            </trans-unit>
+            <trans-unit id="guild_members">
+                <source>guild_members</source>
+                <target>Lonca üyeleri</target>
+            </trans-unit>
+            <trans-unit id="guild_name">
+                <source>guild_name</source>
+                <target>Lonca ismi</target>
+            </trans-unit>
+            <trans-unit id="guild_not_found">
+                <source>guild_not_found</source>
+                <target>Lonca bulunamadı.</target>
+            </trans-unit>
+            <trans-unit id="guild_stat_draws">
+                <source>guild_stat_draws</source>
+                <target>Beraberlikler</target>
+            </trans-unit>
+            <trans-unit id="guild_stat_ladder_points">
+                <source>guild_stat_ladder_points</source>
+                <target>Puan</target>
+            </trans-unit>
+            <trans-unit id="guild_stat_loses">
+                <source>guild_stat_loses</source>
+                <target>Mağlubiyetler</target>
+            </trans-unit>
+            <trans-unit id="guild_stat_wins">
+                <source>guild_stat_wins</source>
+                <target>Zaferler</target>
+            </trans-unit>
+            <trans-unit id="guilds">
+                <source>guilds</source>
+                <target>Loncalar</target>
+            </trans-unit>
+            <trans-unit id="hello">
+                <source>hello</source>
+                <target>Merhaba</target>
+            </trans-unit>
+            <trans-unit id="homepage">
+                <source>homepage</source>
+                <target>Anasayfa</target>
+            </trans-unit>
+            <trans-unit id="language_choose">
+                <source>language_choose</source>
+                <target>Dil seçimi</target>
+            </trans-unit>
+            <trans-unit id="language_current">
+                <source>language_current</source>
+                <target>Şu anki dil</target>
+            </trans-unit>
+            <trans-unit id="language_en">
+                <source>language_en</source>
+                <target>Ingilizce</target>
+            </trans-unit>
+            <trans-unit id="language_pl">
+                <source>language_pl</source>
+                <target>Lehçe</target>
+            </trans-unit>
+            <trans-unit id="language_tr">
+                <source>language_tr</source>
+                <target>Türk</target>
+            </trans-unit>
+            <trans-unit id="level">
+                <source>level</source>
+                <target>Seviye</target>
+            </trans-unit>
+            <trans-unit id="login">
+                <source>login</source>
+                <target>Login</target>
+            </trans-unit>
+            <trans-unit id="logout">
+                <source>logout</source>
+                <target>Çıkış</target>
+            </trans-unit>
+            <trans-unit id="kingdom">
+                <source>kingdom</source>
+                <target>Krallık</target>
+            </trans-unit>
+            <trans-unit id="navigation">
+                <source>navigation</source>
+                <target>Menü</target>
+            </trans-unit>
+            <trans-unit id="next">
+                <source>next</source>
+                <target>İleri</target>
+            </trans-unit>
+            <trans-unit id="password">
+                <source>password</source>
+                <target>Şifre</target>
+            </trans-unit>
+            <trans-unit id="password_change">
+                <source>password_change</source>
+                <target>Şifre değişikliği</target>
+            </trans-unit>
+            <trans-unit id="password_change_success">
+                <source>password_change_success</source>
+                <target>Şifreniz başarıyla değiştirildi.</target>
+            </trans-unit>
+            <trans-unit id="password_new">
+                <source>password_new</source>
+                <target>Yeni şifre</target>
+            </trans-unit>
+            <trans-unit id="password_new_repeat">
+                <source>password_new_repeat</source>
+                <target>Yeni şifrenizi tekrarlayın</target>
+            </trans-unit>
+            <trans-unit id="password_repeat">
+                <source>password_repeat</source>
+                <target>Şifrenizi tekrarlayın</target>
+            </trans-unit>
+            <trans-unit id="password_reset">
+                <source>password_reset</source>
+                <target>Şifre sıfırlama</target>
+            </trans-unit>
+            <trans-unit id="password_reset_success">
+                <source>password_reset_success</source>
+                <target>Şifre değiştirildi. Giriş yaptınız.</target>
+            </trans-unit>
+            <trans-unit id="payments_choose">
+                <source>payments_choose</source>
+                <target>Ödeme yöntemi seçin</target>
+            </trans-unit>
+            <trans-unit id="payments_choose_another">
+                <source>payments_choose_another</source>
+                <target>Farklı bir ödeme yöntemi seçin</target>
+            </trans-unit>
+            <trans-unit id="payments_paypal">
+                <source>payments_paypal</source>
+                <target>PayPal</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon">
+                <source>promotion_coupon</source>
+                <target>Promosyon Kodu</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_usage_success">
+                <source>promotion_coupon_usage_success</source>
+                <target>Promosyon kodu başarıyla kullanıldı.</target>
+            </trans-unit>
+            <trans-unit id="payments_paypal_box_description">
+                <source>payments_paypal_box_description</source>
+                <target>Servis paypal.com tarafından sağlanmaktadır.</target>
+            </trans-unit>
+            <trans-unit id="payments_paypal_box_title">
+                <source>payments_paypal_box_title</source>
+                <target>PayPal kullanarak Ejderha Parası satın al</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_box_description">
+                <source>promotion_coupon_box_description</source>
+                <target>Özel etkinliklerde kod elde edebilirsiniz.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_box_title">
+                <source>promotion_coupon_box_title</source>
+                <target>Promosyon Kodu kullan</target>
+            </trans-unit>
+            <trans-unit id="payments_transfer">
+                <source>payments_transfer</source>
+                <target>Havale</target>
+            </trans-unit>
+            <trans-unit id="payments_transfer_box_description">
+                <source>payments_transfer_box_description</source>
+                <target>Servis cashbill.pl tarafından sağlanmaktadır.</target>
+            </trans-unit>
+            <trans-unit id="payments_transfer_box_title">
+                <source>payments_transfer_box_title</source>
+                <target>Havale yöntemi kullanarak ödeme</target>
+            </trans-unit>
+            <trans-unit id="payments_paysafecard">
+                <source>payments_paysafecard</source>
+                <target>PaySafeCard</target>
+            </trans-unit>
+            <trans-unit id="payments_paysafecard_box_description">
+                <source>payments_paysafecard_box_description</source>
+                <target>Servis cashbill.pl tarafından sağlanmaktadır.</target>
+            </trans-unit>
+            <trans-unit id="payments_paysafecard_box_title">
+                <source>payments_paysafecard_box_title</source>
+                <target>PaySafeCard yöntemi kullanarak ödeme</target>
+            </trans-unit>
+            <trans-unit id="previous">
+                <source>previous</source>
+                <target>Önceki</target>
+            </trans-unit>
+            <trans-unit id="project_caption">
+                <source>project_caption</source>
+                <target>Bizi tanıyın</target>
+            </trans-unit>
+            <trans-unit id="published_by">
+                <source>published_by</source>
+                <target>Tarafından yayınlandı</target>
+            </trans-unit>
+            <trans-unit id="ranking">
+                <source>ranking</source>
+                <target>Ranking</target>
+            </trans-unit>
+            <trans-unit id="ranking_show_full">
+                <source>ranking_show_full</source>
+                <target>Tüm sıralamayı göster</target>
+            </trans-unit>
+            <trans-unit id="ranking_type_guild_name">
+                <source>ranking_type_guild_name</source>
+                <target>Lonca adı giriniz</target>
+            </trans-unit>
+            <trans-unit id="ranking_type_player_name">
+                <source>ranking_type_player_name</source>
+                <target>Oyuncu adı giriniz</target>
+            </trans-unit>
+            <trans-unit id="register_create_one">
+                <source>register_create_one</source>
+                <target>Bir tane oluştur</target>
+            </trans-unit>
+            <trans-unit id="registration">
+                <source>registration</source>
+                <target>Kaydol</target>
+            </trans-unit>
+            <trans-unit id="registration_ask">
+                <source>registration_ask</source>
+                <target>Hesabın yok mu?</target>
+            </trans-unit>
+            <trans-unit id="registration_success">
+                <source>registration_success</source>
+                <target>Hesabınız başarıyla oluşturuldu. Giriş yaptınız.</target>
+            </trans-unit>
+            <trans-unit id="registration_password_help">
+                <source>registration_password_help</source>
+                <target>Güçlü bir şifre ayarlamayı unutmayın.</target>
+            </trans-unit>
+            <trans-unit id="registration_email_help">
+                <source>registration_email_help</source>
+                <target>Parolanızı sıfırlamak veya e-posta adresinizi değiştirmek yararlı olabilir.</target>
+            </trans-unit>
+            <trans-unit id="registration_security_question_help">
+                <source>registration_security_question_help</source>
+                <target>Destek birimiyle iletişime geçtiğinizde hesabınızı kurtarmanız konusunda yardımcı olur.</target>
+            </trans-unit>
+            <trans-unit id="remind_password">
+                <source>remind_password</source>
+                <target>Şifreyi hatırla</target>
+            </trans-unit>
+            <trans-unit id="request_password_reset_expired">
+                <source>request_password_reset_expired</source>
+                <target>Bu fişin süresi doldu. Tekrar deneyin.</target>
+            </trans-unit>
+            <trans-unit id="request_password_reset_success">
+                <source>request_password_reset_success</source>
+                <target>Talimatları e-posta adresinize gönderdik.</target>
+            </trans-unit>
+            <trans-unit id="security_answer">
+                <source>security_answer</source>
+                <target>Güvenlik cevabı</target>
+            </trans-unit>
+            <trans-unit id="security_question">
+                <source>security_question</source>
+                <target>Güvenlik sorusu</target>
+            </trans-unit>
+            <trans-unit id="send">
+                <source>send</source>
+                <target>Gönder</target>
+            </trans-unit>
+            <trans-unit id="search">
+                <source>search</source>
+                <target>Arama</target>
+            </trans-unit>
+            <trans-unit id="server_status">
+                <source>server_status</source>
+                <target>Sunucu durumu</target>
+            </trans-unit>
+            <trans-unit id="server_status_online">
+                <source>server_status_online</source>
+                <target>Aktif</target>
+            </trans-unit>
+            <trans-unit id="server_status_offline">
+                <source>server_status_offline</source>
+                <target>Bakım / Çevrimdışı</target>
+            </trans-unit>
+            <trans-unit id="server_status_not_released">
+                <source>server_status_not_released</source>
+                <target>Proje henüz yayınlanmadı.</target>
+            </trans-unit>
+            <trans-unit id="sign_in">
+                <source>sign_in</source>
+                <target>Oturum aç</target>
+            </trans-unit>
+            <trans-unit id="signing_in">
+                <source>signing_in</source>
+                <target>Oturum aç</target>
+            </trans-unit>
+            <trans-unit id="shop">
+                <source>shop</source>
+                <target>Nesne Market</target>
+            </trans-unit>
+            <trans-unit id="shop_buy_item">
+                <source>shop_buy_item</source>
+                <target>Satın Al</target>
+            </trans-unit>
+            <trans-unit id="shop_item_not_found">
+                <source>shop_item_not_found</source>
+                <target>Talep edilen ürün bulunamıyor.</target>
+            </trans-unit>
+            <trans-unit id="shop_item_unavailable">
+                <source>shop_item_unavailable</source>
+                <target>İstenen öğe şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyiniz.</target>
+            </trans-unit>
+            <trans-unit id="shop_category_not_found">
+                <source>shop_category_not_found</source>
+                <target>İstenen kategori mevcut değil</target>
+            </trans-unit>
+            <trans-unit id="shop_category_unavailable">
+                <source>shop_category_unavailable</source>
+                <target>İstenen kategori şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyiniz.</target>
+            </trans-unit>
+            <trans-unit id="shop.unavailable">
+                <source>shop.unavailable</source>
+                <target>Üzgünüz, fakat Nesne Market şu anda web sitemizde mevcut değil. Oyun içi marketi ziyaret edin.
+                </target>
+            </trans-unit>
+            <trans-unit id="support">
+                <source>support</source>
+                <target>Destek sistemi</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_send">
+                <source>support_ticket_send</source>
+                <target>Bilet gönderildi. En kısa sürede cevaplayacağız.</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_send">
+                <source>support_ticket_reply_send</source>
+                <target>Cevap gönderildi. En kısa sürede cevaplayacağız.</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_list">
+                <source>support_ticket_list</source>
+                <target>Bilet listesi</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_new">
+                <source>support_ticket_new</source>
+                <target>Yeni bilet</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_category">
+                <source>support_ticket_category</source>
+                <target>Kategori</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_content">
+                <source>support_ticket_content</source>
+                <target>İçerik</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_createdAt">
+                <source>support_ticket_createdAt</source>
+                <target>Oluşturulma tarihi</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_title">
+                <source>support_ticket_title</source>
+                <target>Başlık</target>
+            </trans-unit>
+            <trans-unit id="terms_accept_info">
+                <source>terms_accept_info</source>
+                <target>Kayıt olarak bizim şartlarımızı %linkStart%terms%linkEnd% onaylamış olursunuz.</target>
+            </trans-unit>
+            <trans-unit id="time_days">
+                <source>time_days</source>
+                <target>gün|günler</target>
+            </trans-unit>
+            <trans-unit id="time_hours">
+                <source>time_hours</source>
+                <target>saat|saatler</target>
+            </trans-unit>
+            <trans-unit id="time_minutes">
+                <source>time_minutes</source>
+                <target>dakika|dakikalar</target>
+            </trans-unit>
+            <trans-unit id="welcome_message">
+                <source>welcome_message</source>
+                <target>Sunucumuzun web sitesine hoşgeldiniz.</target>
+            </trans-unit>
+            <trans-unit id="welcome_caption">
+                <source>welcome_caption</source>
+                <target>Yanımızda olduğun için mutluyuz.</target>
+            </trans-unit>
+            <trans-unit id="user_ban">
+                <source>user_ban</source>
+                <target>Kullanıcıyı yasakla</target>
+            </trans-unit>
+            <trans-unit id="user_unban">
+                <source>user_unban</source>
+                <target>Kullanıcının yasağını kaldır</target>
+            </trans-unit>
+            <trans-unit id="user_ban_reason">
+                <source>user_ban_reason</source>
+                <target>Yasaklama sebebi</target>
+            </trans-unit>
+            <trans-unit id="user_characters_list">
+                <source>user_characters_list</source>
+                <target>Kullanıcının karakter listesi</target>
+            </trans-unit>
+            <trans-unit id="user_has_no_characters">
+                <source>user_has_no_characters</source>
+                <target>Kullanıcının karakteri yok</target>
+            </trans-unit>
+            <trans-unit id="user_status_banned_perm">
+                <source>user_status_banned_perm</source>
+                <target>Sınırsız</target>
+            </trans-unit>
+            <trans-unit id="user_status_ok">
+                <source>user_status_ok</source>
+                <target>OK</target>
+            </trans-unit>
+            <trans-unit id="user_status_banned_perm_util">
+                <source>user_status_banned_perm_util</source>
+                <target>Tarihine kadar yasaklı (%date%)</target>
+            </trans-unit>
+            <trans-unit id="user_title_1">
+                <source>user_title_1</source>
+                <target>Kahraman</target>
+            </trans-unit>
+            <trans-unit id="user_title_2">
+                <source>user_title_2</source>
+                <target>Soylu</target>
+            </trans-unit>
+            <trans-unit id="user_title_3">
+                <source>user_title_3</source>
+                <target>İyi</target>
+            </trans-unit>
+            <trans-unit id="user_title_4">
+                <source>user_title_4</source>
+                <target>Arkadaşça</target>
+            </trans-unit>
+            <trans-unit id="user_title_5">
+                <source>user_title_5</source>
+                <target>Agresif</target>
+            </trans-unit>
+            <trans-unit id="user_title_6">
+                <source>user_title_6</source>
+                <target>Hileli</target>
+            </trans-unit>
+            <trans-unit id="user_title_7">
+                <source>user_title_7</source>
+                <target>Kötü Niyetli</target>
+            </trans-unit>
+            <trans-unit id="user_title_8">
+                <source>user_title_8</source>
+                <target>Zalim</target>
+            </trans-unit>
+            <trans-unit id="users">
+                <source>users</source>
+                <target>Kullanıcılar</target>
+            </trans-unit>
+            <trans-unit id="vip_account">
+                <source>vip_account</source>
+                <target>VIP Hesap</target>
+            </trans-unit>
+            <trans-unit id="vip_bronze">
+                <source>vip_bronze</source>
+                <target>VIP - YANG</target>
+            </trans-unit>
+            <trans-unit id="vip_silver">
+                <source>vip_silver</source>
+                <target>VIP - EXP</target>
+            </trans-unit>
+            <trans-unit id="vip_gold">
+                <source>vip_gold</source>
+                <target>VIP - DROP</target>
+            </trans-unit>
+            <trans-unit id="you_will_receive">
+                <source>you_will_receive</source>
+                <target>Alacaksın</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

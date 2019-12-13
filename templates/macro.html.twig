@@ -1,0 +1,274 @@
+{% macro paginate(pagination, routeName, nearbyPagesLimit = 4) %}
+    {% if pagination.haveToPaginate %}
+
+        <ul class="pagination">
+            {% if pagination.hasPreviousPage %}
+                <li>
+                    <a href="{{ path(routeName, {"page" : pagination.previousPage}) }}" class="prev fa fa-arrow-left">
+                    </a>
+                </li>
+            {% endif %}
+            {% for i in 1..pagination.numPages %}
+                {% if 0 == (pagination.currentPage - nearbyPagesLimit) - i %}
+                    <li>
+                        <a href="{{ path(routeName, {"page" : 1}) }}">{{ 1 }}</a>
+                    </li>
+                    {% if 1 != i %}
+                        <li><span>…</span></li>
+                    {% endif %}
+                {% elseif 0 == (pagination.currentPage + nearbyPagesLimit) - i  and (pagination.currentPage + nearbyPagesLimit) < pagination.numPages %}
+                    <li><span>…</span></li>
+                {% elseif 0 < (pagination.currentPage - nearbyPagesLimit) - i %}
+                {% elseif 0 > (pagination.currentPage + nearbyPagesLimit) - i %}
+                {% else %}
+                    <li>
+                        {% if pagination.currentPage == i %}
+                            <a href="" class="active">{{ i }}</a>
+                        {% else %}
+                            <a href="{{ path(routeName, {
+                                "page" : i
+                            }) }}">{{ i }}</a>
+                        {% endif %}
+                    </li>
+                {% endif %}
+            {% endfor %}
+
+            {% if pagination.currentPage != pagination.numPages  and (pagination.currentPage + nearbyPagesLimit) < pagination.numPages %}
+                <li>
+                    <a href="{{ path(routeName, {
+                        "page" : pagination.numPages
+                    }) }}">{{ pagination.numPages }}</a>
+                </li>
+            {% endif %}
+
+            {% if pagination.hasNextPage %}
+                <li>
+                    <a href="{{ path(routeName, {
+                        "page" : pagination.nextPage
+                    }) }}" class="next fa fa-arrow-right">
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    {% endif %}
+{% endmacro %}
+
+{% macro paginate_bootstrap(pagination, routeName, nearbyPagesLimit = 8) %}
+    {% if pagination.haveToPaginate %}
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="dataTables_paginate paging_simple_numbers text-center">
+                    <ul class="pagination">
+                        {% if pagination.hasPreviousPage %}
+                            <li class="paginate_button previous">
+                                <a href="{{ path(routeName, {"page" : pagination.previousPage}) }}">{% trans %}previous{% endtrans %}</a>
+                            </li>
+                        {% else %}
+                            <li class="paginate_button previous disabled">
+                                <span href="#">{% trans %}previous{% endtrans %}</span>
+                            </li>
+                        {% endif %}
+
+                        {% for i in 1..pagination.numPages %}
+                            {% if 0 == (pagination.currentPage - nearbyPagesLimit) - i %}
+                                <li>
+                                    <a href="{{ path(routeName, {"page" : 1}) }}">{{ 1 }}</a>
+                                </li>
+                                {% if 1 != i %}
+                                    <li><span>…</span></li>
+                                {% endif %}
+                            {% elseif 0 == (pagination.currentPage + nearbyPagesLimit) - i  and (pagination.currentPage + nearbyPagesLimit) < pagination.numPages %}
+                                <li><span>…</span></li>
+                            {% elseif 0 < (pagination.currentPage - nearbyPagesLimit) - i %}
+                            {% elseif 0 > (pagination.currentPage + nearbyPagesLimit) - i %}
+                            {% else %}
+                                <li {{ pagination.currentPage == i ? 'class="active"' }}>
+                                    {% if pagination.currentPage == i %}
+                                        <span>{{ i }}</span>
+                                    {% else %}
+                                        <a href="{{ path(routeName, {
+                                            "page" : i
+                                        }) }}">{{ i }}</a>
+                                    {% endif %}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if pagination.currentPage != pagination.numPages  and (pagination.currentPage + nearbyPagesLimit) < pagination.numPages %}
+                            <li>
+                                <a href="{{ path(routeName, {
+                                    "page" : pagination.numPages
+                                }) }}">{{ pagination.numPages }}</a>
+                            </li>
+                        {% endif %}
+
+                        {% if pagination.hasNextPage %}
+                            <li class="paginate_button next">
+                                <a href="{{ path(routeName, {
+                                    "page" : pagination.nextPage
+                                }) }}">{% trans %}next{% endtrans %}</a>
+                            </li>
+                        {% else %}
+                            <li class="paginate_button next disabled">
+                                <span href="#">{% trans %}next{% endtrans %}</span>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endmacro %}
+
+{% macro displayEmpireFlag(empireId) %}
+    {% if empireId == 1 %}
+        <img src="{{ asset('build/images/static/_user/kingdoms/shinsoo_static.png') }}" alt="{% trans %}flag_shinsoo{% endtrans %}">
+    {% elseif empireId == 2 %}
+        <img src="{{ asset('build/images/static/_user/kingdoms/chunjo_static.png') }}" alt="{% trans %}flag_chunjo{% endtrans %}">
+    {% elseif empireId == 3 %}
+        <img src="{{ asset('build/images/static/_user/kingdoms/jinno_static.png') }}" alt="{% trans %}flag_jinno{% endtrans %}">
+    {% endif %}
+{% endmacro %}
+
+{% macro displayAccountStatus(banTime, status) %}
+    {% if status == 'BLOCK' %}
+        <span class="label label-danger">
+            {% trans %}user_status_banned_perm{% endtrans %}
+       </span>
+    {% elseif banTime > date() %}
+        <span class="label label-warning">
+            {% trans with {'%date%' : banTime|date('Y-m-d H:i:s')} %}user_status_banned_perm_util{% endtrans %}
+       </span>
+    {% else %}
+        <span class="label label-success">
+            {% trans %}user_status_ok{% endtrans %}
+       </span>
+    {% endif %}
+{% endmacro %}
+
+{% macro displayAccountStatus_bootstrap(banTime, status) %}
+    {% if status == 'BLOCK' %}
+        <span class="label label-danger">
+            {% trans %}user_status_banned_perm{% endtrans %}
+       </span>
+    {% elseif banTime > date() %}
+        <span class="label label-warning">
+            {% trans with {'%date%' : banTime|date('Y-m-d H:i:s')} %}user_status_banned_perm_util{% endtrans %}
+       </span>
+    {% else %}
+        <span class="label label-success">
+            {% trans %}user_status_ok {% endtrans %}
+       </span>
+    {% endif %}
+{% endmacro %}
+{% macro displayMinutesAsText(minutes) %}
+    {% if minutes == 0 %}
+        -
+    {% elseif minutes < 60 %}
+        {{ minutes }} {% transchoice minutes %}time_minutes{% endtranschoice %}
+    {% elseif minutes < 1440 %}
+        {% set hours = (minutes/60)|round(0, 'floor') %}
+        {% set minutes = minutes - hours * 60 %}
+
+        {{ hours }} {% transchoice hours %}time_hours{% endtranschoice %}
+        {% if minutes > 0 %}
+            {{ minutes }} {% transchoice minutes %}time_minutes{% endtranschoice %}
+        {% endif %}
+    {% else %}
+        {% set days = (minutes/24/60)|round(0, 'floor') %}
+        {% set hours = ((minutes - (days * 24 * 60))/60)|round(0, 'floor') %}
+        {% set minutes = minutes - (days * 60 * 24) - (hours * 60) %}
+
+        {{ days|round(0, 'floor') }} {% transchoice days %}time_days{% endtranschoice %}
+        {% if hours > 0 %}
+            {{ hours }} {% transchoice hours %}time_hours{% endtranschoice %}
+        {% endif %}
+        {% if minutes > 0 %}
+            {{ minutes }} {% transchoice minutes %}time_minutes{% endtranschoice %}
+        {% endif %}
+    {% endif %}
+{% endmacro %}
+
+{% macro displayProfessionName(professionId) %}
+    {% if professionId == 0 or professionId == 4 %}
+        {% trans %}character_profession_warrior{% endtrans %}
+    {% elseif professionId == 1 or professionId == 5 %}
+        {% trans %}character_profession_ninja{% endtrans %}
+    {% elseif professionId == 2 or professionId == 6 %}
+        {% trans %}character_profession_sura{% endtrans %}
+    {% elseif professionId == 3 or professionId == 7 %}
+        {% trans %}character_profession_shaman{% endtrans %}
+    {% else %}
+        Not supported profession.
+    {% endif %}
+{% endmacro %}
+
+{% macro displayProfessionImage(professionId) %}
+    {% from _self import displayProfessionName %}
+
+    {% if professionId == 0 or professionId == 4 %}
+        {% set fileName = 'warrior.png' %}
+    {% elseif professionId == 1 or professionId == 5 %}
+        {% set fileName = 'ninja.png' %}
+    {% elseif professionId == 2 or professionId == 6 %}
+        {% set fileName = 'sura.png' %}
+    {% elseif professionId == 3 or professionId == 7 %}
+        {% set fileName = 'shaman.png' %}
+    {% else %}
+        Not supported profession.
+    {% endif %}
+
+    {% if fileName is defined %}
+        <img src="{{ asset('assets/images/characters/') ~ fileName }}"
+             alt="{% spaceless %}{{ displayProfessionName(professionId) }}{% endspaceless %}">
+    {% else %}
+        Not supported character.
+    {% endif %}
+{% endmacro %}
+
+{% macro displayTitlePoints(titlePoints) %}
+    {% set color = '0, 0, 0' %}
+
+    {% if titlePoints >= 120000 %}
+        {% set color = '0, 204, 255' %}
+        {% set titleName = 'user_title_1'|trans %}
+    {% elseif titlePoints >= 80000 %}
+        {% set color = '0, 144, 255' %}
+        {% set titleName = 'user_title_2'|trans %}
+    {% elseif titlePoints >= 40000 %}
+        {% set color = '92, 110, 255' %}
+        {% set titleName = 'user_title_3'|trans %}
+    {% elseif titlePoints >= 10000 %}
+        {% set color = '155, 155, 255' %}
+        {% set titleName = 'user_title_4'|trans %}
+    {% elseif titlePoints >= 0 %}
+        {% set color = '0, 0, 0' %}
+        {% set titleName = '-' %}
+    {% elseif titlePoints <= -10000 and titlePoints >= -40000 %}
+        {% set color = '207, 117, 0' %}
+        {% set titleName = 'user_title_5'|trans %}
+    {% elseif titlePoints <= -40000  and titlePoints >= -80000 %}
+        {% set color = '235, 83, 0' %}
+        {% set titleName = 'user_title_6'|trans %}
+    {% elseif titlePoints <= -80000 and titlePoints >= -120000 %}
+        {% set color = '227, 0, 0' %}
+        {% set titleName = 'user_title_7'|trans %}
+    {% elseif titlePoints <= -120000 %}
+        {% set color = '255, 0, 0' %}
+        {% set titleName = 'user_title_8'|trans %}
+    {% endif %}
+
+    <span style="color: rgb({{ color }})">{{ titleName }}</span>
+{% endmacro %}
+
+{% macro displayVIPDate(date, color = '#e2c424') %}
+    {% set dateAsString = date|date('Y-m-d H:i:s') %}
+
+    <span {% if date > date() %}style="color: {{ color }}"{% endif %}>
+        {% if date > date() %}
+            {{ dateAsString }}
+        {% else %}
+            {% trans %}vip_inactive{% endtrans %}
+        {% endif %}
+    </span>
+{% endmacro %}

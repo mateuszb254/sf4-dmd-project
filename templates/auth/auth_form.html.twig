@@ -1,0 +1,10 @@
+{{ form_start(form) }}
+{{ form_widget(form) }}
+<div class="form-row">
+    <button class="button-medium" type="submit">{% trans %}sign_in{% endtrans %}</button>
+    {% if error is defined and error is not empty %}
+        <span class="form-error">{{ error.messageKey|trans(error.messageData, 'security') }}</span>
+    {% endif %}
+</div>
+
+{{ form_end(form) }}

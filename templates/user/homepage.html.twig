@@ -1,0 +1,25 @@
+{% extends 'user/base.html.twig' %}
+{% from 'macro.html.twig' import paginate %}
+{% block content %}
+    {% for article in pagination.result %}
+        <article class="article">
+            <div class="article-image-placeholder">
+                <img src="{{ asset('build/images/static/_user/components/article/article_image_default_static.png') }}"
+                     class=article-image" alt="article image">
+            </div>
+            <div class="article-content-wrapper">
+                <header class="article-header">
+                    <h2>{{ article.title }}</h2>
+                    <time>{{ article.createdAt|date('Y-m-d H:i') }}</time>
+                </header>
+                <div class="article-content">
+                    {{ article.contents|striptags('<strong><img><i><u><p><br><b><ol><ul><li><i><u><a>')|raw }}
+                </div>
+                <footer class="article-footer">
+                    {% trans %}published_by{% endtrans %} <span class="author">{{ article.author.login }}</span>
+                </footer>
+            </div>
+        </article>
+    {% endfor %}
+    {{ paginate(pagination, 'articles') }}
+{% endblock %}

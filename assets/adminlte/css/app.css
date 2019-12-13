@@ -1,0 +1,12 @@
+/* ----- bootstrap ------ */
+@import "../../../node_modules/bootstrap";
+/* ----- font-awesome ------ */
+@import "../../../node_modules/font-awesome";
+/* ----- AdminLTE ------ */
+@import "../../../node_modules/admin-lte/dist/css/AdminLTE.min.css";
+@import "../../../node_modules/admin-lte/dist/css/skins/skin-blue.min.css";
+@import "adminlte_extension.css";
+
+/* ----- iCheck ------ */
+@import "../../../node_modules/icheck/skins/all.css";
+

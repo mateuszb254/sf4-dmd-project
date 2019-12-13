@@ -1,0 +1,70 @@
+{
+  "entrypoints": {
+    "app_user_js": {
+      "js": [
+        "/build/runtime.ed3c6480.js",
+        "/build/0.9d8395ac.js",
+        "/build/2.c10ed47b.js",
+        "/build/app_user_js.5eb5736d.js"
+      ]
+    },
+    "app_user_js_demo": {
+      "js": [
+        "/build/runtime.ed3c6480.js",
+        "/build/0.9d8395ac.js",
+        "/build/app_user_js_demo.1d13226f.js"
+      ]
+    },
+    "app_user_js_calculate_coins": {
+      "js": [
+        "/build/runtime.ed3c6480.js",
+        "/build/0.9d8395ac.js",
+        "/build/app_user_js_calculate_coins.d907acb0.js"
+      ]
+    },
+    "adminlte_js": {
+      "js": [
+        "/build/runtime.ed3c6480.js",
+        "/build/0.9d8395ac.js",
+        "/build/3.9caf2d7e.js",
+        "/build/adminlte_js.2bf75b47.js"
+      ],
+      "css": [
+        "/build/3.20793c49.css"
+      ]
+    },
+    "adminlte_js_promotion": {
+      "js": [
+        "/build/runtime.ed3c6480.js",
+        "/build/0.9d8395ac.js",
+        "/build/adminlte_js_promotion.72dd2dd1.js"
+      ]
+    },
+    "app_user_css": {
+      "js": [
+        "/build/runtime.ed3c6480.js"
+      ],
+      "css": [
+        "/build/app_user_css.1b9238ea.css"
+      ]
+    },
+    "app_user_css_demo": {
+      "js": [
+        "/build/runtime.ed3c6480.js"
+      ],
+      "css": [
+        "/build/app_user_css_demo.9768dfe2.css"
+      ]
+    },
+    "adminlte_css": {
+      "js": [
+        "/build/runtime.ed3c6480.js",
+        "/build/4.06694f2d.js"
+      ],
+      "css": [
+        "/build/4.de5dd9e1.css",
+        "/build/adminlte_css.2dd53775.css"
+      ]
+    }
+  }
+}

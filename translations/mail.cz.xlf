@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="generated_info">
+                <source>generated_info</source>
+                <target>Táto zpráva byla automaticky vygenerována, prosím neodpovídej.</target>
+            </trans-unit>
+            <trans-unit id="hello">
+                <source>hello</source>
+                <target>Ahoj, %username%!</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_title">
+                <source>email_change_request_title</source>
+                <target>Změnit e-mailovou adresu</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_1">
+                <source>email_change_request_content_1</source>
+                <target>Dostali jsme informace o změnění e-mailové adresy na %project_name% .</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_2">
+                <source>email_change_request_content_2</source>
+                <target>Nebyl jsi to ty? Změn jsi prosím e-mailovou adresu, která je na tomto účtu registrována.</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_3">
+                <source>email_change_request_content_3</source>
+                <target>Byl jsi to ty? E-mailovou adresu si můžeš změnit pomocí tohto tlačítka dolu.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_1">
+                <source>password_reset_request_content_1</source>
+                <target>Dostali jsme informace o změnění e-mailové adresy na %project_name% .</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_2">
+                <source>password_reset_request_content_2</source>
+                <target>Nebyl jsi to ty? Změn jsi prosím e-mailovou adresu, která je na tomto účtu registrována.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_3">
+                <source>password_reset_request_content_3</source>
+                <target>Byl jsi to ty? E-mailovou adresu si můžeš změnit pomocí tohto tlačítka dolu.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_title">
+                <source>password_reset_request_title</source>
+                <target>Zapomněl jsem heslo</target>
+            </trans-unit>
+            <trans-unit id="regards">
+                <source>regards</source>
+                <target>S pozdravem - %project_name% tým!</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_title">
+                <source>support_ticket_reply_received_title</source>
+                <target>Odpověd na tiket - %title%</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_content_1">
+                <source>support_ticket_reply_received_content_1</source>
+                <target>Dostal jsi odpověd na tvůj tiket - %title%.</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_content_2">
+                <source>support_ticket_reply_received_content_2</source>
+                <target>Klikni na tlačítko dolu k přesunutí tiketu.</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_content_3">
+                <source>support_ticket_reply_received_content_3</source>
+                <target>Doufame že to nebude dlouho trvat.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

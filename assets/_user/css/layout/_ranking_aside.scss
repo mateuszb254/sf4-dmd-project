@@ -1,0 +1,18 @@
+.ranking-aside {
+  font-size: 10px;
+
+  table {
+    width: 100%;
+  }
+
+  .ranking-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 10px 0;
+  }
+
+  .ranking-more {
+    text-align: center;
+  }
+}

@@ -1,0 +1,30 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  color: $defaultFontColor;
+  font-size: 12px;
+
+  .error {
+    color: red;
+  }
+
+  .success {
+    color: green;
+  }
+}
+
+input {
+  font-family: "Tahoma", sans-serif;
+}
+
+label, button {
+  font-family: "Van Helsing", monospace;
+  text-transform: uppercase;
+}
+
+a {
+  color: $defaultLinkColor;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Van Helsing", monospace;
+}

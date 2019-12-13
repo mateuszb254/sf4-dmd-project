@@ -1,0 +1,27 @@
+security:
+    providers:
+        users:
+            entity:
+                class: 'App\User\Entity\User'
+                property: 'login'
+    encoders:
+        App\User\Entity\User:
+            id: App\User\Security\Encoder\MysqlPasswordFunctionEncoder
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            anonymous: true
+            guard:
+                authenticators:
+                    - App\Auth\Security\Authenticator\FormAuthenticator
+            logout:
+                path: auth_logout
+
+    #PREDEFINED ROLES
+    role_hierarchy:
+        ROLE_GLOBAL_ADMIN: ROLE_ADMIN
+        ROLE_ADMIN: ROLE_USER
+        ROLE_USER: ~

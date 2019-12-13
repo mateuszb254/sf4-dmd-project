@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="user_login_not_found">
+                <source>user_login_not_found</source>
+                <target>An user with login "{{ value }}" doesn't exist.</target>
+            </trans-unit>
+            <trans-unit id="email_nonexistent">
+                <source>email_nonexistent</source>
+                <target>The given email is not assigned to any account.</target>
+            </trans-unit>
+            <trans-unit id="login_invalid_pattern">
+                <source>login_invalid_pattern</source>
+                <target>The login can contain only alphanumeric characters.</target>
+            </trans-unit>
+            <trans-unit id="recaptcha_invalid">
+                <source>recaptcha_invalid</source>
+                <target>You must confirm the recaptcha.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_not_found">
+                <source>promotion_coupon_not_found</source>
+                <target>The code "%code%" doesn't exist.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_expired">
+                <source>promotion_coupon_expired</source>
+                <target>The coupon has already been expired.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_already_used">
+                <source>promotion_coupon_already_used</source>
+                <target>The coupon has already been used.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_one_per_tag">
+                <source>promotion_coupon_one_per_tag</source>
+                <target>The coupon belonging to the promotion %promotion_tag% has already been used.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

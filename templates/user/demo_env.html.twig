@@ -1,0 +1,59 @@
+<div id="demo" class="demo-container">
+    <div class="demo-content">
+        <div class="demo-header">
+            <h3>{% trans from 'demo' %}Dane dostepowe{% endtrans %}</h3>
+            <button id="demo-close-button" class="demo-header-close-button">
+                <i class="close"></i>
+            </button>
+        </div>
+        <div class="demo-body">
+            <div class="demo-body-image-wrapper">
+                <img src="{{ asset('build/images/static/_user/presentation/header_static.png') }}" alt="logo">
+            </div>
+            <div class="demo-body-data-wrapper">
+                <div class="demo-body-data-block">
+                    <div class="demo-body-data-row">
+                        <span class="global-admin">ROLE_GLOBAL_ADMIN <sup>(predefiniowana)</sup></span>
+                    </div>
+                    <div class="demo-body-data-row">
+                        <span>{% trans from 'messages' %}login{% endtrans %}:</span>
+                        <span>{{ constant('App\\User\\DataFixtures\\UserFixture::GLOBAL_ADMIN_AUTH_DATA') }}</span>
+                    </div>
+                    <div class="demo-body-data-row">
+                        <span>{% trans from 'messages' %}password{% endtrans %}:</span>
+                        <span>{{ constant('App\\User\\DataFixtures\\UserFixture::GLOBAL_ADMIN_AUTH_DATA') }}</span>
+                    </div>
+                </div>
+                <div class="demo-body-data-block">
+                    <div class="demo-body-data-row">
+                        <span class="admin">ROLE_ADMIN <sup>(utworzona)</sup></span>
+                    </div>
+                    <div class="demo-body-data-row">
+                        <span>{% trans from 'messages' %}login{% endtrans %}:</span>
+                        <span>{{ constant('App\\User\\DataFixtures\\UserFixture::ADMIN_AUTH_DATA') }}</span>
+                    </div>
+                    <div class="demo-body-data-row">
+                        <span>{% trans from 'messages' %}password{% endtrans %}:</span>
+                        <span>{{ constant('App\\User\\DataFixtures\\UserFixture::ADMIN_AUTH_DATA') }}</span>
+                    </div>
+                </div>
+                <div class="demo-body-data-block">
+                    <div class="demo-body-data-row">
+                        <span class="user">ROLE_USER <sup>(predefiniowana)</sup></span>
+                    </div>
+                    <div class="demo-body-data-row">
+                        <span>{% trans from 'messages' %}login{% endtrans %}:</span>
+                        <span>{{ constant('App\\User\\DataFixtures\\UserFixture::USER_AUTH_DATA') }}</span>
+                    </div>
+                    <div class="demo-body-data-row">
+                        <span>{% trans from 'messages' %}password{% endtrans %}:</span>
+                        <span>{{ constant('App\\User\\DataFixtures\\UserFixture::USER_AUTH_DATA') }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="demo-minimized" class="demo-minimized">
+    <img src="{{ asset('build/images/static/_user/presentation/header_static.png') }}" alt="logo">
+</div>

@@ -1,0 +1,71 @@
+{% extends 'admin/base.html.twig' %}
+{% form_theme form with ['admin/form_theme.html.twig', _self] %}
+{% block _promotion_with_coupon_collection_coupons_row %}
+    {% for child_form in form %}
+        <tr id="{{ child_form.vars.id }}_tr">
+            <td style="line-height: 28px;"><input id="{{ child_form.vars.id }}_delete" class="iCheck-deletable" type="checkbox"></td>
+            <td>{{ form_widget(child_form) }}</td>
+            {% set user = child_form.vars.data.usedBy %}
+            <td style="line-height: 28px;">
+                {% if user %}
+                    {% trans %}used_by{% endtrans %}
+                    <a href="{{ path('admin_user_profile', {'login' : user.login }) }}">{{ user.login }}</a>
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+{% endblock %}
+{% block content %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="col-sm-8">
+                <div class="box box-solid box-primary">
+                    <div class="box-header">
+                        {% trans %}promotion{% endtrans %} - {{ promotion.name }}
+                    </div>
+                    <div class="box-body">
+                        {{ form_start(form) }}
+                        {{ form_row(form.name) }}
+                        {{ form_row(form.coins) }}
+                        {{ form_row(form.type) }}
+                        {{ form_row(form.expires_confirmation) }}
+                        <div id="expires_wrapper" style="text-align: center; display: {{ promotion.getExpires ? 'block' : 'none' }};">
+                            {{ form_row(form.expires) }}
+                        </div>
+                        <div class="text-center">
+                            <button class="btn button-medium btn-primary" type="submit">
+                                {% trans %}save{% endtrans %}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="box box-solid box-primary">
+                    <div class="box-header">
+                        {% trans %}promotion_coupons{% endtrans %}
+                    </div>
+                    <div class="box-body">
+                        <div class="table-responsive mailbox-messages">
+                            {% include 'admin/_layout/_icheck_buttons.html.twig' with {'id' : 'coupons-table', 'element' : 'tr'} %}
+                            <table id="coupons-table" class="table table-hover table-striped">
+                                <tbody>
+                                {% if form.coupons.vars.form.children|length %}
+                                    {{ form_row(form.coupons) }}
+                                {% else %}
+                                    {% trans %}no_result{% endtrans %}
+                                {% endif %}
+                                {{ form_end(form) }}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('adminlte_js_promotion') }}
+{% endblock %}

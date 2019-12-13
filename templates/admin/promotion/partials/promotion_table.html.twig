@@ -1,0 +1,41 @@
+{% from 'admin/macro.html.twig' import progressBar, percentBadge %}
+<table class="table table-bordered">
+    <tbody>
+    <tr>
+        <th>#</th>
+        <th>{% trans %}promotion_name{% endtrans %}</th>
+        <th>{% trans %}promotion_coupon_left{% endtrans %}</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+    {% set lp = 1 %}
+    {% for promotionData in promotionsData %}
+        <tr>
+            <td>{{ lp }}</td>
+            <td>{{ promotionData.promotion.name }}</td>
+            <td>
+                {{ progressBar(promotionData.all_coupons_count, promotionData.used_coupons_count) }}
+            </td>
+            <td>
+                {{ percentBadge(promotionData.all_coupons_count, promotionData.used_coupons_count) }}
+            </td>
+            <td>{{ promotionData.all_coupons_count - promotionData.used_coupons_count }}
+                z {{ promotionData.all_coupons_count }}</td>
+            <td>
+                <a href="{{ path('admin_promotion_edit', {'id' : promotionData.promotion.id }) }}" class="btn btn-sm btn-block btn-primary">
+                    <i class="fa fa-edit" aria-hidden="true"></i>
+                </a>
+            </td>
+            <td>
+                {{ include('admin/promotion/coupon/_form/_delete_form.html.twig', {'id' : promotionData.promotion.id, 'itemName' : promotionData.promotion }) }}
+            </td>
+        </tr>
+        {% set lp = lp +1 %}
+    {% else %}
+        <tr>
+            <td>{% trans %}no_result{% endtrans %}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

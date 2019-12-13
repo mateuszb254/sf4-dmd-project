@@ -1,0 +1,94 @@
+parameters:
+    # Adds a fallback DATABASE_URL if the env var is not set.
+    # This allows you to run cache:warmup even if your
+    # environment variables are not available yet.
+    # You should not need to change this value.
+    env(DATABASE_URL): ''
+
+doctrine:
+    dbal:
+        # configure these for your database server
+        driver: 'pdo_mysql'
+        server_version: '5.7'
+        charset: utf8mb4
+        default_table_options:
+            charset: utf8mb4
+            collate: utf8mb4_unicode_ci
+
+        url: '%env(resolve:DATABASE_URL)%'
+        mapping_types:
+            enum: string
+    orm:
+        auto_generate_proxy_classes: true
+        naming_strategy: doctrine.orm.naming_strategy.underscore
+        auto_mapping: true
+        mappings:
+            Article:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Article/Entity'
+                prefix: 'App\Article\Entity'
+                alias: Article
+
+            Character:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Character/Entity'
+                prefix: 'App\Character\Entity'
+                alias: Character
+
+            Download:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Download/Entity'
+                prefix: 'App\Download\Entity'
+                alias: Download
+
+            Guild:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Guild/Entity'
+                prefix: 'App\Guild\Entity'
+                alias: Download
+
+            Log:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Log/Entity'
+                prefix: 'App\Log\Entity'
+                alias: Download
+
+            Payments:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Payments/Entity'
+                prefix: 'App\Promotion\Entity'
+                alias: Payments
+
+            Promotion:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Promotion/Entity'
+                prefix: 'App\Promotion\Entity'
+                alias: Promotion
+
+            Support:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Support/Entity'
+                prefix: 'App\Support\Entity'
+                alias: Download
+
+            Terms:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/Terms/Entity'
+                prefix: 'App\Terms\Entity'
+                alias: Terms
+
+            User:
+                is_bundle: false
+                type: annotation
+                dir: '%kernel.project_dir%/src/User/Entity'
+                prefix: 'App\User\Entity'
+                alias: User

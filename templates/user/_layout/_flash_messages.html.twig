@@ -1,0 +1,11 @@
+<div class="flash-message-wrapper">
+    {% for key, flashes in app.flashes %}
+        <div class="flash-message {{ key }}">
+            {% for flash in flashes %}
+                <p class="flash-message-content">
+                    {{ flash|trans }}
+                </p>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>

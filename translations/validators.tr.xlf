@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="email_nonexistent">
+                <source>email_nonexistent</source>
+                <target>Verilen e-posta hiçbir hesaba atanmadı.</target>
+            </trans-unit>
+            <trans-unit id="recaptcha_invalid">
+                <source>recaptcha_invalid</source>
+                <target>Recaptcha'yı onaylamalısın.</target>
+            </trans-unit>
+            <trans-unit id="payments_promotional_not_found">
+                <source>payments_promotional_not_found</source>
+                <target>Promosyon kodu mevcut değil.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_already_used">
+                <source>promotion_coupon_already_used</source>
+                <target>Promosyon kodu zaten kullanıldı.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_one_per_tag">
+                <source>promotion_coupon_one_per_tag</source>
+                <target>Bu promosyon havuzunun promosyon kodu zaten kullanılmıştır.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

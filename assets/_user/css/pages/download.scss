@@ -1,0 +1,65 @@
+.download {
+  .download-content {
+    .download-boxes {
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      display: flex;
+
+      .download-box {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        width: 140px;
+        height: 200px;
+        margin-bottom: 18px;
+
+        display: flex;
+
+        .image-wrapper {
+          width: 120px;
+          height: 150px;
+
+          justify-content: center;
+          align-items: center;
+          display: flex;
+
+          transition: all 0.7s;
+
+          img {
+            max-width: 110px;
+
+            transition: all 0.7s;
+            display: block;
+          }
+        }
+
+        .caption {
+          height: 25px;
+          width: 75%;
+
+          padding: 0 5px;
+          box-sizing: border-box;
+          overflow: hidden;
+
+          justify-content: center;
+          align-items: center;
+          display: flex;
+
+          span {
+            font-size: 10px;
+          }
+        }
+
+        &:hover > .image-wrapper {
+          background-color: #055a75;
+        }
+
+        &:hover > .image-wrapper > img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

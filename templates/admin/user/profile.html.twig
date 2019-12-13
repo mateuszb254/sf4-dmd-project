@@ -1,0 +1,236 @@
+{% extends 'admin/base.html.twig' %}
+{% form_theme editUserForm 'admin/form_theme.html.twig' %}
+{#{% form_theme banUserForm 'admin/form_theme.html.twig' %}#}
+{% from 'macro.html.twig' import displayTitlePoints, displayVIPDate, displayAccountStatus, displayAccountStatus_bootstrap %}
+{% block content %}
+    <div class="col-sm-12 col-md-4">
+        <!-- Profile Image -->
+        <div class="box box-primary">
+            <div class="box-body box-profile">
+                <h3 class="profile-username text-center">
+                    {{ user.login }}
+                </h3>
+                <p class="text-muted text-center">
+                    {{ displayAccountStatus_bootstrap(user.banTime, user.status) }}
+                </p>
+                {% if user.isBanned %}
+                    <div class="text-muted text-center" style="margin: 15px 0;">
+                        <span class="text-muted" style="display: block; font-size: 13px;">
+                            <strong>{% trans %}user_ban_reason{% endtrans %}</strong>
+                        </span>
+                        <span class="text-muted" style="display: block; font-size: 12px;">
+                            {{ user.banReason ? user.BanReason : '-' }}
+                        </span>
+                    </div>
+                {% endif %}
+
+                <div class="text-muted text-center">
+                    <p><strong>{% trans %}user_characters_list{% endtrans %}</strong></p>
+
+                    <ol class="list-group list-group-unbordered">
+                        {% for character in user.characters %}
+                            <li class="list-group-item">
+                                <span style="width: 35%; display: inline-block; text-align: left">
+                                    <span style="color: forestgreen">Lv. {{ character.level }}</span>
+                                </span>
+                                <span style="width: 40%; display: inline-block; text-align: left;">
+                                    {{ character.name }}
+                                </span>
+                                <span style="width: 15%; display: inline-block; text-align: right;">
+                                    {{ displayTitlePoints(character.titlePoints) }}
+                                </span>
+                            </li>
+                        {% else %}
+                            <li class="list-group-item">{% trans %}user_has_no_characters{% endtrans %}.
+                            </li>
+                        {% endfor %}
+                    </ol>
+                </div>
+
+                <div class="text-muted text-center">
+                    <p><strong>{% trans %}vip_account{% endtrans %}</strong></p>
+                    <ul class="list-group list-group-unbordered">
+                        <li class="list-group-item">
+                            <span style="width: 40%; display: inline-block; text-align: left;">
+                                <b>{% trans %}vip_silver{% endtrans %}</b>
+                            </span>
+                            <span style="width: 40%; display: inline-block; text-align: left;"
+                                  class="pull-right">
+                                {{ displayVIPDate(user.silverVip) }}
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <span style="width: 40%; display: inline-block; text-align: left;">
+                                <b>{% trans %}vip_gold{% endtrans %}</b>
+                            </span>
+                            <span style="width: 40%; display: inline-block; text-align: left;"
+                                  class="pull-right">
+                                {{ displayVIPDate(user.goldVip) }}
+                            </span>
+                        </li>
+                        <li class="list-group-item">
+                            <span style="width: 40%; display: inline-block; text-align: left;">
+                                <b>{% trans %}vip_bronze{% endtrans %}</b>
+                            </span>
+                            <span style="width: 40%; display: inline-block; text-align: left;"
+                                  class="pull-right">
+                                {{ displayVIPDate(user.bronzeVip) }}
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="box-body">
+                    <strong>
+                        <i class="fa fa-question-circle margin-r-5"></i>
+                        {% trans %}security_question{% endtrans %}
+                    </strong>
+
+                    <p class="text-muted">
+                        {{ user.securityQuestion }}
+                    </p>
+
+                    <hr>
+                    <strong>
+                        <i class="fa fa-book margin-r-5"></i>
+                        {% trans %}security_answer{% endtrans %}
+                    </strong>
+
+                    <p class="text-muted">
+                        {{ user.securityAnswer }}
+                    </p>
+
+                    <hr>
+                </div>
+
+                {% if user.isBanned %}
+                    <button class="btn btn-danger btn-block"><b>{% trans %}user_unban{% endtrans %}</b></button>
+                {% else %}
+                    {#<div id="ban-form" class="ban-form">#}
+                        {#{{ form_start(banUserForm) }}#}
+                        {#{{ form_row(banUserForm.reason) }}#}
+                        {#{{ form_row(banUserForm.type) }}#}
+                        {#<div class="text-center">#}
+                            {#{{ form_row(banUserForm.banTime) }}#}
+                        {#</div>#}
+                        {#{{ form_widget(banUserForm) }}#}
+                        <button type="submit" class="btn btn-primary btn-block text-bold">
+                            <i class="fa fa-user-times"></i>
+                            {% trans %}user_ban{% endtrans %}
+                        </button>
+                        {#{{ form_end(banUserForm) }}#}
+                    {#</div>#}
+                {% endif %}
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+    <div class="col-sm-12 col-md-8">
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#settings" data-toggle="tab" aria-expanded="false">Edycja</a></li>
+                <li class=""><a href="#activity" data-toggle="tab" aria-expanded="true">Historia logowań</a></li>
+                <li class=""><a href="#activity_shop" data-toggle="tab" aria-expanded="true">Historia zakupów</a></li>
+                <li class=""><a href="#activity_data" data-toggle="tab" aria-expanded="true">Historia zmian danych</a>
+                <li class="">
+                    <a href="#user_tickets" data-toggle="tab" aria-expanded="true">
+                        Zgłoszenia
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="settings">
+                    <div class="box-body">
+                        {{ form_start(editUserForm) }}
+                        {{ form_widget(editUserForm) }}
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-danger">Submit</button>
+                            </div>
+                        </div>
+                        {{ form_end(editUserForm) }}
+                    </div>
+                </div>
+                <!-- /.tab-pane -->
+                <div class="tab-pane" id="activity">
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-hover">
+                            <tbody>
+                            <tr>
+                                <th>IP</th>
+                                <th>Przeglądarka</th>
+                                <th>Data</th>
+                            </tr>
+                            {% for authAttempt in user_statistics.authAttempts %}
+                                <tr>
+                                    <td>{{ authAttempt.ip }}</td>
+                                    <td>{{ authAttempt.userAgent }}</td>
+                                    <td>{{ authAttempt.createdAt|date('Y-m-d H:i:sP') }}</td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td colspan="5">Nie znaleziono</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.tab-pane -->
+                <div class="tab-pane" id="activity_shop">
+
+                </div>
+                <!-- /.tab-pane -->
+                <div class="tab-pane" id="activity_data">
+                </div>
+                <div class="tab-pane" id="user_tickets">
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-hover table-striped">
+                            <tbody>
+                            {% for ticket in user.tickets %}
+                                <tr>
+                                    <td>
+                                        <div class="icheckbox_flat-blue" aria-checked="false" aria-disabled="false"
+                                             style="position: relative;">
+                                            <input type="checkbox" style="position: absolute; opacity: 0;">
+                                            <ins class="iCheck-helper"
+                                                 style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+                                        </div>
+                                    </td>
+                                    {#<td class="mailbox-star"><i class="fa text-yellow fa-star-o"></i></td>#}
+                                    <td class="mailbox-star">
+                                        <i class="fa fa-star text-yellow"></i>
+                                    </td>
+                                    <td class="mailbox-subject">
+                                        <a href="{{ path('admin_support_ticket', {"id" : ticket.id}) }}"
+                                           style="color: #000">
+                                            <b>{{ ticket.title }}</b> -
+                                            {{ ticket.content|truncate(80, false, '...')|striptags }}
+                                        </a>
+                                    </td>
+                                    <td class="mailbox-attachment"></td>
+                                    <td class="mailbox-category">
+                                        <a href="{{ path('admin_support_tickets', {'name' : ticket.category.name }) }}">
+                                            {{ ticket.category }}
+                                        </a>
+                                    </td>
+                                    <td class="mailbox-date">{{ ticket.createdAt|time_diff }}</td>
+                                </tr>
+                            {% else %}
+                                <tr>
+                                    <td>
+                                        Nie znaleziono
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+        </div>
+        <!-- /.nav-tabs-custom -->
+    </div>
+{% endblock %}

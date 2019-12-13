@@ -1,0 +1,18 @@
+.payments {
+  .payments-content {
+    .receive-coins-info, .another-payment-link {
+      text-align: center;
+      font-size: 11px;
+      color: #95e2f9;
+    }
+
+    .receive-coins-info {
+      padding-bottom: 10px;
+
+      .coins-amount {
+        font-weight: bold;
+        color: #FFD700;
+      }
+    }
+  }
+}

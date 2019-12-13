@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="{{ app.request.session.get('_locale') }}">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ project_name }} - {% block header_title %}{% trans %}project_caption{% endtrans %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    {{ encore_entry_link_tags('app_user_css') }}
+    {% if app.environment == 'demo' %}
+        {{ encore_entry_link_tags('app_user_css_demo') }}
+    {% endif %}
+</head>
+<body>
+{% if app.environment == 'demo' %}
+    {% include 'user/demo_env.html.twig' %}
+{% endif %}
+{% include 'user/_layout/_welcome.html.twig' %}
+{% include 'user/_layout/_header.html.twig' %}
+<main id="main" class="main">
+    <div class="main-content">
+        <div class="col-side">
+            {% include 'user/_layout/_navigation.html.twig' %}
+            {% include 'user/_layout/_calendar.html.twig' %}
+        </div>
+        <div class="col-center">
+            <section class="box-center {% block template_name %}articles{% endblock %}">
+                {% include 'user/_layout/_download.html.twig' %}
+                <div class="box-center-middle">
+                    <div class="box-center-content {{ block('template_name') }}-content">
+                        {% include 'user/_layout/_flash_messages.html.twig' %}
+                        {% block content %}{% endblock %}
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-side">
+            {% include 'user/_layout/_userbox.html.twig' %}
+            {% include 'user/_layout/_rankingaside.html.twig' %}
+        </div>
+    </div>
+</main>
+{% include 'user/_layout/_facebook.html.twig' %}
+{% include 'user/_layout/_footer.html.twig' %}
+{% include 'user/_layout/_authors.html.twig' %}
+{% block js %}
+    <script src="{{ asset('bundles/bazingajstranslation/js/translator.min.js') }}"></script>
+    <script src="{{ path('bazinga_jstranslation_js', { 'domain': 'date', 'locales': localeWithFallback()|join(',') }) }}"></script>
+    {{ encore_entry_script_tags('app_user_js') }}
+    {% if app.environment == 'demo' %}
+        {{ encore_entry_script_tags('app_user_js_demo') }}
+    {% endif %}
+{% endblock %}
+</body>
+</html>

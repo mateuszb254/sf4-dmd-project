@@ -1,0 +1,59 @@
+{% from 'macro.html.twig' import paginate, displayEmpireFlag, displayProfessionName %}
+{% extends 'user/ranking/ranking_base.html.twig' %}
+{% block search_label %}
+    {% trans %}ranking_type_player_name{% endtrans %}
+{% endblock %}
+{% block ranking_table %}
+    <table id="ranking" class="table">
+        <tbody>
+        <tr>
+            <th class="left">
+                Lp.
+            </th>
+            <th class="left">
+                {% trans %}character_name{% endtrans %}
+            </th>
+            <th>
+                {% trans %}kingdom{% endtrans %}
+            </th>
+            <th>
+                {% trans %}character_profession{% endtrans %}
+            </th>
+            <th>
+                {% trans %}guild{% endtrans %}
+            </th>
+            <th>
+                {% trans %}level{% endtrans %}
+            </th>
+        </tr>
+        {% set paginationLength = pagination.result|length %}
+        {% set lp = pagination.currentPage > 1 ? ((pagination.currentPage-1) * constant('App\\Character\\Entity\\Character::PER_PAGE'))+1 : 1 %}
+        {% for character in pagination.result %}
+            <tr>
+                <td class="left">{{ lp }}.</td>
+                <td class="left">
+                    <a href="{{ path('character_profile', {
+                        'name' : character.name
+                    }) }}"> {{ character.name }}</a>
+                </td>
+                <td class="image">
+                    {{ displayEmpireFlag(character.empire) }}
+                </td>
+                <td>{{ displayProfessionName(character.profession) }}</td>
+                <td>
+                    {% if character.guild is not null %}
+                        <a href="{{ path('guild_profile', {
+                            'name' : character.guild.name
+                        }) }}">{{ character.guild.name }}</a>
+                    {% else %}
+                        -
+                    {% endif %}
+                </td>
+                <td>{{ character.level }}</td>
+            </tr>
+            {% set lp = lp + 1 %}
+        {% endfor %}
+        </tbody>
+    </table>
+    {{ paginate(pagination, 'ranking_characters') }}
+{% endblock %}

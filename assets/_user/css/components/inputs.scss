@@ -1,0 +1,43 @@
+.input-medium,
+.select,
+.textarea {
+  font-size: 11px;
+  color: #fff;
+
+}
+
+.input-medium,
+.select {
+  background: url('../../images/components/input/input_medium.png');
+  font-family: "Tahoma", sans-serif;
+
+  width: 158px;
+  height: 34px;
+
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.select option {
+  background: #000;
+}
+
+.textarea {
+  $backgroundColor: #000;
+  background: url('../../images/components/input/textarea/textarea_horizontal.png') center top repeat-x,
+  url('../../images/components/input/textarea/textarea_vertical.png') left repeat-y,
+  url('../../images/components/input/textarea/textarea_vertical.png') right repeat-y,
+  url('../../images/components/input/textarea/textarea_horizontal.png') center bottom repeat-x,
+  linear-gradient(
+                  to bottom,
+                  rgba($backgroundColor, 0.4) 0%,
+                  rgba($backgroundColor, 0.6) 25%,
+                  rgba($backgroundColor, 0.8) 50%,
+                  rgba($backgroundColor, 0.6) 75%,
+                  rgba($backgroundColor, 0.4) 100%
+  );
+
+  padding: 10px 10px;
+  width: 250px;
+  height: 250px;
+}

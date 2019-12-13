@@ -1,0 +1,114 @@
+article:
+    resource: ../../src/Article/Controller/
+    type: annotation
+
+auth:
+    resource: ../../src/Auth/Controller/
+    type: annotation
+
+download:
+    resource: ../../src/Download/Controller/
+    type: annotation
+
+character:
+    resource: ../../src/Character/Controller/
+    type: annotation
+    prefix: /character
+
+game:
+    resource: ../../src/Game/Controller/
+    type: annotation
+    prefix: /game
+
+guild:
+    resource: ../../src/Guild/Controller/
+    type: annotation
+    prefix: /guild
+
+user:
+    resource: ../../src/User/Controller/
+    type: annotation
+    prefix: /user
+
+terms:
+    resource: ../../src/Terms/Controller/
+    type: annotation
+
+payments:
+    resource: ../../src/Payments/Controller/
+    type: annotation
+    prefix: /payments
+
+promotion:
+    resource: ../../src/Promotion/Controller
+    type: annotation
+    prefix: /promotion
+
+ranking:
+    resource: ../../src/Ranking/Controller/
+    type: annotation
+    prefix: /ranking
+
+support:
+    resource: ../../src/Support/Controller/
+    type: annotation
+    prefix: /support
+
+shop:
+    resource: ../../src/Shop/Controller/
+    type: annotation
+    prefix: /shop
+
+#admin
+admin_article:
+    resource: ../../src/Article/Controller/Admin/
+    type: annotation
+    prefix: /admin/articles
+
+#admin_character:
+#    resource: ../../src/Article/Controller/Admin/
+#    type: annotation
+#    prefix: /admin/characters
+
+admin_dashboard:
+    resource: ../../src/Dashboard/Controller/Admin
+    type: annotation
+    prefix: /admin
+
+#admin_document:
+#    resource: ../../src/Document/Controller/Admin
+#    type: annotation
+#    prefix: /admin/document
+
+#admin_payments:
+#    resource: ../../src/Payments/Controller/Admin
+#    type: annotation
+#    prefix: /admin/payments
+
+admin_promotion:
+    resource: ../../src/Promotion/Controller/Admin
+    type: annotation
+    prefix: /admin/promotion
+
+admin_support:
+    resource: ../../src/Support/Controller/Admin/
+    type: annotation
+    prefix: /admin/support
+
+admin_terms:
+    resource: ../../src/Terms/Controller/Admin/
+    type: annotation
+    prefix: /admin/terms
+
+admin_user:
+    resource: ../../src/User/Controller/Admin/
+    type: annotation
+    prefix: /admin/users
+
+#API
+api_payments:
+    resource: ../../src/Payments/Controller/API/
+    type: annotation
+    prefix: /api/payments
+
+

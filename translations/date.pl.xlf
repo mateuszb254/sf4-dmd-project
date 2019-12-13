@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="pl" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="diff.ago.second">
+                <source>diff.ago.second</source>
+                <target>przed chwilą</target>
+            </trans-unit>
+            <trans-unit id="diff.ago.minute">
+                <source>diff.ago.minute</source>
+                <target>minutę temu|%count% minuty temu|%count% minut temu</target>
+            </trans-unit>
+            <trans-unit id="diff.ago.hour">
+                <source>diff.ago.hour</source>
+                <target>godzinę temu|%count% godziny temu|%count% godzin temu</target>
+            </trans-unit>
+            <trans-unit id="diff.ago.day">
+                <source>diff.ago.day</source>
+                <target>dzień temu|%count% dni temu|%count% dni temu</target>
+            </trans-unit>
+            <trans-unit id="diff.ago.month">
+                <source>diff.ago.month</source>
+                <target>miesiąc temu|%count% miesięcy temu|%count% miesięcy temu</target>
+            </trans-unit>
+            <trans-unit id="diff.ago.year">
+                <source>diff.ago.year</source>
+                <target>ponad rok temu|%count% lata temu|%count% lat temu</target>
+            </trans-unit>
+            <trans-unit id="day1">
+                <source>day1</source>
+                <target>Poniedzialek</target>
+            </trans-unit>
+            <trans-unit id="day2">
+                <source>day2</source>
+                <target>Wtorek</target>
+            </trans-unit>
+            <trans-unit id="day3">
+                <source>day3</source>
+                <target>Środa</target>
+            </trans-unit>
+            <trans-unit id="day4">
+                <source>day4</source>
+                <target>Czwartek</target>
+            </trans-unit>
+            <trans-unit id="day5">
+                <source>day5</source>
+                <target>Piątek</target>
+            </trans-unit>
+            <trans-unit id="day6">
+                <source>day6</source>
+                <target>Sobota</target>
+            </trans-unit>
+            <trans-unit id="day7">
+                <source>day7</source>
+                <target>Niedziela</target>
+            </trans-unit>
+            <trans-unit id="day1_short">
+                <source>day1_short</source>
+                <target>Pon</target>
+            </trans-unit>
+            <trans-unit id="day2_short">
+                <source>day2_short</source>
+                <target>Wt</target>
+            </trans-unit>
+            <trans-unit id="day3_short">
+                <source>day3_short</source>
+                <target>Śr</target>
+            </trans-unit>
+            <trans-unit id="day4_short">
+                <source>day4_short</source>
+                <target>Czw</target>
+            </trans-unit>
+            <trans-unit id="day5_short">
+                <source>day5_short</source>
+                <target>Pt</target>
+            </trans-unit>
+            <trans-unit id="day6_short">
+                <source>day6_short</source>
+                <target>Sob</target>
+            </trans-unit>
+            <trans-unit id="day7_short">
+                <source>day7_short</source>
+                <target>Niedz</target>
+            </trans-unit>
+            <trans-unit id="month1">
+                <source>month1</source>
+                <target>Styczeń</target>
+            </trans-unit>
+            <trans-unit id="month2">
+                <source>month2</source>
+                <target>Luty</target>
+            </trans-unit>
+            <trans-unit id="month3">
+                <source>month3</source>
+                <target>Marzec</target>
+            </trans-unit>
+            <trans-unit id="month4">
+                <source>month4</source>
+                <target>Kwiecień</target>
+            </trans-unit>
+            <trans-unit id="month5">
+                <source>month5</source>
+                <target>Maj</target>
+            </trans-unit>
+            <trans-unit id="month6">
+                <source>month6</source>
+                <target>Czerwiec</target>
+            </trans-unit>
+            <trans-unit id="month7">
+                <source>month7</source>
+                <target>Lipiec</target>
+            </trans-unit>
+            <trans-unit id="month8">
+                <source>month8</source>
+                <target>Sierpień</target>
+            </trans-unit>
+            <trans-unit id="month9">
+                <source>month9</source>
+                <target>Wrzesień</target>
+            </trans-unit>
+            <trans-unit id="month10">
+                <source>month10</source>
+                <target>Październik</target>
+            </trans-unit>
+            <trans-unit id="month11">
+                <source>month11</source>
+                <target>Listopad</target>
+            </trans-unit>
+            <trans-unit id="month12">
+                <source>month12</source>
+                <target>Grudzień</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

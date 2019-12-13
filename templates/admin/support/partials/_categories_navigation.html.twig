@@ -1,0 +1,40 @@
+{% macro displayAmountOfUnansweredTickets(amount) %}
+    {% if amount >= constant('App\\Support\\Entity\\TicketCategory::UNANSWERED_TICKETS_AMOUNT_DANGER') %}
+        {% set class = 'danger' %}
+    {% elseif amount >= constant('App\\Support\\Entity\\TicketCategory::UNANSWERED_TICKETS_AMOUNT_WARNING') %}
+        {% set class = 'warning' %}
+    {% elseif amount > constant('App\\Support\\Entity\\TicketCategory::UNANSWERED_TICKETS_AMOUNT_SAFE') %}
+        {% set class = 'primary' %}
+    {% endif %}
+
+    <span class="label label-{{ class is defined ? class : 'default' }} pull-right">{{ amount }}</span>
+{% endmacro %}
+<ul class="nav nav-pills nav-stacked">
+    <a href="{{ path('admin_support_categories_list') }}" class="btn btn-primary btn-block margin-bottom">
+        {% trans %}support_category_manage{% endtrans %}
+    </a>
+    {% if categoriesWithAmount is not empty %}
+        <li class="{% if currentCategory == null %}active{% endif %}">
+            <a href="{{ path('admin_support_tickets') }}">
+                <i class="fa fa-inbox"></i>
+                {% trans %}support_tickets_all{% endtrans %}
+            </a>
+        </li>
+        {% for categoryWithAmount in categoriesWithAmount %}
+            <li class="{% if currentCategory is not null and categoryWithAmount.category.name == currentCategory.name %}active{% endif %}">
+                <a style="margin-left: 20px;" href="{{ path('admin_support_tickets', {'slug': categoryWithAmount.category.slug}) }}">
+                    <i class="{{ categoryWithAmount.category.faIconName ?? 'fa' }}"></i>
+                    {{ categoryWithAmount.category.name }}
+                    {{ _self.displayAmountOfUnansweredTickets(categoryWithAmount.amount) }}
+                </a>
+            </li>
+        {% endfor %}
+    {% else %}
+        <li>
+            <span style="display: block; text-align: center; padding: 10px 10px;">
+               {% trans %}support_categories_not_found{% endtrans %}
+                <a href="{{ path('admin_support_categories_list') }}">{% trans %}support_category_manage{% endtrans %}</a>.
+        </span>
+        </li>
+    {% endif %}
+</ul>

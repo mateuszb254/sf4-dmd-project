@@ -1,0 +1,20 @@
+{% extends 'user/base.html.twig' %}
+{% block header_title %}{% trans %}registration{% endtrans %}{% endblock %}
+{% block template_name %}download{% endblock %}
+{% block content %}
+    <h2>Wybierz zrodlo pobrana gry</h2>
+    <div class="download-boxes">
+        {% for mirror in mirrors %}
+            <a href="{{ mirror.uri }}" class="frame-box download-box">
+                <div class="image-wrapper frame-box">
+                    <img src="{{ mirror.image ? asset(mirror.image) : asset('assets/images/payments/promotion_code.png') }}" alt="">
+                </div>
+                <div class="caption frame-box">
+                    <span>{{ mirror.title }}</span>
+                </div>
+            </a>
+            {% else %}
+            <p>{% trans %}no_result{% endtrans %}</p>
+        {% endfor %}
+    </div>
+{% endblock %}

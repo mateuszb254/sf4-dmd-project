@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="generated_info">
+                <source>generated_info</source>
+                <target>This message has been generated automatically. Please, do not answer.</target>
+            </trans-unit>
+            <trans-unit id="hello">
+                <source>hello</source>
+                <target>Hello, %username%!</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_title">
+                <source>email_change_request_title</source>
+                <target>E-mail address change</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_1">
+                <source>email_change_request_content_1</source>
+                <target>We've received a request to change your email address on %project_name% .</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_2">
+                <source>email_change_request_content_2</source>
+                <target>Wasn't it you? Change your email address assigned to your account.</target>
+            </trans-unit>
+            <trans-unit id="email_change_request_content_3">
+                <source>email_change_request_content_3</source>
+                <target>Was it you? You can change your email address by clicking button below.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_1">
+                <source>password_reset_request_content_1</source>
+                <target>We've received a request to change your password on %project_name% .</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_2">
+                <source>password_reset_request_content_2</source>
+                <target>Wasn't it you? Change your email address assigned to your account.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_content_3">
+                <source>password_reset_request_content_3</source>
+                <target>Was it you? You can change your email address by clicking button below.</target>
+            </trans-unit>
+            <trans-unit id="password_reset_request_title">
+                <source>password_reset_request_title</source>
+                <target>Password reset</target>
+            </trans-unit>
+            <trans-unit id="regards">
+                <source>regards</source>
+                <target>Best regards - %project_name% team!</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_title">
+                <source>support_ticket_reply_received_title</source>
+                <target>Ticket reply - %title%</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_content_1">
+                <source>support_ticket_reply_received_content_1</source>
+                <target>You got an answer for your ticket - %title%.</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_content_2">
+                <source>support_ticket_reply_received_content_2</source>
+                <target>Click the button below to move to the ticket.</target>
+            </trans-unit>
+            <trans-unit id="support_ticket_reply_received_content_3">
+                <source>support_ticket_reply_received_content_3</source>
+                <target>We hope you haven't waited too long.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

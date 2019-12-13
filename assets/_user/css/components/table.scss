@@ -1,0 +1,63 @@
+table.table {
+  $borderColor: rgba(#95e2f9, 0.3);
+
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    border-bottom: 1px solid $borderColor;
+  }
+
+  tr:nth-child(even) {
+    $backgroundColor: #95e2f9;
+    background-image: -moz-linear-gradient(
+                    left,
+                    rgba($backgroundColor, 0.1) 0%,
+                    rgba($backgroundColor, 0.35) 25%,
+                    rgba($backgroundColor, 0.60) 50%,
+                    rgba($backgroundColor, 0.60) 60%,
+                    rgba($backgroundColor, 0.35) 75%,
+                    rgba($backgroundColor, 0.1) 100%
+    );
+    background-image: -webkit-linear-gradient(
+                    left,
+                    rgba($backgroundColor, 0.1) 0%,
+                    rgba($backgroundColor, 0.35) 25%,
+                    rgba($backgroundColor, 0.60) 50%,
+                    rgba($backgroundColor, 0.60) 60%,
+                    rgba($backgroundColor, 0.35) 75%,
+                    rgba($backgroundColor, 0.1) 100%
+    );
+    background-image: linear-gradient(
+                    to right,
+                    rgba($backgroundColor, 0.1) 0%,
+                    rgba($backgroundColor, 0.35) 25%,
+                    rgba($backgroundColor, 0.60) 50%,
+                    rgba($backgroundColor, 0.60) 60%,
+                    rgba($backgroundColor, 0.35) 75%,
+                    rgba($backgroundColor, 0.1) 100%
+    );
+  }
+
+  td {
+    font-size: 11px;
+  }
+
+  th {
+    font-size: 13px;
+  }
+
+  td, th {
+    text-align: center;
+    padding: 4px 0;
+
+    &.left {
+      text-align: left;
+      padding-left: 9px;
+    }
+  }
+
+  td:not(:first-child) {
+    border-left: 1px solid $borderColor;
+  }
+}

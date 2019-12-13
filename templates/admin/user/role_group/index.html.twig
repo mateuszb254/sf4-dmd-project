@@ -1,0 +1,87 @@
+{% form_theme roleGroupsForm 'admin/form_theme.html.twig' %}
+{% form_theme assignRoleForm 'admin/form_theme.html.twig' %}
+{% extends 'admin/base.html.twig' %}
+{% block content %}
+    <div class="col-xs-7">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">{% trans %}user_role_groups{% endtrans %}</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover">
+                    <tbody>
+                    <tr>
+                        <th>ID</th>
+                        <th>{% trans %}user_role_group_name{% endtrans %}</th>
+                        <th>{% trans %}users{% endtrans %}</th>
+                    </tr>
+                    {% for roleGroup in roleGroups %}
+                        <tr>
+                            <td>{{ roleGroup.id }}</td>
+                            <td>{{ roleGroup.name }}</td>
+                            <td>
+                                {% for user in roleGroup.users %}
+                                    <a href="{{ path('admin_user_profile', {"login" : user.login}) }}">{{ user.login }}</a>
+                                    {% if not loop.last %}, {% endif %}
+                                {% endfor %}
+                            </td>
+                            <td>
+                                <a href="{{ path('admin_users_role_group_edit', {'id' : roleGroup.id }) }}" class="btn btn-sm btn-block btn-primary">
+                                    <i class="fa fa-edit" aria-hidden="true"></i>
+                                </a>
+                            </td>
+                            <td>
+                                {{ include('admin/user/role_group/form/_delete_form.html.twig', {'id' : roleGroup.id, 'itemName' : roleGroup.name }) }}
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td>{% trans %}no_result{% endtrans %}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+    <div class="col-xs-5">
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">{% trans %}user_assign_to_role{% endtrans %}</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                {{ form_start(assignRoleForm) }}
+                {{ form_widget(assignRoleForm) }}
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">
+                        {% trans %}assign{% endtrans %}
+                    </button>
+                </div>
+                {{ form_end(assignRoleForm) }}
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <h3 class="box-title">{% trans %}user_role_groups_add{% endtrans %}</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                {{ form_start(roleGroupsForm) }}
+                {{ form_widget(roleGroupsForm) }}
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary">
+                        {% trans %}add{% endtrans %}
+                    </button>
+                </div>
+                {{ form_end(roleGroupsForm) }}
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+    </div>
+{% endblock %}

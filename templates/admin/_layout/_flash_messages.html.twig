@@ -1,0 +1,11 @@
+<div class="flash-message-wrapper">
+    {% for key, flashes in app.flashes %}
+        {% for flash in flashes %}
+            <div class="alert alert-{{ key == 'failure' ? 'danger' : key }} alert-dismissible" style="">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h4><i class="icon fa fa-check"></i> {{ key|trans }}</h4>
+                {{ flash|trans }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+</div>

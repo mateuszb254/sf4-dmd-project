@@ -1,0 +1,57 @@
+{% use "form_div_layout.html.twig" %}
+
+{% block form_widget_simple -%}
+    {% if type is not defined or type not in ['file', 'hidden', 'textarea'] %}
+        {%- set attr = attr|merge({class: 'input-medium'|trim}) -%}
+    {% endif %}
+    {{- parent() -}}
+{%- endblock form_widget_simple %}
+
+{% block form_help %}
+    {%- set help_attr = help_attr|merge({class: 'form-help'|trim}) -%}
+    {{ parent() }}
+{% endblock %}
+{% block form_row -%}
+    {%- set widget_attr = {} -%}
+    {%- set row_attr = {'class' : 'form-row'} -%}
+
+    {%- if help is not empty -%}
+        {%- set widget_attr = {attr: {'aria-describedby': id ~"_help"}} -%}
+    {%- endif -%}
+
+    <div {% with {attr: row_attr|default({})} %}{{ block('attributes') }}{% endwith %}>
+        {{- form_label(form) -}}
+        {{- form_widget(form, widget_attr) -}}
+        {% if not valid %}
+            <span class="form-error">
+                {{- form_errors(form) -}}
+            </span>
+        {% endif %}
+        {{- form_help(form) -}}
+    </div>
+{%- endblock form_row %}
+
+{% block checkbox_row %}
+    <div class="form-row checkbox-row{% if not valid %} has-error{% endif %}">
+        {{- form_label(form) -}}
+        {{- form_widget(form) -}}
+        {{- form_help(form) -}}
+    </div>
+{% endblock %}
+
+{% block textarea_widget %}
+    {% set attr = { 'class' : 'textarea' } %}
+    {{ parent() }}
+{% endblock %}
+
+{% block choice_widget_collapsed   %}
+    {% set attr = { 'class' : 'select' } %}
+    {{ parent() }}
+{% endblock %}
+
+{% block recaptcha_widget %}
+    <div>
+        {{ form_widget(form) }}
+    </div>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+{% endblock %}

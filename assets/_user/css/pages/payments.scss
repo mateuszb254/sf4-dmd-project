@@ -1,0 +1,50 @@
+.payments {
+  .payments-content {
+    h2 {
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .payment-box {
+      margin: auto;
+    }
+
+    .payment-box {
+      width: 400px;
+
+      &:hover {
+        background-color: #28a1cd;
+        cursor: pointer;
+      }
+
+
+      .image-wrapper {
+        width: 115px;
+        height: 115px;
+
+        justify-content: center;
+        align-items: center;
+
+        display: flex;
+      }
+
+      .description {
+        box-sizing: border-box;
+        padding: 10px 10px;
+
+        flex-direction: column;
+        display: flex;
+
+        h4 {
+          font-size: 17px;
+          padding-bottom: 5px;
+        }
+
+        p {
+          font-size: 10px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

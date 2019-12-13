@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="pl" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="user_login_not_found">
+                <source>user_login_not_found</source>
+                <target>Użytkownik z loginem "{{ value }}" nie istnieje.</target>
+            </trans-unit>
+            <trans-unit id="email_nonexistent">
+                <source>email_nonexistent</source>
+                <target>Podany adres mailowy nie jest przypisany do zadnego konta.</target>
+            </trans-unit>
+            <trans-unit id="login_invalid_pattern">
+                <source>login_invalid_pattern</source>
+                <target>Login może zawierać jedynie znaki alfanumeryczne.</target>
+            </trans-unit>
+            <trans-unit id="recaptcha_invalid">
+                <source>recaptcha_invalid</source>
+                <target>Musisz potwierdzić recaptchę.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_not_found">
+                <source>promotion_coupon_not_found</source>
+                <target>Kod "%code%" nie istnieje.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_already_used">
+                <source>promotion_coupon_already_used</source>
+                <target>Podany kod promocyjny został już wykorzystany.</target>
+            </trans-unit>
+            <trans-unit id="promotion_coupon_one_per_tag">
+                <source>promotion_coupon_one_per_tag</source>
+                <target>Jeden kod z tej promocji "%promotion_tag%" został już wykorzystany.</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
